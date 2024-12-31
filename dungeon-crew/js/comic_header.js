@@ -8,8 +8,9 @@ document.querySelector(".writeHeader").innerHTML = `
             <a href="index.html">HOME</a> |
             <a href="archive.html">ARCHIVE</a> |
             <a href="about.html">ABOUT</a> | 
-            <a href="characters.html">SYNOPSIS</a> | 
             <a href="../index.html">MY-WEBSITE</a>
         </div>
     </header>
 `;
+
+//<a href="characters.html">SYNOPSIS</a> | 
