@@ -113,14 +113,10 @@ function writeNav(imageToggle) {
     writeNavDiv.forEach(function(element) {
       element.innerHTML = `<div class="comicNav">
         ${firstButton()}
-        
         ${prevButton()}
-
-        ${aboutButton()}
         ${archiveButton()}
-       
+        ${aboutButton()}
         ${nextButton()}
-        
         ${lastButton()}
         </div>
         `;})
@@ -141,6 +137,7 @@ function writeNav(imageToggle) {
             //wait until page 2 to make button active
             return `<a href="?pg=` + 1 + navScrollTo + `"/>` + imgOrText(imageToggle, 0) + `</a>`;
         } else {
+          return imgOrText(imageToggle, 0);
             if (!imageToggle) {
                 return imgOrText(imageToggle, 0);
             } else {
@@ -163,6 +160,7 @@ function writeNav(imageToggle) {
             //wait until page 2 to make button active
             return `<a href="?pg=` + (pg - 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 1) + `</a>`;
         } else {
+          return imgOrText(imageToggle, 1);
             if (!imageToggle) {
                 return imgOrText(imageToggle, 1);
             } else {
@@ -177,6 +175,7 @@ function writeNav(imageToggle) {
             //only make active if not on the last page
             return `<a href="?pg=` + (pg + 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 2) + `</a>`;
         } else {
+          return imgOrText(imageToggle, 2);
             if (!imageToggle) {
                 return imgOrText(imageToggle, 2);
             } else {
@@ -191,6 +190,7 @@ function writeNav(imageToggle) {
             //only make active if not on last page
             return `<a href="?pg=` + maxpg + navScrollTo + `"/>` + imgOrText(imageToggle, 3) + `</a>`;
         } else {
+          return imgOrText(imageToggle, 3);
             if (!imageToggle) {
                 return imgOrText(imageToggle, 3);
             } else {
