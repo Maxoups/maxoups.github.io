@@ -64,6 +64,11 @@ header img {
   image-rendering: crisp-edges; 
 }
 
+.navLink {
+  color:rgb(0, 0, 0);
+  text-decoration-thickness: 0px;
+}
+
 /* for pictures displayed to the left */
 .rightPic {
   clear: right;
@@ -78,7 +83,8 @@ header img {
 
 /* link colors */
 a {
-      color: #000000;
+      color: #0048ff;
+      text-decoration-thickness: 1.2px;
     }
 
 a:hover {

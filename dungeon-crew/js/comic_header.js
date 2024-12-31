@@ -5,10 +5,10 @@ document.querySelector(".writeHeader").innerHTML = `
         <a href="index.html"><img src="./img/logo.png" alt="" /></a> 
 
         <div id="nav" style="display: flex;flex-wrap: wrap;gap: 3%; justify-content: center;">
-            <a href="index.html">HOME</a> |
-            <a href="archive.html">ARCHIVE</a> |
-            <a href="about.html">ABOUT</a> | 
-            <a href="../index.html">MY-WEBSITE</a>
+            <a href="index.html" class="navLink">HOME</a> |
+            <a href="archive.html" class="navLink">ARCHIVE</a> |
+            <a href="about.html" class="navLink">ABOUT</a> | 
+            <a href="../index.html" class="navLink">MY-WEBSITE</a>
         </div>
     </header>
 `;
