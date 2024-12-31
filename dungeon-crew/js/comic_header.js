@@ -4,7 +4,7 @@ document.querySelector(".writeHeader").innerHTML = `
     <header align="center">
         <a href="index.html"><img src="./img/logo.png" alt="" /></a> 
 
-        <div id="nav">
+        <div id="nav" style="display: flex;flex-wrap: wrap;gap: 3%; justify-content: center;">
             <a href="index.html">HOME</a> |
             <a href="archive.html">ARCHIVE</a> |
             <a href="about.html">ABOUT</a> | 
