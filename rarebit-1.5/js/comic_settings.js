@@ -44,21 +44,12 @@ if (pg == 0) {pg = maxpg;} //display MOST RECENT COMIC when the webpage is loade
         authorNotes: ``
     },
 */
-//Note: the formatting is important! The whole thing won't show up if you forget to include the commas or curly braces in the right place.
 
-const pgData = [
-    {
-        pgNum: 1, //what page number it is
-        title: "Welcome to the Dungeon", //the title of the page (leaving this blank will default it to "Page X")
-        date: writeDate(2024, 12, 20), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
-        altText: "Here's some alt text!", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
-        imageFiles: 1, //how many image files this page is split into
-        authorNotes: `
-            <p>If you want to write an author notes section, this'd be the place to do it.</p>
-            <p>You can even use whatever html tags you want in here to format it, the script called on your html page should spit out anything you type between these backticks.</p>
-            `,
-    },
-    {
+
+/* 
+EXAMPLE WITH AUTHOR NOTES:
+
+{
         pgNum: 2,
         title: "Business Opportunity",
         date: writeDate(2024, 12, 21),
@@ -69,15 +60,33 @@ const pgData = [
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate, orci sit amet dignissim eleifend, magna felis malesuada nunc, ut sagittis purus mi ac urna. Fusce ligula urna, varius vel sapien sit amet, vulputate tempor felis. In hac habitasse platea dictumst. Aliquam laoreet volutpat interdum. Vestibulum non libero sit amet leo accumsan porttitor. Vivamus nec porttitor neque. Sed eget mauris quam.</p>
             `,
     },
+*/
+//Note: the formatting is important! The whole thing won't show up if you forget to include the commas or curly braces in the right place.
+
+const pgData = [
+    {
+        pgNum: 1, //what page number it is
+        title: "Welcome to the Dungeon", //the title of the page (leaving this blank will default it to "Page X")
+        date: writeDate(2024, 12, 20), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
+        altText: "Here's some alt text!", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
+        imageFiles: 1, //how many image files this page is split into
+        authorNotes: ``,
+    },
+    {
+        pgNum: 2,
+        title: "Business Opportunity",
+        date: writeDate(2024, 12, 21),
+        altText: "Here's some more alt text!",
+        imageFiles: 1,
+        authorNotes: ``,
+    },
     {
         pgNum: 3,
         title: "Wrong target",
         date: writeDate(2024, 12, 26),
         altText: "Here's even more alt text!",
         imageFiles: 1,
-        authorNotes: `
-            <p>Sed lectus magna, dignissim eu sapien quis, euismod pulvinar diam. In odio massa, auctor blandit dolor id, varius ultricies lacus. Suspendisse sed libero vel leo dictum consectetur. In fringilla elit sit amet placerat varius. Duis vel lacus ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Proin eleifend metus eu ex elementum venenatis. Curabitur sodales, ipsum placerat ornare convallis, sem eros convallis felis, vel efficitur erat ante id diam.</p>
-            `,
+        authorNotes: ``,
     },
     {
         pgNum: 4,
@@ -85,9 +94,7 @@ const pgData = [
         date: writeDate(2024, 12, 30),
         altText: "So much alt text...",
         imageFiles: 1,
-        authorNotes: `
-            <p>Sed lectus magna, dignissim eu sapien quis, euismod pulvinar diam. In odio massa, auctor blandit dolor id, varius ultricies lacus. Suspendisse sed libero vel leo dictum consectetur. In fringilla elit sit amet placerat varius. Duis vel lacus ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Proin eleifend metus eu ex elementum venenatis. Curabitur sodales, ipsum placerat ornare convallis, sem eros convallis felis, vel efficitur erat ante id diam.</p>
-            `,
+        authorNotes: ``,
     },
 ];
 

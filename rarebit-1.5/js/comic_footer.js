@@ -2,8 +2,8 @@
 //at the bottom of your page, but before the js script calls and the closing body tag, put an empty div with a class of "writeFooter"
 document.querySelector(".writeFooter").innerHTML = `
     <footer align="center">
-        <p>Here's a footer where you can put copyright information and stuff.</p>
-        <p>There's also a link back to Rarebit. It's ultimately your choice whether to delete it or not but it'd be cool of you to keep it there and spread the word...</p> 
+        <p>Thanks for reading :)</p>
+        <p>Here's a link to Rarebit. It's what I used to make this part of the website and it's really cool and I like it.</p> 
         <p><strong>Powered by</strong></p>
         <a href="https://rarebit.neocities.org"><img src="img/rarebitlogo_small.png" height = "30" /></a>
     </footer>
