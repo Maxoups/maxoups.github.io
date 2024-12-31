@@ -113,14 +113,27 @@ function writeNav(imageToggle) {
     writeNavDiv.forEach(function(element) {
       element.innerHTML = `<div class="comicNav">
         ${firstButton()}
-        ${divider()}
+        
         ${prevButton()}
-        ${divider()}
+
+        ${aboutButton()}
+        ${archiveButton()}
+       
         ${nextButton()}
-        ${divider()}
+        
         ${lastButton()}
         </div>
         `;})
+    
+    function archiveButton() {
+        //ARCHIVE BUTTON
+        return `<a href="archive.html"/>` + imgOrText(imageToggle, 5) + `</a>`;
+    }
+
+    function aboutButton() {
+        //ABOUT BUTTON
+        return `<a href="about.html"/>` + imgOrText(imageToggle, 4) + `</a>`;
+    }
 
     function firstButton() {
         //FIRST BUTTON

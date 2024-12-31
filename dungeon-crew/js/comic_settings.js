@@ -26,7 +26,7 @@ const thumbExt = "png" //file extension of thumbnails
 const thumbDefault = "default" //name of the default thumbnail that displays when no thumbnail is set, located in the directory you set thumbFolder to.
 
 //NAVIGATION SETTINGS
-const navText = ["First","Previous","Next","Last"]; //alt text for your nav images, or just the text that shows up if you're not using images
+const navText = ["First","Previous","Next","Last", "About", "Archive"]; //alt text for your nav images, or just the text that shows up if you're not using images
 const navFolder = "img/comicnav"; //directory where nav images are stored
 const navExt = "png" //file extension of nav images
 const navScrollTo = "#showComic"; //id of the div you want the page to automatically scroll to when you click to the next comic. will turn off if you delete text between quotation marks
