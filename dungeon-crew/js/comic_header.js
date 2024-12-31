@@ -9,7 +9,7 @@ document.querySelector(".writeHeader").innerHTML = `
             <a href="archive.html">ARCHIVE</a> |
             <a href="about.html">ABOUT</a> | 
             <a href="characters.html">SYNOPSIS</a> | 
-            <a href="../index.html">WEBSITE</a>
+            <a href="../index.html">MY-WEBSITE</a>
         </div>
     </header>
 `;
