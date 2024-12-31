@@ -91,7 +91,7 @@ function writeArchive(divClass, min, max, reverseOrder, useThumbs,useNums) {
         }
         
         //draw each row
-        cellTitle.innerHTML = `<span><strong>${pgTitle}</strong></span>`;
+        cellTitle.innerHTML = `<a href="${linkToComic}" class="archiveLink"><strong>${pgTitle}</strong></a>`;
         cellTitle.setAttribute("class", "archiveCellTitle");
         cellDate.innerHTML = "<span> " + pgDate + " </span>";
         cellDate.setAttribute("class", "archiveCellDate");

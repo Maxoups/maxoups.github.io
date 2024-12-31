@@ -138,6 +138,15 @@ header #nav {
 /* ARCHIVE PAGE */
 
 /* style table in which archive is displayed */
+.archiveLink {
+  color: #000000;
+  text-decoration: none;
+}
+
+.archiveLink:visited {
+  color: #c22194;
+}
+
 .archiveTable {
   width: 90%;
   border-collapse:collapse;
@@ -182,7 +191,7 @@ header #nav {
 
 /* highlight a table row and make pointer into hand when moused over */
 .archiveRow:hover {
-  background-color: #DA5437;
+  background-color: #00000036;
   cursor: pointer;
 }
 
