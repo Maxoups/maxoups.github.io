@@ -89,7 +89,7 @@ function writeArchive(divClass, min, max, reverseOrder, useThumbs,useNums) {
             cellNum.innerHTML = `<span><strong>${pgNum}</strong></span>`;
             cellNum.setAttribute("class", "archiveCellNum");
         }
-
+        
         //draw each row
         cellTitle.innerHTML = `<span><strong>${pgTitle}</strong></span>`;
         cellTitle.setAttribute("class", "archiveCellTitle");
