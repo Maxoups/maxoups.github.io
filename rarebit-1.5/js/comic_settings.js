@@ -60,6 +60,13 @@ EXAMPLE WITH AUTHOR NOTES:
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate, orci sit amet dignissim eleifend, magna felis malesuada nunc, ut sagittis purus mi ac urna. Fusce ligula urna, varius vel sapien sit amet, vulputate tempor felis. In hac habitasse platea dictumst. Aliquam laoreet volutpat interdum. Vestibulum non libero sit amet leo accumsan porttitor. Vivamus nec porttitor neque. Sed eget mauris quam.</p>
             `,
     },
+
+    // this is what the author notes section looks like in the html (I removed it):
+    <div id="authorNotes">
+    <h2>Author Notes</h2>
+    <!-- write the author notes for the current page-->
+    <div class="writeAuthorNotes"></div>
+    </div>
 */
 //Note: the formatting is important! The whole thing won't show up if you forget to include the commas or curly braces in the right place.
 
