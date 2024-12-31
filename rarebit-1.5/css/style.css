@@ -61,6 +61,7 @@ header img {
   clear: left;
   float:right;
   margin-left:20px;
+  image-rendering: crisp-edges; 
 }
 
 /* for pictures displayed to the left */
