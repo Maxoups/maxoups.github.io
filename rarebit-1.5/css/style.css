@@ -9,7 +9,7 @@ body, div, main, section, article {
 
 /* universal background color */
 body {
-  background-color: #ffffff; 
+  background-color: #739ca5; 
 }
 
 /* header image */
@@ -113,6 +113,7 @@ header #nav {
 .comicPage img {
   width: 900px;
   max-width: 98%;
+  image-rendering: crisp-edges; 
 }
 
 /* style author notes */
