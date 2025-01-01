@@ -137,7 +137,7 @@ function writeNav(imageToggle) {
             //wait until page 2 to make button active
             return `<a href="?pg=` + 1 + navScrollTo + `"/>` + imgOrText(imageToggle, 0) + `</a>`;
         } else {
-          return imgOrText(imageToggle, 0);
+          return `<a/>` + imgOrText(imageToggle, 0) + `</a>`;
             if (!imageToggle) {
                 return imgOrText(imageToggle, 0);
             } else {
@@ -160,7 +160,7 @@ function writeNav(imageToggle) {
             //wait until page 2 to make button active
             return `<a href="?pg=` + (pg - 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 1) + `</a>`;
         } else {
-          return imgOrText(imageToggle, 1);
+          return `<a/>` + imgOrText(imageToggle, 1) + `</a>`;
             if (!imageToggle) {
                 return imgOrText(imageToggle, 1);
             } else {
@@ -175,7 +175,7 @@ function writeNav(imageToggle) {
             //only make active if not on the last page
             return `<a href="?pg=` + (pg + 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 2) + `</a>`;
         } else {
-          return imgOrText(imageToggle, 2);
+          return `<a/>` + imgOrText(imageToggle, 2) + `</a>`;
             if (!imageToggle) {
                 return imgOrText(imageToggle, 2);
             } else {
@@ -190,7 +190,7 @@ function writeNav(imageToggle) {
             //only make active if not on last page
             return `<a href="?pg=` + maxpg + navScrollTo + `"/>` + imgOrText(imageToggle, 3) + `</a>`;
         } else {
-          return imgOrText(imageToggle, 3);
+          return `<a/>` + imgOrText(imageToggle, 3) + `</a>`;
             if (!imageToggle) {
                 return imgOrText(imageToggle, 3);
             } else {
