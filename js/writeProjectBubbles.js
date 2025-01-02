@@ -10,6 +10,11 @@ class BubbleData {
     }
 }
 
+let projects = [
+    new BubbleData("Project 1", "url('images/projects/okayama_research.jpg')", "This is a placeholder for project 1", "project1.html", 0, 0),
+    new BubbleData("Project 2", "url('images/projects/okayama_research.jpg')", "This is a placeholder for project 2", "project2.html", 0, 0),
+]
+
 
 writeBubbles();
 
@@ -17,8 +22,10 @@ writeBubbles();
 function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
-      element.innerHTML = `<div class="projectBubblesWrapper">
-        ${projectBubble()}
+      element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 900px; spacing: 10px;">
+        ${projectBubble(projects[0])}
+        ${projectBubble(projects[0])}
+        ${projectBubble(projects[1])}
         </div>
         `;})
     
@@ -28,10 +35,18 @@ function writeBubbles() {
     }
     
     function projectBubble(bubbleData) {
-        return `<a href="`+ bubbleData.link +`" class="workBubble" 
+        return `<div class="workBubble" 
             style="background-image:`+ bubbleData.image +`;">
             <p class="card-title">`+ bubbleData.title +`</p>
             <p class="card-description">`+ bubbleData.text +`</p>
         </a>`
     }
 }
+
+/*
+return `<a href="`+ bubbleData.link +`" class="workBubble" 
+            style="background-image:`+ bubbleData.image +`;min-height: 900px;min-width: 900px;">
+            <p class="card-title">`+ bubbleData.title +`</p>
+            <p class="card-description">`+ bubbleData.text +`</p>
+        </a>`
+*/
