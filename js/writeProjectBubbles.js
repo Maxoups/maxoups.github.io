@@ -12,7 +12,6 @@ function writeBubbles() {
         `;})
     
     function projectBubble() {
-        //ARCHIVE BUTTON
         return `<a/>` + `` + `</a>`;
     }
 

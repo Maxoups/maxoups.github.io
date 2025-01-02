@@ -138,11 +138,11 @@ function writeNav(imageToggle) {
             return `<a href="?pg=` + 1 + navScrollTo + `"/>` + imgOrText(imageToggle, 0) + `</a>`;
         } else {
           return `<a/>` + imgOrText(imageToggle, 0) + `</a>`;
-            if (!imageToggle) {
-                return imgOrText(imageToggle, 0);
-            } else {
-                return ``;
-            }
+            // if (!imageToggle) {
+            //     return imgOrText(imageToggle, 0);
+            // } else {
+            //     return ``;
+            // }
         }
     }
 
@@ -161,11 +161,11 @@ function writeNav(imageToggle) {
             return `<a href="?pg=` + (pg - 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 1) + `</a>`;
         } else {
           return `<a/>` + imgOrText(imageToggle, 1) + `</a>`;
-            if (!imageToggle) {
-                return imgOrText(imageToggle, 1);
-            } else {
-                return ``;
-            }
+            // if (!imageToggle) {
+            //     return imgOrText(imageToggle, 1);
+            // } else {
+            //     return ``;
+            // }
         }
     }
 
@@ -176,11 +176,11 @@ function writeNav(imageToggle) {
             return `<a href="?pg=` + (pg + 1) + navScrollTo + `"/>` + imgOrText(imageToggle, 2) + `</a>`;
         } else {
           return `<a/>` + imgOrText(imageToggle, 2) + `</a>`;
-            if (!imageToggle) {
-                return imgOrText(imageToggle, 2);
-            } else {
-                return ``;
-            }
+            // if (!imageToggle) {
+            //     return imgOrText(imageToggle, 2);
+            // } else {
+            //     return ``;
+            // }
         }
     }
 
@@ -191,11 +191,11 @@ function writeNav(imageToggle) {
             return `<a href="?pg=` + maxpg + navScrollTo + `"/>` + imgOrText(imageToggle, 3) + `</a>`;
         } else {
           return `<a/>` + imgOrText(imageToggle, 3) + `</a>`;
-            if (!imageToggle) {
-                return imgOrText(imageToggle, 3);
-            } else {
-                return ``;
-            }
+            // if (!imageToggle) {
+            //     return imgOrText(imageToggle, 3);
+            // } else {
+            //     return ``;
+            // }
         }
     }
 }
