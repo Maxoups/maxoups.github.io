@@ -3,13 +3,21 @@
 	WorkBubbles CSS
 */
 
-.workBubble {
-	background-color: rgba(0, 0, 0, 0.2);
+.workBubble p {
+	color:#00000000;
+
 	-moz-transition: all .4s ease-out;
     -o-transition: all .4s ease-out;
     -webkit-transition: all .4s ease-out;
     transition: all .4s ease-out;
-	animation: idle_bob 4s infinite ease-in-out;
+}
+
+.workBubble:hover p {
+	color: #fff;
+}
+
+.workBubble {
+	background-color: rgba(0, 0, 0, 0.2);
 	background-size: 375px;
 	background-repeat: no-repeat;
 	background-position: right;
@@ -19,6 +27,13 @@
 	position: relative;
 	height: 200px;
 	width: 300px;
+
+	-moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+
+	animation: idle_bob 5s infinite ease-in-out;
 }
 
 .workBubble:hover {

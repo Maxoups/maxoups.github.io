@@ -36,7 +36,7 @@ function writeBubbles() {
     writeNavDiv.forEach(function(element) {
       element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 900px; ">
         ${projectBubble(projects["lab"], true, true)}
-        ${projectBubble(projects["lab2"], true, true)}
+        ${projectBubble(projects["lab2"], true, false)}
         ${projectBubble(projects["project2"], false, false)}
         </div>
         `;})
@@ -65,7 +65,7 @@ function writeBubbles() {
             `+ top_dot +`
             `+ bottom_dot +`
             <p class="card-description">`+ bubbleData.text +`</p>
-            <p style="text-align:center;font-weight: bold; font-size:large; background-color:black; width:100%;
+            <p style="color: #fff;text-align:center;font-weight: bold; font-size:large; background-color:black; width:100%;
             margin-left:0px; bottom:-10px; position:absolute;">`+ bubbleData.title +`</p>
         </div>`
     }
