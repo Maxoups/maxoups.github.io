@@ -13,8 +13,8 @@ class BubbleData {
 let projects = {
     "lab": new BubbleData(
         "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
-        "This is a placeholder for project 1", 
-        "project1.html", 
+        "As part of my Master's degree, I worked on a bioengineering research project at the University of Okayama in Japan, under the guidance of Professor K. Takahashi.", 
+        "https://ken-takahashi.net/french-sorbonne-university-student-executes-fluid-dynamics-simulation-project-for-organ-chips/", 
         "10%", "5%"),
     "lab2": new BubbleData(
         "Project 1", "url('images/projects/okayama_research.jpg')", 
@@ -58,20 +58,27 @@ function writeBubbles() {
         if (display_bottom_dot) {
             bottom_dot = `<span class="dot" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
         }
-        return `<div class="workBubble" 
-            style="background-image:`+ bubbleData.image +`;
-            top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`;
-            animation-delay: `+ anim_delay +`s;">
-            `+ top_dot +`
-            `+ bottom_dot +`
-            <p class="card-description">`+ bubbleData.text +`</p>
-            <p style="color: #fff;text-align:center;font-weight: bold; font-size:large; background-color:black; width:100%;
-            margin-left:0px; bottom:-10px; position:absolute;">`+ bubbleData.title +`</p>
-        </div>`
+        return `
+        <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration: none;">
+            <div class="workBubble" 
+                style="background-image:`+ bubbleData.image +`;
+                top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`;
+                animation-delay: `+ anim_delay +`s;">
+                `+ top_dot +`
+                `+ bottom_dot +`
+                <p class="card-description" style="font-size:15px;text-align:center;">`+ bubbleData.text +`</p>
+                <p style="color: #fff;text-align:center;font-weight: bold; font-size:large; background-color:black; width:100%;
+                margin-left:0px; bottom:-10px; position:absolute;">`+ bubbleData.title +`</p>
+            </div>
+        </a>`
     }
 }
 
 /*
+# Read more line:
+    <p class="card-description" style="font-size:14px;font-style:italic;text-align:right;margin-top:-15px">Read more...</p>
+
+
 # Cool color:
 rgba(200,100,0,.5)
 

@@ -5,6 +5,7 @@
 
 .workBubble p {
 	color:#00000000;
+	
 
 	-moz-transition: all .4s ease-out;
     -o-transition: all .4s ease-out;
@@ -17,6 +18,7 @@
 }
 
 .workBubble {
+	scale: 1;
 	background-color: rgba(0, 0, 0, 0.2);
 	background-size: 375px;
 	background-repeat: no-repeat;
@@ -37,6 +39,7 @@
 }
 
 .workBubble:hover {
+	scale:1.175;
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
