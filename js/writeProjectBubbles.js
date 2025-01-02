@@ -31,6 +31,21 @@ let projects = {
         "I am the author of the pixel art webcomic Dungeon Crew, a fantasy adventure about a group of bad guys managing a dungeon.", 
         "https://maxoups.github.io/dungeon-crew/index.html?pg=1", 
         "5%", "0%"),
+    "allianz_vr": new BubbleData("Olympic Games VR Experience", 
+        "url('images/projects/allianz_vr.jpg')", 
+        "I have worked as a Gameplay Developer at Virtual Room, for a freeroaming multiplayer VR experience at the 2024 Paris Olympics Games, commissioned by Allianz.", 
+        "https://www.allianz.com/en/mediacenter/news/media-releases/240729-allianz-offers-unique-experiences-for-club-france-visitors.html", 
+        "10%", "500%"),
+    "pogobots": new BubbleData("Swarm Robotics Research & Development", 
+        "url('images/projects/pogobots.jpg')", 
+        "As part of my studies, I have done behavioral programming and data analysis on the Pogobot, a robot designed at ISIR Laboratory for swarm robotics experiments.", 
+        "https://pogobot.github.io/", 
+        "10%", "500%"),
+    "covr": new BubbleData("Research on Augmented VR", 
+        "url('images/projects/allianz_vr.jpg')", 
+        "I have worked as a Gameplay Developer at Virtual Room, for a freeroaming multiplayer VR experience at the 2024 Paris Olympics Games, commissioned by Allianz.", 
+        "https://www.allianz.com/en/mediacenter/news/media-releases/240729-allianz-offers-unique-experiences-for-club-france-visitors.html", 
+        "10%", "500%"),
 }
 
 writeBubbles();
@@ -44,6 +59,9 @@ function writeBubbles() {
         ${projectBubble(projects["ooc"], true, true)}
         ${projectBubble(projects["master"], true, false)}
         ${projectBubble(projects["licence"], true, false)}
+        ${projectBubble(projects["allianz_vr"], true, false)}
+        ${projectBubble(projects["pogobots"], true, false)}
+        ${projectBubble(projects["covr"], true, false)}
         </div>
         `;})
     
