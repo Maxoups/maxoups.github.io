@@ -8,8 +8,7 @@
 	height: 25px;
 	width: 25px;
 	background-color: #84fff5;
-	border-color: #ee0000;
-	border-width: thick;
+	border: 5px solid #000000;
 	border-radius: 50%;
 	display: inline-block;
   }

@@ -35,9 +35,9 @@ function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
       element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 900px; ">
-        ${projectBubble(projects["lab"])}
-        ${projectBubble(projects["lab2"])}
-        ${projectBubble(projects["project2"])}
+        ${projectBubble(projects["lab"], true, true)}
+        ${projectBubble(projects["lab2"], true, true)}
+        ${projectBubble(projects["project2"], false, false)}
         </div>
         `;})
     
@@ -46,22 +46,41 @@ function writeBubbles() {
 
     }
     
-    function projectBubble(bubbleData) {
+    function projectBubble(bubbleData, display_top_dot, display_bottom_dot) {
         let anim_delay = ((Math.random() * 20 ) * -1);
-        let top_dot_posX = Math.random() * 70 + 10;
-        let bottom_dot_posX = Math.random() * 70 + 10;
+        let top_dot_posX = (Math.random() * 70) + 10;
+        let bottom_dot_posX = (Math.random() * 70) + 10;
+        let top_dot = "";
+        if (display_top_dot) {
+            top_dot = `<span class="dot" style="position:absolute; top:-20px; left:`+ top_dot_posX +`%"></span>`;
+        }
+        let bottom_dot = "";
+        if (display_bottom_dot) {
+            bottom_dot = `<span class="dot" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
+        }
         return `<div class="workBubble" 
             style="background-image:`+ bubbleData.image +`;position: relative; height: 200px; width: 300px;
             top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`; border-radius: 25px; border: 5px solid #000;
             background-size: 375px; background-repeat: no-repeat; background-position: right;
             animation: idle_bob 4s infinite ease-in-out; animation-delay: `+ anim_delay +`s;">
-            <span class="dot" style="position:absolute; top:-15px; left:`+ top_dot_posX +`%"></span>
-            <span class="dot" style="position:absolute; bottom:-15px; left:`+ bottom_dot_posX +`%"></span>
-            <p class="card-title">`+ bubbleData.title +`</p>
+            `+ top_dot +`
+            `+ bottom_dot +`
+            
             <p class="card-description">`+ bubbleData.text +`</p>
+            <p style="text-align:center;font-weight: bold; font-size:large; background-color:black; width:100%;
+            margin-left:0px; bottom:-10px; position:absolute;">`+ bubbleData.title +`</p>
         </a>`
     }
 }
+
+/*
+# Draw a line between two points
+
+
+<svg height="200" width="300" xmlns="http://www.w3.org/2000/svg">
+                <line x1="`+ top_dot_posX +`" y1="0" x2="300" y2="200" style="stroke:black;stroke-width:5" />
+            </svg> 
+*/
 
 /*
 return `<a href="`+ bubbleData.link +`" class="workBubble" 
