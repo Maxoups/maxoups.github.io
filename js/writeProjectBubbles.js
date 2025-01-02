@@ -48,13 +48,15 @@ function writeBubbles() {
     
     function projectBubble(bubbleData) {
         let anim_delay = ((Math.random() * 20 ) * -1);
+        let top_dot_posX = Math.random() * 70 + 10;
+        let bottom_dot_posX = Math.random() * 70 + 10;
         return `<div class="workBubble" 
             style="background-image:`+ bubbleData.image +`;position: relative; height: 200px; width: 300px;
             top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`; border-radius: 25px; border: 5px solid #000;
             background-size: 375px; background-repeat: no-repeat; background-position: right;
             animation: idle_bob 4s infinite ease-in-out; animation-delay: `+ anim_delay +`s;">
-            <span class="dot" style="position:relative; top:-15px"></span>
-            <span class="dot" style="position:absolute; bottom:-15px"></span>
+            <span class="dot" style="position:absolute; top:-15px; left:`+ top_dot_posX +`%"></span>
+            <span class="dot" style="position:absolute; bottom:-15px; left:`+ bottom_dot_posX +`%"></span>
             <p class="card-title">`+ bubbleData.title +`</p>
             <p class="card-description">`+ bubbleData.text +`</p>
         </a>`
