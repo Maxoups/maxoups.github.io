@@ -42,9 +42,9 @@ let projects = {
         "https://pogobot.github.io/", 
         "10%", "500%"),
     "covr": new BubbleData("Research on Augmented VR", 
-        "url('images/projects/allianz_vr.jpg')", 
-        "I have worked as a Gameplay Developer at Virtual Room, for a freeroaming multiplayer VR experience at the 2024 Paris Olympics Games, commissioned by Allianz.", 
-        "https://www.allianz.com/en/mediacenter/news/media-releases/240729-allianz-offers-unique-experiences-for-club-france-visitors.html", 
+        "url('images/projects/covr.jpg')", 
+        "As part of my Master's degree, I worked on CoVR, an augmented VR platform with haptic feedback, developed at ISIR Laboratory, testing the systems and developing games for it.", 
+        "https://www.isir.upmc.fr/projects/covr-haptic-platform-for-virtual-reality/?lang=en", 
         "10%", "500%"),
 }
 
