@@ -51,8 +51,10 @@ function writeBubbles() {
         return `<div class="workBubble" 
             style="background-image:`+ bubbleData.image +`;position: relative; height: 200px; width: 300px;
             top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`; border-radius: 25px; border: 5px solid #000;
-            background-size: 800px; background-repeat: no-repeat; background-position: center;
+            background-size: 375px; background-repeat: no-repeat; background-position: right;
             animation: idle_bob 4s infinite ease-in-out; animation-delay: `+ anim_delay +`s;">
+            <span class="dot" style="position:relative; top:-15px"></span>
+            <span class="dot" style="position:absolute; bottom:-15px"></span>
             <p class="card-title">`+ bubbleData.title +`</p>
             <p class="card-description">`+ bubbleData.text +`</p>
         </a>`
