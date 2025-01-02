@@ -67,7 +67,7 @@ function writeBubbles() {
             <p class="card-description">`+ bubbleData.text +`</p>
             <p style="text-align:center;font-weight: bold; font-size:large; background-color:black; width:100%;
             margin-left:0px; bottom:-10px; position:absolute;">`+ bubbleData.title +`</p>
-        </a>`
+        </div>`
     }
 }
 
