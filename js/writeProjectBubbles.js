@@ -10,11 +10,10 @@ class BubbleData {
     }
 }
 
-let projects = [
-    new BubbleData("Project 1", "url('images/projects/okayama_research.jpg')", "This is a placeholder for project 1", "project1.html", 0, 0),
-    new BubbleData("Project 2", "url('images/projects/okayama_research.jpg')", "This is a placeholder for project 2", "project2.html", 0, 0),
-]
-
+let projects = {
+    "lab": new BubbleData("Project 1", "url('images/projects/okayama_research.jpg')", "This is a placeholder for project 1", "project1.html", 0, 0),
+    "project2": new BubbleData("Project 2", "url('images/projects/okayama_research.jpg')", "This is a placeholder for project 2", "project2.html", 0, 0),
+}
 
 writeBubbles();
 
@@ -22,10 +21,10 @@ writeBubbles();
 function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
-      element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 900px; spacing: 10px;">
-        ${projectBubble(projects[0])}
-        ${projectBubble(projects[0])}
-        ${projectBubble(projects[1])}
+      element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 900px; ">
+        ${projectBubble(projects["lab"])}
+        ${projectBubble(projects["lab"])}
+        ${projectBubble(projects["project2"])}
         </div>
         `;})
     
