@@ -51,6 +51,11 @@ let projects = {
         "I have, sometimes over my own good, participated in many, many game jams.<br><br>You can check out the results here!", 
         "https://itch.io/c/3660379/game-jams-collaborative-projects", 
         "10%", "500%"),
+    "website": new BubbleData("This Website", 
+        "url('images/projects/website.jpg')", 
+        "This website took a long time to make. That's because it holds a few secrets. Do you know what ARG Games are? I do.<br>Do you want to play?", 
+        "arg_game/index.html", 
+        "10%", "500%"),
 }
 
 writeBubbles();
@@ -68,6 +73,7 @@ function writeBubbles() {
         ${projectBubble(projects["pogobots"], true, false)}
         ${projectBubble(projects["covr"], true, false)}
         ${projectBubble(projects["gamejams"], false, false)}
+        ${projectBubble(projects["website"], false, false)}
         </div>
         `;})
     
