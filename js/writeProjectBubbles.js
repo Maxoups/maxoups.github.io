@@ -21,10 +21,15 @@ let projects = {
         "In 2024, I graduated from Sorbonne University with a Master's degree in Human-Computer Interaction, Multi-Agent Systems, Artificial Intelligence and Robotics.", 
         "https://sciences.sorbonne-universite.fr/formation-sciences/masters/master-informatique/parcours-ai2d", 
         "40%", "115%"),
-    "project2": new BubbleData("Project 2", 
-        "url('images/projects/okayama_research.jpg')", 
-        "This is a placeholder for project 2", 
-        "https://maxoups.github.io/", 
+    "licence": new BubbleData("Double Degree in Modern Literature & Computer Science", 
+        "url('images/projects/licence.jpg')", 
+        "In 2022, I graduated from Sorbonne Université with a Double Bachelor's degree in Modern Literature and Computer Science. It's a fun combo.", 
+        "https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/licences/licence-carte/double-cursus-licences-schumaines/infolettres", 
+        "5%", "0%"),
+    "dungeon_crew": new BubbleData("Dungeon Crew Webcomic", 
+        "url('images/projects/dungeon_crew.jpg')", 
+        "I am the author of the pixel art webcomic Dungeon Crew, a fantasy adventure about a group of bad guys managing a dungeon.", 
+        "https://maxoups.github.io/dungeon-crew/index.html?pg=1", 
         "5%", "0%"),
 }
 
@@ -34,10 +39,11 @@ writeBubbles();
 function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
-      element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 100%; ">
+        element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 100%; ">
+        ${projectBubble(projects["dungeon_crew"], false, false)}  
         ${projectBubble(projects["ooc"], true, true)}
         ${projectBubble(projects["master"], true, false)}
-        ${projectBubble(projects["project2"], false, false)}
+        ${projectBubble(projects["licence"], true, false)}
         </div>
         `;})
     
