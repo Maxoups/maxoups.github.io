@@ -40,13 +40,13 @@
 
 .workBubble:hover {
 	scale:1.175;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.85);
 }
 
 .dot {
 	height: 25px;
 	width: 25px;
-	background-color: #84fff5;
+	background-color: #006a61;
 	border: 5px solid #000000;
 	border-radius: 50%;
 	display: inline-block;
