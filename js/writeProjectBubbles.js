@@ -20,7 +20,7 @@ let projects = {
         "Project 1", "url('images/projects/okayama_research.jpg')", 
         "This is a placeholder for project 1", 
         "project1.html", 
-        "20%", "15%"),
+        "70%", "115%"),
     "project2": new BubbleData("Project 2", 
         "url('images/projects/okayama_research.jpg')", 
         "This is a placeholder for project 2", 
@@ -48,8 +48,9 @@ function writeBubbles() {
     
     function projectBubble(bubbleData) {
         return `<div class="workBubble" 
-            style="background-image:`+ bubbleData.image +`;position: relative;
-            top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`; border-radius: 20px;">
+            style="background-image:`+ bubbleData.image +`;position: relative; height: 200px; width: 300px;
+            top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`; border-radius: 25px; border: 5px solid #000;
+            background-size: 800px; background-repeat: no-repeat; background-position: center;">
             <p class="card-title">`+ bubbleData.title +`</p>
             <p class="card-description">`+ bubbleData.text +`</p>
         </a>`
