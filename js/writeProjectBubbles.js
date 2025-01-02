@@ -46,6 +46,11 @@ let projects = {
         "As part of my Master's degree, I worked on CoVR, an augmented VR platform with haptic feedback, developed at ISIR Laboratory, testing the systems and developing games for it.", 
         "https://www.isir.upmc.fr/projects/covr-haptic-platform-for-virtual-reality/?lang=en", 
         "10%", "500%"),
+    "gamejams": new BubbleData("Game Jams Projects", 
+        "url('images/projects/gamejams.jpg')", 
+        "I have, sometimes over my own good, participated in many, many game jams.<br><br>You can check out the results here!", 
+        "https://itch.io/c/3660379/game-jams-collaborative-projects", 
+        "10%", "500%"),
 }
 
 writeBubbles();
@@ -62,6 +67,7 @@ function writeBubbles() {
         ${projectBubble(projects["allianz_vr"], true, false)}
         ${projectBubble(projects["pogobots"], true, false)}
         ${projectBubble(projects["covr"], true, false)}
+        ${projectBubble(projects["gamejams"], false, false)}
         </div>
         `;})
     
