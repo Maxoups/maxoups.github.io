@@ -12,7 +12,7 @@ class BubbleData {
 
 let projects = {
     "lab": new BubbleData(
-        "Project 1", "url('images/projects/okayama_research.jpg')", 
+        "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
         "This is a placeholder for project 1", 
         "project1.html", 
         "10%", "5%"),
@@ -48,8 +48,8 @@ function writeBubbles() {
     
     function projectBubble(bubbleData, display_top_dot, display_bottom_dot) {
         let anim_delay = ((Math.random() * 20 ) * -1);
-        let top_dot_posX = (Math.random() * 70) + 10;
-        let bottom_dot_posX = (Math.random() * 70) + 10;
+        let top_dot_posX = (Math.random() * 60) + 15;
+        let bottom_dot_posX = (Math.random() * 60) + 15;
         let top_dot = "";
         if (display_top_dot) {
             top_dot = `<span class="dot" style="position:absolute; top:-20px; left:`+ top_dot_posX +`%"></span>`;
@@ -59,13 +59,11 @@ function writeBubbles() {
             bottom_dot = `<span class="dot" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
         }
         return `<div class="workBubble" 
-            style="background-image:`+ bubbleData.image +`;position: relative; height: 200px; width: 300px;
-            top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`; border-radius: 25px; border: 5px solid #000;
-            background-size: 375px; background-repeat: no-repeat; background-position: right;
-            animation: idle_bob 4s infinite ease-in-out; animation-delay: `+ anim_delay +`s;">
+            style="background-image:`+ bubbleData.image +`;
+            top: `+ bubbleData.posY +`; left: `+ bubbleData.posX +`;
+            animation-delay: `+ anim_delay +`s;">
             `+ top_dot +`
             `+ bottom_dot +`
-            
             <p class="card-description">`+ bubbleData.text +`</p>
             <p style="text-align:center;font-weight: bold; font-size:large; background-color:black; width:100%;
             margin-left:0px; bottom:-10px; position:absolute;">`+ bubbleData.title +`</p>
@@ -74,9 +72,11 @@ function writeBubbles() {
 }
 
 /*
+# Cool color:
+rgba(200,100,0,.5)
+
+
 # Draw a line between two points
-
-
 <svg height="200" width="300" xmlns="http://www.w3.org/2000/svg">
                 <line x1="`+ top_dot_posX +`" y1="0" x2="300" y2="200" style="stroke:black;stroke-width:5" />
             </svg> 

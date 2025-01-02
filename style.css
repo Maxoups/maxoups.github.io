@@ -3,6 +3,27 @@
 	WorkBubbles CSS
 */
 
+.workBubble {
+	background-color: rgba(0, 0, 0, 0.2);
+	-moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+	animation: idle_bob 4s infinite ease-in-out;
+	background-size: 375px;
+	background-repeat: no-repeat;
+	background-position: right;
+	border-radius: 25px;
+	border: 5px solid #000;
+	background-blend-mode: multiply;
+	position: relative;
+	height: 200px;
+	width: 300px;
+}
+
+.workBubble:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
 
 .dot {
 	height: 25px;
