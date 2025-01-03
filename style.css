@@ -643,6 +643,12 @@ p {
 	z-index: 0;
 }
 
+.img-decorporate {
+	position:absolute;
+	scale: 0.3;
+	z-index: 0;
+  }
+
 .img-scrambled {
 	position:absolute;
 	scale: 0.4;
