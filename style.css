@@ -634,6 +634,15 @@ p {
 	z-index: 0;
 }
 
+.img-schrodinger {
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+	position:absolute;
+	scale: 1.8;
+	z-index: 0;
+}
+
 .img-scrambled {
 	position:absolute;
 	scale: 0.4;
