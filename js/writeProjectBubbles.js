@@ -119,12 +119,6 @@ function writeBubbles() {
         line.startPlug = 'behind';
         line.startSocket = 'bottom';
         line.bottomSocket = 'top';
-        //line.dropShadow = true;
-        // console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
-        // ALTERNATIVE WOULD BE TO DRAW VERTICAL LINES WITH RIGHT ANGLES BETWEEN BUBBLES
-        // setInterval(function() {
-        //     line.position();
-        //   }, 50);
         // line.outline = true;
         // line.outlineColor = 'black';
         // line.outlineSize = 5;
