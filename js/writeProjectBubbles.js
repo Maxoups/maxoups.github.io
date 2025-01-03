@@ -11,7 +11,7 @@ class BubbleData {
     }
 }
 
-let hover_intervals = {};
+// let hover_intervals = {};
 let projects = {
     "ooc": new BubbleData(
         "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
@@ -88,25 +88,39 @@ function writeBubbles() {
             document.getElementById(bubble2+"_bottom")
           );
         line.color = 'black';
-        line.size = 5;
+        line.size = 10;
         line.arc = "magnet";
         line.endPlug = 'behind';
+        console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
+        setInterval(function() {
+            line.position();
+          }, 50);
         // line.outline = true;
         // line.outlineColor = 'black';
         // line.outlineSize = 5;
-        let parent1 = document.getElementById(bubble1).parentElement;
+        /*let parent1 = document.getElementById(bubble1).parentElement;
         let parent2 = document.getElementById(bubble2).parentElement;
         for (let p in [parent1, parent2]) {
+            let current_id = p.id;
             p.addEventListener('mouseover', () => {
-                line.position();
+                if (hover_intervals[current_id] != null) {
+                    return;
+                }
+                hover_intervals[current_id] = setInterval(function() {
+                    line.position();
+                }, 1000);
             });
             p.addEventListener('mouseout', () => {
-                line.position();
+                if (hover_intervals[current_id] != null) {
+                    clearInterval(hover_intervals[current_id]);
+                    hover_intervals[current_id] = null;
+                }
             });
-        }
+        }*/
     }
     
     function projectBubble(bubble_id, display_top_dot, display_bottom_dot) {
+        // hover_intervals[bubble_id] = null;
         let bubbleData = projects[bubble_id];
         let anim_delay = ((Math.random() * 20 ) * -1);
         let top_dot_posX = (Math.random() * 60) + 15;
