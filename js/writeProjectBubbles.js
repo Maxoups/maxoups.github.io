@@ -64,6 +64,14 @@ let projects = {
         "url('images/projects/website.jpg')", 
         "This website took some time to m", 
         "arg_game/index.html"),
+
+    // TO ADD:
+    // - Add woodworking stuff
+    // - Add electronic stuff
+    // - Add Tabletop RPG stuff
+    // - Add Decorporate when it's done
+    // - Add Fish'n'Peas when it's done
+    // - Cat?
 }
 
 writeBubbles();
@@ -73,16 +81,16 @@ function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%);> 
-        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,"posX": "50%","posY": "50%"})}  
-        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,"posX": "50%","posY": "50%"})}
-        ${projectBubble("ooc",              {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
-        ${projectBubble("covr",             {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
-        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,"posX": "50%","posY": "50%"})}
-        ${projectBubble("master",           {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
-        ${projectBubble("licence",          {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
-        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,"posX": "50%","posY": "50%"})}
-        ${projectBubble("gamejams",         {"top_dot": true,"bottom_dot": false,"posX": "50%", "posY": "50%"})}
-        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,"posX": "50%","posY": "50%"})}    
+        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "posX": "10%", "posY": "50px"})}  
+        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "posX": "40%", "posY": "50px"})}
+        ${projectBubble("ooc",              {"top_dot": true,  "bottom_dot": true,   "posX": "20%", "posY": "50px"})}
+        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "posX": "70%", "posY": "50px"})}
+        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "posX": "50%", "posY": "50px"})}
+        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "posX": "15%", "posY": "50px"})}
+        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "posX": "60%", "posY": "50px"})}
+        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "posX": "35%", "posY": "50px"})}
+        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "posX": "15%", "posY": "50px"})}
+        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "posX": "60%", "posY": "50px"})}    
         </div>
         `;})
     
@@ -106,8 +114,8 @@ function writeBubbles() {
         line.startPlug = 'behind';
         line.startSocket = 'bottom';
         line.bottomSocket = 'top';
-        line.startSocketGravity =   [0, -100];
-        line.endSocketGravity =     [0,  100];
+        line.startSocketGravity =   [0, -75];
+        line.endSocketGravity =     [0,  75];
         //line.dropShadow = true;
         // console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
         // ALTERNATIVE WOULD BE TO DRAW VERTICAL LINES WITH RIGHT ANGLES BETWEEN BUBBLES
@@ -141,7 +149,7 @@ function writeBubbles() {
     function projectBubble(bubble_id, layout) {
         let display_top_dot = layout["top_dot"];
         let display_bottom_dot = layout["bottom_dot"];
-        let posX = ((Math.random() * 70.0 ) + 10.0) + "%" ; //layout["posX"];
+        let posX = layout["posX"];  //((Math.random() * 70.0 ) + 10.0) + "%";
         let posY = layout["posY"];
         // hover_intervals[bubble_id] = null;
         let bubbleData = projects[bubble_id];
@@ -160,7 +168,7 @@ function writeBubbles() {
         <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200px; max-width: 300px;">
             <div class="workBubble" id="`+ bubble_id +`" 
                 style="background-image:`+ bubbleData.image +`;
-                top: `+ posY +`; left: `+ posX +`;
+                margin-top: `+ posY +`; left: `+ posX +`;
                 animation-delay: `+ anim_delay +`s;">
                 `+ top_dot +`
                 `+ bottom_dot +`
