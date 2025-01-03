@@ -53,7 +53,7 @@ let projects = {
         "10%", "500%"),
     "website": new BubbleData("This Website", 
         "url('images/projects/website.jpg')", 
-        "This website took a long time to make. That's because it holds a few secrets. Do you know what ARG Games are? I do.<br>Do you want to play?", 
+        "This website took some time to make. That's because it holds a few secrets. Do you know what ARG Games are? I do.<br>Do you want to play?", 
         "arg_game/index.html", 
         "10%", "500%"),
 }
