@@ -47,7 +47,7 @@
 
 @media (max-width: 500px) {
 	.workBubble {
-	  scale:0.875
+	  scale:1
 	}
 
 	.workBubble:hover {
