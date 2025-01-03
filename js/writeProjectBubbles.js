@@ -146,7 +146,7 @@ function writeBubbles() {
             bottom_dot = `<span class="dot" id="`+ bubble_id +`_bottom" style="position:absolute; bottom:-20px; left:`+ display_bottom_dot +`%"></span>`;
         }
         return `
-        <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200%; max-width: 300px;`+ layout["style"] +`">
+        <a href="`+ bubbleData.link +`" target="_blank" style="z-index:10; text-decoration:none; max-height: 200%; max-width: 300px;`+ layout["style"] +`">
             <div class="workBubble" id="`+ bubble_id +`" 
                 style="background-image:`+ bubbleData.image +`; ` +` animation-delay: `+ anim_delay +`s;">
                 `+ top_dot +`
