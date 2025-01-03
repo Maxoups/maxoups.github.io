@@ -17,7 +17,7 @@
 }
 
 .workBubble {
-	z-index: 2;
+	z-index: 3;
 	scale: 1;
 	background-color: rgba(0, 0, 0, 0.2);
 	background-size: 375px;
@@ -48,7 +48,7 @@
   } */
 
 .workBubble:hover {
-	z-index: 5;
+	z-index: 8;
 	scale:1.175;
 	background-color: rgba(0, 0, 0, 0.85);
 }
