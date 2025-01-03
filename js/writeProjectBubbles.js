@@ -74,16 +74,30 @@ let projects = {
     // - Cat?
 }
 
+
+/*
+${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `left:5%; margin-top:50px;`})}  
+        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `left:20%; margin-top:50px;`})}
+        ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `left:40%; margin-top:70px;`})}
+        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `left:10%; margin-top:50px;`})}
+        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `left:70%; margin-top:50px;`})}
+        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "style": `left:15%; margin-top:50px;`})}
+        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}
+        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `left:35%; margin-top:50px;`})}
+        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `left:15%; margin-top:50px;`})}
+        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}  
+*/
+
 writeBubbles();
 
 //background-color:red;
 function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
-        element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%);">
+        element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
+        justify-content: space-between; align-items: center; margin-top: 30px;">
         ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `left:5%; margin-top:50px;`})}  
         ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `left:20%; margin-top:50px;`})}
-
         ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `left:40%; margin-top:70px;`})}
         ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `left:10%; margin-top:50px;`})}
         ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `left:70%; margin-top:50px;`})}
@@ -180,6 +194,7 @@ function writeBubbles() {
         </a>`
     }
 }
+
 
 /*
 # Read more line:
