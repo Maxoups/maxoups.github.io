@@ -51,6 +51,10 @@ let projects = {
         "url('images/projects/echoes.jpg')", 
         "I developed Echoes, a stealth puzzle game in which you play alongside your past selves to pull off impossible heists! It's pretty fun, you should try it!", 
         "https://feuillemorteentertainment.itch.io/echoes-complete-edition"),
+    "electronics": new BubbleData("Electronics Projects", 
+        "url('images/projects/electronics.jpg')", 
+        "I have a few electronics projects I'm proud of, with a few more on the way. I'll show them here soon!", 
+        ""),
     "decorporate": new BubbleData("Decorporate", 
         "url('images/projects/website.jpg')", 
         "This website took some time to m", 
@@ -58,7 +62,6 @@ let projects = {
 
     // TO ADD:
     // - Add woodworking stuff
-    // - Add electronic stuff
     // - Add Tabletop RPG stuff
     // - Add Decorporate when it's done
     // - Add Fish'n'Peas when it's done
@@ -79,8 +82,9 @@ function writeBubbles() {
         ${lineBreak()}
         ${projectBubble("pogobots",         {"top_dot": null, "bottom_dot": 45,     "style": `margin-left:5%; margin-top:60px;`})}
         ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,      "style": `margin-left:2%; margin-top: 0px;`})}
-        ${lineBreak()}
         ${projectBubble("website",          {"top_dot": null, "bottom_dot": null,   "style": `margin-left:5%; margin-top:70px;`})}
+        ${lineBreak()}
+        ${projectBubble("electronics",      {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:5%; margin-top:70px;`})}
         ${projectBubble("master",           {"top_dot": 60,  "bottom_dot": 35,      "style": `margin-left:10%; margin-top:30px;`})}
         ${projectBubble("echoes",           {"top_dot": null, "bottom_dot": 75,     "style": `margin-left:5%; margin-top: 0px;`})}
         ${lineBreak()}
@@ -95,6 +99,7 @@ function writeBubbles() {
     connectBubbles("master", "ooc");
     connectBubbles("covr", "allianz_vr");
     connectBubbles("gamejams", "echoes");
+    connectBubbles("electronics", "pogobots");
     
     function lineBreak() {
         return `<div class="v_separator" style="width: 100%; height:0px;" ></div>`
