@@ -29,6 +29,7 @@
 	position: relative;
 	height: 200px;
 	width: 300px;
+	display: inline-block;
 
 	-moz-transition: all .4s ease-out;
     -o-transition: all .4s ease-out;
