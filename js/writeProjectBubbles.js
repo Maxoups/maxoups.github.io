@@ -77,6 +77,8 @@ function writeBubbles() {
         </div>
         `;})
     
+    connectBubbles("licence", "master");
+    
 
     function connectBubbles(bubble1, bubble2) {
 
@@ -88,11 +90,11 @@ function writeBubbles() {
         let bottom_dot_posX = (Math.random() * 60) + 15;
         let top_dot = "";
         if (display_top_dot) {
-            top_dot = `<span class="dot" style="position:absolute; top:-20px; left:`+ top_dot_posX +`%"></span>`;
+            top_dot = `<span class="dot" id="`+ bubbleData.title +`_top" style="position:absolute; top:-20px; left:`+ top_dot_posX +`%"></span>`;
         }
         let bottom_dot = "";
         if (display_bottom_dot) {
-            bottom_dot = `<span class="dot" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
+            bottom_dot = `<span class="dot" id="`+ bubbleData.title +`_bottom" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
         }
         return `
         <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200px; max-width: 300px;">
