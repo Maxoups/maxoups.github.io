@@ -81,16 +81,16 @@ function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%);> 
-        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "posX": "10%", "posY": "50px"})}  
-        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "posX": "40%", "posY": "50px"})}
-        ${projectBubble("ooc",              {"top_dot": true,  "bottom_dot": true,   "posX": "20%", "posY": "50px"})}
-        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "posX": "70%", "posY": "50px"})}
-        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "posX": "50%", "posY": "50px"})}
-        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "posX": "15%", "posY": "50px"})}
-        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "posX": "60%", "posY": "50px"})}
-        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "posX": "35%", "posY": "50px"})}
-        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "posX": "15%", "posY": "50px"})}
-        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "posX": "60%", "posY": "50px"})}    
+        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `left:10%; margin-top:50px;`})}  
+        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `left:40%; margin-top:50px;`})}
+        ${projectBubble("ooc",              {"top_dot": true,  "bottom_dot": true,   "style": `left:20%; margin-top:50px;`})}
+        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `left:70%; margin-top:50px;`})}
+        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `left:50%; margin-top:50px;`})}
+        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "style": `left:15%; margin-top:50px;`})}
+        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}
+        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `left:35%; margin-top:50px;`})}
+        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `left:15%; margin-top:50px;`})}
+        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}   
         </div>
         `;})
     
@@ -149,8 +149,8 @@ function writeBubbles() {
     function projectBubble(bubble_id, layout) {
         let display_top_dot = layout["top_dot"];
         let display_bottom_dot = layout["bottom_dot"];
-        let posX = layout["posX"];  //((Math.random() * 70.0 ) + 10.0) + "%";
-        let posY = layout["posY"];
+        let posX = "30%";
+        let posY = "50px";
         // hover_intervals[bubble_id] = null;
         let bubbleData = projects[bubble_id];
         let anim_delay = ((Math.random() * 20 ) * -1);
@@ -167,9 +167,7 @@ function writeBubbles() {
         return `
         <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200px; max-width: 300px;">
             <div class="workBubble" id="`+ bubble_id +`" 
-                style="background-image:`+ bubbleData.image +`;
-                margin-top: `+ posY +`; left: `+ posX +`;
-                animation-delay: `+ anim_delay +`s;">
+                style="background-image:`+ bubbleData.image +`; `+ layout["style"] +` animation-delay: `+ anim_delay +`s;">
                 `+ top_dot +`
                 `+ bottom_dot +`
                 <p class="card-description" style="font-size:15px;text-align:center;">`+ bubbleData.text +`</p>
