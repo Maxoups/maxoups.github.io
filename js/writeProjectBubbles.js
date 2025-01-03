@@ -58,6 +58,16 @@ let projects = {
         "This website took some time to make. That's because it holds a few secrets. Do you know what ARG Games are? I do.<br>Do you want to play?", 
         "arg_game/index.html", 
         "10%", "500%"),
+    "echoes": new BubbleData("Echoes", 
+        "url('images/projects/echoes.jpg')", 
+        "I developed Echoes, a stealth puzzle game in which you play alongside your past selves to pull off impossible heists! It's pretty fun, you should try it!", 
+        "https://feuillemorteentertainment.itch.io/echoes-complete-edition", 
+        "10%", "500%"),
+    "decorporate": new BubbleData("This Website", 
+        "url('images/projects/website.jpg')", 
+        "This website took some time to make. That's because it holds a few secrets. Do you know what ARG Games are? I do.<br>Do you want to play?", 
+        "arg_game/index.html", 
+        "10%", "500%"),
 }
 
 writeBubbles();
@@ -76,6 +86,7 @@ function writeBubbles() {
         ${projectBubble("covr", true, false)}
         ${projectBubble("gamejams", false, false)}
         ${projectBubble("website", false, false)}
+        ${projectBubble("echoes", false, false)}
         </div>
         `;})
     
@@ -92,6 +103,7 @@ function writeBubbles() {
         line.arc = "magnet";
         line.endPlug = 'behind';
         console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
+        // ALTERNATIVE WOULD BE TO DRAW VERTICAL LINES WITH RIGHT ANGLES BETWEEN BUBBLES
         setInterval(function() {
             line.position();
           }, 50);
