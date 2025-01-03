@@ -73,20 +73,20 @@ function writeBubbles() {
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
         margin-top:30px; gap:50px;">
-        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `margin-left:15%; margin-top:75px;`})}  
-        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": null,  "style": `margin-left:15%; margin-top:75px;`})}  
+        ${projectBubble("allianz_vr",       {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:10%; margin-top:50px;`})}
         ${lineBreak()}
-        ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `margin-left:22%; margin-top:50px;`})}
-        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `margin-left:0%; margin-top:50px;`})}
+        ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,  "style": `margin-left:22%; margin-top:50px;`})}
+        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,   "style": `margin-left:5%; margin-top:50px;`})}
         ${lineBreak()}
-        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
-        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `margin-left:25%; margin-top:50px;`})}
+        ${projectBubble("pogobots",         {"top_dot": null, "bottom_dot": 45,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("echoes",           {"top_dot": null, "bottom_dot": 75,   "style": `margin-left:25%; margin-top:50px;`})}
         ${lineBreak()}
-        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `margin-left:5%; margin-top:50px;`})}
-        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("website",          {"top_dot": null, "bottom_dot": null,  "style": `margin-left:5%; margin-top:50px;`})}
+        ${projectBubble("master",           {"top_dot": 40,  "bottom_dot": 65,   "style": `margin-left:10%; margin-top:50px;`})}
         ${lineBreak()}
-        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:20%; margin-top:50px;`})}
-        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:15%; margin-top:50px;`})}  
+        ${projectBubble("licence",          {"top_dot": 35,  "bottom_dot": null,  "style": `margin-left:20%; margin-top:50px;`})}
+        ${projectBubble("gamejams",         {"top_dot": 50,  "bottom_dot": null,  "style": `margin-left:15%; margin-top:50px;`})}  
         </div>
         `;})
     
@@ -106,8 +106,8 @@ function writeBubbles() {
             LeaderLine.pointAnchor({element: document.getElementById(bubble1+"_top"),    x: 18, y:  30}),
             LeaderLine.pointAnchor({element: document.getElementById(bubble2+"_bottom"), x: 18, y: -30}),
           );
-        line.color = '#006a61';
-        line.size = 14;
+        line.color = 'black';
+        line.size = 10;
         line.endPlug = 'behind';
         line.startPlug = 'behind';
         line.startSocket = 'bottom';
@@ -133,15 +133,13 @@ function writeBubbles() {
         // hover_intervals[bubble_id] = null;
         let bubbleData = projects[bubble_id];
         let anim_delay = ((Math.random() * 20 ) * -1);
-        let top_dot_posX = (Math.random() * 60) + 15;
-        let bottom_dot_posX = (Math.random() * 60) + 15;
         let top_dot = "";
-        if (display_top_dot) {
-            top_dot = `<span class="dot" id="`+ bubble_id +`_top" style="position:absolute; top:-20px; left:`+ top_dot_posX +`%"></span>`;
+        if (display_top_dot != null) {
+            top_dot = `<span class="dot" id="`+ bubble_id +`_top" style="position:absolute; top:-20px; left:`+ display_top_dot +`%"></span>`;
         }
         let bottom_dot = "";
-        if (display_bottom_dot) {
-            bottom_dot = `<span class="dot" id="`+ bubble_id +`_bottom" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
+        if (display_bottom_dot != null) {
+            bottom_dot = `<span class="dot" id="`+ bubble_id +`_bottom" style="position:absolute; bottom:-20px; left:`+ display_bottom_dot +`%"></span>`;
         }
         return `
         <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200%; max-width: 300px;`+ layout["style"] +`">
