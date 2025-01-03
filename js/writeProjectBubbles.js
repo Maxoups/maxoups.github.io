@@ -15,8 +15,8 @@ let projects = {
         "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
         "As part of my Master's degree, I worked on a bioengineering research project at the University of Okayama in Japan, under the guidance of Professor K. Takahashi.", 
         "https://ken-takahashi.net/french-sorbonne-university-student-executes-fluid-dynamics-simulation-project-for-organ-chips/"),
-    "master": new BubbleData(
-        "Master in Computer Science", "url('images/projects/remise_masters.jpg')", 
+    "master": new BubbleData("Master in Computer Science",
+        "url('images/projects/remise_masters.jpg')", 
         "In 2024, I graduated from Sorbonne University with a Master's degree in Human-Computer Interaction, Multi-Agent Systems, Artificial Intelligence and Robotics.", 
         "https://sciences.sorbonne-universite.fr/formation-sciences/masters/master-informatique/parcours-ai2d"),
     "licence": new BubbleData("Double Degree in Modern Literature & Computer Science", 
