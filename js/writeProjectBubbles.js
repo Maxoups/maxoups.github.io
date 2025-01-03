@@ -1,11 +1,18 @@
 
 
 class BubbleData {
-    constructor(title, image, text, link, posX, posY) {
+    constructor(title, image, text, link) {
         this.title = title; 
         this.image = image;
         this.text = text;
         this.link = link;
+    }
+}
+
+class BubbleLayout {
+    constructor(top_dot, bottom_dot, poxX, posY) {
+        this.top_dot = top_dot;
+        this.bottom_dot = bottom_dot;
         this.posX = posX;
         this.posY = posY;
     }
@@ -16,58 +23,47 @@ let projects = {
     "ooc": new BubbleData(
         "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
         "As part of my Master's degree, I worked on a bioengineering research project at the University of Okayama in Japan, under the guidance of Professor K. Takahashi.", 
-        "https://ken-takahashi.net/french-sorbonne-university-student-executes-fluid-dynamics-simulation-project-for-organ-chips/", 
-        "10%", "5%"),
+        "https://ken-takahashi.net/french-sorbonne-university-student-executes-fluid-dynamics-simulation-project-for-organ-chips/"),
     "master": new BubbleData(
         "Master in Computer Science", "url('images/projects/remise_masters.jpg')", 
         "In 2024, I graduated from Sorbonne University with a Master's degree in Human-Computer Interaction, Multi-Agent Systems, Artificial Intelligence and Robotics.", 
-        "https://sciences.sorbonne-universite.fr/formation-sciences/masters/master-informatique/parcours-ai2d", 
-        "40%", "115%"),
+        "https://sciences.sorbonne-universite.fr/formation-sciences/masters/master-informatique/parcours-ai2d"),
     "licence": new BubbleData("Double Degree in Modern Literature & Computer Science", 
         "url('images/projects/licence.jpg')", 
         "In 2022, I graduated from Sorbonne Université with a Double Bachelor's degree in Modern Literature and Computer Science. It's a fun combo.", 
-        "https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/licences/licence-carte/double-cursus-licences-schumaines/infolettres", 
-        "5%", "150px"),
+        "https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/licences/licence-carte/double-cursus-licences-schumaines/infolettres"),
     "dungeon_crew": new BubbleData("Dungeon Crew Webcomic", 
         "url('images/projects/dungeon_crew.jpg')", 
         "I am the author of the pixel art webcomic Dungeon Crew, a fantasy adventure about a group of bad guys managing a dungeon.", 
-        "https://maxoups.github.io/dungeon-crew/index.html?pg=1", 
-        "5%", "0%"),
+        "https://maxoups.github.io/dungeon-crew/index.html?pg=1"),
     "allianz_vr": new BubbleData("Olympic Games VR Experience", 
         "url('images/projects/allianz_vr.jpg')", 
         "I have worked as a Gameplay Developer at Virtual Room, for a freeroaming multiplayer VR experience at the 2024 Paris Olympics Games, commissioned by Allianz.", 
-        "https://www.allianz.com/en/mediacenter/news/media-releases/240729-allianz-offers-unique-experiences-for-club-france-visitors.html", 
-        "60%", "500%"),
+        "https://www.allianz.com/en/mediacenter/news/media-releases/240729-allianz-offers-unique-experiences-for-club-france-visitors.html"),
     "pogobots": new BubbleData("Swarm Robotics Research & Development", 
         "url('images/projects/pogobots.jpg')", 
         "As part of my studies, I have done behavioral programming and data analysis on the Pogobot, a robot designed at ISIR Laboratory for swarm robotics experiments.", 
-        "https://pogobot.github.io/", 
-        "10%", "500%"),
+        "https://pogobot.github.io/"),
     "covr": new BubbleData("Research on Augmented VR", 
         "url('images/projects/covr.jpg')", 
         "As part of my Master's degree, I worked on CoVR, an augmented VR platform with haptic feedback, developed at ISIR Laboratory, testing the systems and developing games for it.", 
-        "https://www.isir.upmc.fr/projects/covr-haptic-platform-for-virtual-reality/?lang=en", 
-        "10%", "500%"),
+        "https://www.isir.upmc.fr/projects/covr-haptic-platform-for-virtual-reality/?lang=en"),
     "gamejams": new BubbleData("Game Jams Projects", 
         "url('images/projects/gamejams.jpg')", 
         "I have, sometimes over my own good, participated in many, many game jams.<br><br>You can check out the results here!", 
-        "https://itch.io/c/3660379/game-jams-collaborative-projects", 
-        "50%", "500%"),
+        "https://itch.io/c/3660379/game-jams-collaborative-projects"),
     "website": new BubbleData("The website you're currently on!", 
         "url('images/projects/website.jpg')", 
         "This website took some time to make. That's because it holds a few secrets. Do you know what an ARG game is?<br>I do.", 
-        "arg_game/index.html", 
-        "70%", "500%"),
+        "arg_game/index.html"),
     "echoes": new BubbleData("Echoes", 
         "url('images/projects/echoes.jpg')", 
         "I developed Echoes, a stealth puzzle game in which you play alongside your past selves to pull off impossible heists! It's pretty fun, you should try it!", 
-        "https://feuillemorteentertainment.itch.io/echoes-complete-edition", 
-        "0%", "500%"),
+        "https://feuillemorteentertainment.itch.io/echoes-complete-edition"),
     "decorporate": new BubbleData("Decorporate", 
         "url('images/projects/website.jpg')", 
         "This website took some time to m", 
-        "arg_game/index.html", 
-        "10%", "500%"),
+        "arg_game/index.html"),
 }
 
 writeBubbles();
@@ -77,16 +73,16 @@ function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%);> 
-        ${projectBubble("dungeon_crew", false, false)}  
-        ${projectBubble("allianz_vr", false, true)}
-        ${projectBubble("ooc", true, true)}
-        ${projectBubble("covr", true, true)}
-        ${projectBubble("pogobots", false, true)}
-        ${projectBubble("master", true, true)}
-        ${projectBubble("licence", true, true)}
-        ${projectBubble("echoes", false, true)}
-        ${projectBubble("gamejams", true, false)}
-        ${projectBubble("website", false, false)}   
+        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,"posX": "50%","posY": "50%"})}  
+        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,"posX": "50%","posY": "50%"})}
+        ${projectBubble("ooc",              {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
+        ${projectBubble("covr",             {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
+        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,"posX": "50%","posY": "50%"})}
+        ${projectBubble("master",           {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
+        ${projectBubble("licence",          {"top_dot": true, "bottom_dot": true,"posX": "50%","posY": "50%"})}
+        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,"posX": "50%","posY": "50%"})}
+        ${projectBubble("gamejams",         {"top_dot": true,"bottom_dot": false,"posX": "50%", "posY": "50%"})}
+        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,"posX": "50%","posY": "50%"})}    
         </div>
         `;})
     
@@ -105,13 +101,15 @@ function writeBubbles() {
           );
         line.color = 'black';
         line.size = 10;
-        line.arc = "magnet";
+        line.path = "grid";
         line.endPlug = 'behind';
+        line.startSocket = 'bottom';
+        line.bottomSocket = 'top';
         console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
         // ALTERNATIVE WOULD BE TO DRAW VERTICAL LINES WITH RIGHT ANGLES BETWEEN BUBBLES
-        setInterval(function() {
-            line.position();
-          }, 50);
+        // setInterval(function() {
+        //     line.position();
+        //   }, 50);
         // line.outline = true;
         // line.outlineColor = 'black';
         // line.outlineSize = 5;
@@ -136,7 +134,11 @@ function writeBubbles() {
         }*/
     }
     
-    function projectBubble(bubble_id, display_top_dot, display_bottom_dot) {
+    function projectBubble(bubble_id, layout) {
+        let display_top_dot = layout["top_dot"];
+        let display_bottom_dot = layout["bottom_dot"];
+        let posX = ((Math.random() * 70.0 ) + 10.0) + "%" ; //layout["posX"];
+        let posY = layout["posY"];
         // hover_intervals[bubble_id] = null;
         let bubbleData = projects[bubble_id];
         let anim_delay = ((Math.random() * 20 ) * -1);
@@ -154,7 +156,7 @@ function writeBubbles() {
         <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200px; max-width: 300px;">
             <div class="workBubble" id="`+ bubble_id +`" 
                 style="background-image:`+ bubbleData.image +`;
-                top: `+ bubbleData.posY +`; margin-left: `+ bubbleData.posX +`;
+                top: `+ posY +`; left: `+ posX +`;
                 animation-delay: `+ anim_delay +`s;">
                 `+ top_dot +`
                 `+ bottom_dot +`
