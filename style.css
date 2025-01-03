@@ -6,7 +6,6 @@
 .workBubble p {
 	color:#00000000;
 	
-
 	-moz-transition: all .4s ease-out;
     -o-transition: all .4s ease-out;
     -webkit-transition: all .4s ease-out;
@@ -38,6 +37,14 @@
 
 	animation: idle_bob 5s infinite ease-in-out;
 }
+
+@media screen and (max-width: 700px) {
+	.workBubble {
+	  top: 0px;
+	  margin-left: 0px;
+	  background-color: rgb(255, 0, 0);
+	}
+  }
 
 .workBubble:hover {
 	z-index: 5;

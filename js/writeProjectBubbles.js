@@ -52,45 +52,50 @@ let projects = {
         "url('images/projects/gamejams.jpg')", 
         "I have, sometimes over my own good, participated in many, many game jams.<br><br>You can check out the results here!", 
         "https://itch.io/c/3660379/game-jams-collaborative-projects", 
-        "10%", "500%"),
-    "website": new BubbleData("This Website", 
+        "50%", "500%"),
+    "website": new BubbleData("The website you're currently on!", 
         "url('images/projects/website.jpg')", 
-        "This website took some time to make. That's because it holds a few secrets. Do you know what ARG Games are? I do.<br>Do you want to play?", 
+        "This website took some time to make. That's because it holds a few secrets. Do you know what an ARG game is?<br>I do.", 
         "arg_game/index.html", 
-        "10%", "500%"),
+        "70%", "500%"),
     "echoes": new BubbleData("Echoes", 
         "url('images/projects/echoes.jpg')", 
         "I developed Echoes, a stealth puzzle game in which you play alongside your past selves to pull off impossible heists! It's pretty fun, you should try it!", 
         "https://feuillemorteentertainment.itch.io/echoes-complete-edition", 
-        "10%", "500%"),
-    "decorporate": new BubbleData("This Website", 
+        "0%", "500%"),
+    "decorporate": new BubbleData("Decorporate", 
         "url('images/projects/website.jpg')", 
-        "This website took some time to make. That's because it holds a few secrets. Do you know what ARG Games are? I do.<br>Do you want to play?", 
+        "This website took some time to m", 
         "arg_game/index.html", 
         "10%", "500%"),
 }
 
 writeBubbles();
 
-
+//background-color:red;
 function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
-        element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 100%; ">
+        element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%);> 
         ${projectBubble("dungeon_crew", false, false)}  
+        ${projectBubble("allianz_vr", false, true)}
         ${projectBubble("ooc", true, true)}
+        ${projectBubble("covr", true, true)}
+        ${projectBubble("pogobots", false, true)}
         ${projectBubble("master", true, true)}
         ${projectBubble("licence", true, true)}
-        ${projectBubble("allianz_vr", true, false)}
-        ${projectBubble("pogobots", true, false)}
-        ${projectBubble("covr", true, false)}
-        ${projectBubble("gamejams", false, false)}
-        ${projectBubble("website", false, false)}
-        ${projectBubble("echoes", false, false)}
+        ${projectBubble("echoes", false, true)}
+        ${projectBubble("gamejams", true, false)}
+        ${projectBubble("website", false, false)}   
         </div>
         `;})
     
     connectBubbles("licence", "master");
+    connectBubbles("master", "pogobots");
+    connectBubbles("master", "covr");
+    connectBubbles("master", "ooc");
+    connectBubbles("covr", "allianz_vr");
+    connectBubbles("gamejams", "echoes");
     
 
     function connectBubbles(bubble1, bubble2) {
