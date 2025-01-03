@@ -110,8 +110,8 @@ function writeBubbles() {
             LeaderLine.pointAnchor({element: document.getElementById(bubble1+"_top"),    x: 18, y:  30}),
             LeaderLine.pointAnchor({element: document.getElementById(bubble2+"_bottom"), x: 18, y: -30}),
           );
-        line.color = 'black';
-        line.size = 10;
+        line.color = '#006a61';
+        line.size = 14;
         line.endPlug = 'behind';
         line.startPlug = 'behind';
         line.startSocket = 'bottom';
