@@ -73,20 +73,20 @@ function writeBubbles() {
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
         margin-top:30px; gap:50px;">
-        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `margin-left:10%; margin-top:75px;`})}  
+        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `margin-left:15%; margin-top:75px;`})}  
         ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
         ${lineBreak()}
-        ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `margin-left:10%; margin-top:50px;`})}
-        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `margin-right:10%; margin-top:50px;`})}
+        ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `margin-left:22%; margin-top:50px;`})}
+        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `margin-left:0%; margin-top:50px;`})}
         ${lineBreak()}
         ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `margin-left:25%; margin-top:50px;`})}
+        ${lineBreak()}
+        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `margin-left:5%; margin-top:50px;`})}
         ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
         ${lineBreak()}
-        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:10%; margin-top:50px;`})}
-        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
-        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `margin-left:10%; margin-top:50px;`})}
-        ${lineBreak()}
-        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:10%; margin-top:50px;`})}  
+        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:20%; margin-top:50px;`})}
+        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:15%; margin-top:50px;`})}  
         </div>
         `;})
     
@@ -103,15 +103,18 @@ function writeBubbles() {
 
     function connectBubbles(bubble1, bubble2) {
         let line = new LeaderLine(
-            LeaderLine.pointAnchor({element: document.getElementById(bubble1+"_top"),    x: 19, y:  30}),
-            LeaderLine.pointAnchor({element: document.getElementById(bubble2+"_bottom"), x: 19, y: -30}),
+            LeaderLine.pointAnchor({element: document.getElementById(bubble1+"_top"),    x: 18, y:  30}),
+            LeaderLine.pointAnchor({element: document.getElementById(bubble2+"_bottom"), x: 18, y: -30}),
           );
-        line.color = 'black';
-        line.size = 10;
+        line.color = '#006a61';
+        line.size = 14;
         line.endPlug = 'behind';
         line.startPlug = 'behind';
         line.startSocket = 'bottom';
         line.bottomSocket = 'top';
+        line.outline = true;
+        line.outlineColor = '#000';
+        line.outlineSize = 0.35;
 
         // FLUID ALIGNEMENT
         // line.path = "fluid";
@@ -122,29 +125,6 @@ function writeBubbles() {
         line.path = "grid";
         line.startSocketGravity = [0, -100];
         line.endSocketGravity   = [0,  100];
-
-        // line.outline = true;
-        // line.outlineColor = 'black';
-        // line.outlineSize = 5;
-        /*let parent1 = document.getElementById(bubble1).parentElement;
-        let parent2 = document.getElementById(bubble2).parentElement;
-        for (let p in [parent1, parent2]) {
-            let current_id = p.id;
-            p.addEventListener('mouseover', () => {
-                if (hover_intervals[current_id] != null) {
-                    return;
-                }
-                hover_intervals[current_id] = setInterval(function() {
-                    line.position();
-                }, 1000);
-            });
-            p.addEventListener('mouseout', () => {
-                if (hover_intervals[current_id] != null) {
-                    clearInterval(hover_intervals[current_id]);
-                    hover_intervals[current_id] = null;
-                }
-            });
-        }*/
     }
     
     function projectBubble(bubble_id, layout) {
