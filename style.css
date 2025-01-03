@@ -393,7 +393,10 @@ iframe:hover {
 
 .links-list {
 	list-style: none;
-	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 35px;
 }
 
 .profile-picture {
