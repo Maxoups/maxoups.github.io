@@ -9,15 +9,6 @@ class BubbleData {
     }
 }
 
-class BubbleLayout {
-    constructor(top_dot, bottom_dot, poxX, posY) {
-        this.top_dot = top_dot;
-        this.bottom_dot = bottom_dot;
-        this.posX = posX;
-        this.posY = posY;
-    }
-}
-
 // let hover_intervals = {};
 let projects = {
     "ooc": new BubbleData(
@@ -74,20 +65,6 @@ let projects = {
     // - Cat?
 }
 
-
-/*
-${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `left:5%; margin-top:50px;`})}  
-        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `left:20%; margin-top:50px;`})}
-        ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `left:40%; margin-top:70px;`})}
-        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `left:10%; margin-top:50px;`})}
-        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `left:70%; margin-top:50px;`})}
-        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "style": `left:15%; margin-top:50px;`})}
-        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}
-        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `left:35%; margin-top:50px;`})}
-        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `left:15%; margin-top:50px;`})}
-        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}  
-*/
-
 writeBubbles();
 
 //background-color:red;
@@ -95,17 +72,21 @@ function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
-        justify-content: space-between; align-items: center; margin-top: 30px;">
-        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `left:5%; margin-top:50px;`})}  
-        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `left:20%; margin-top:50px;`})}
-        ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `left:40%; margin-top:70px;`})}
-        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `left:10%; margin-top:50px;`})}
-        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `left:70%; margin-top:50px;`})}
-        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "style": `left:15%; margin-top:50px;`})}
-        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}
-        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `left:35%; margin-top:50px;`})}
-        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `left:15%; margin-top:50px;`})}
-        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `left:60%; margin-top:50px;`})}  
+        margin-top:30px; gap:50px;">
+        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `margin-left:10%; margin-top:75px;`})}  
+        ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${lineBreak()}
+        ${projectBubble("ooc",              {"top_dot": false,  "bottom_dot": true,  "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `margin-right:10%; margin-top:50px;`})}
+        ${lineBreak()}
+        ${projectBubble("pogobots",         {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("master",           {"top_dot": true,  "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${lineBreak()}
+        ${projectBubble("licence",          {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("echoes",           {"top_dot": false, "bottom_dot": true,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("website",          {"top_dot": false, "bottom_dot": false,  "style": `margin-left:10%; margin-top:50px;`})}
+        ${lineBreak()}
+        ${projectBubble("gamejams",         {"top_dot": true,  "bottom_dot": false,  "style": `margin-left:10%; margin-top:50px;`})}  
         </div>
         `;})
     
@@ -116,6 +97,9 @@ function writeBubbles() {
     connectBubbles("covr", "allianz_vr");
     connectBubbles("gamejams", "echoes");
     
+    function lineBreak() {
+        return `<div class="v_separator" style="width: 100%; height:0px;" ></div>`
+    }
 
     function connectBubbles(bubble1, bubble2) {
         let line = new LeaderLine(
@@ -166,8 +150,6 @@ function writeBubbles() {
     function projectBubble(bubble_id, layout) {
         let display_top_dot = layout["top_dot"];
         let display_bottom_dot = layout["bottom_dot"];
-        let posX = "30%";
-        let posY = "50px";
         // hover_intervals[bubble_id] = null;
         let bubbleData = projects[bubble_id];
         let anim_delay = ((Math.random() * 20 ) * -1);
@@ -182,9 +164,9 @@ function writeBubbles() {
             bottom_dot = `<span class="dot" id="`+ bubble_id +`_bottom" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
         }
         return `
-        <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200px; max-width: 300px;">
+        <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200%; max-width: 300px;`+ layout["style"] +`">
             <div class="workBubble" id="`+ bubble_id +`" 
-                style="background-image:`+ bubbleData.image +`; `+ layout["style"] +` animation-delay: `+ anim_delay +`s;">
+                style="background-image:`+ bubbleData.image +`; ` +` animation-delay: `+ anim_delay +`s;">
                 `+ top_dot +`
                 `+ bottom_dot +`
                 <p class="card-description" style="font-size:15px;text-align:center;">`+ bubbleData.text +`</p>
