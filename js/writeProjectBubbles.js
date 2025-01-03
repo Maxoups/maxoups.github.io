@@ -96,16 +96,20 @@ function writeBubbles() {
 
     function connectBubbles(bubble1, bubble2) {
         let line = new LeaderLine(
-            document.getElementById(bubble1+"_top"),
-            document.getElementById(bubble2+"_bottom")
+            LeaderLine.pointAnchor({element: document.getElementById(bubble1+"_top"),    x: 19, y:  30}),
+            LeaderLine.pointAnchor({element: document.getElementById(bubble2+"_bottom"), x: 19, y: -30}),
           );
         line.color = 'black';
         line.size = 10;
         line.path = "grid";
         line.endPlug = 'behind';
+        line.startPlug = 'behind';
         line.startSocket = 'bottom';
         line.bottomSocket = 'top';
-        console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
+        line.startSocketGravity =   [0, -100];
+        line.endSocketGravity =     [0,  100];
+        //line.dropShadow = true;
+        // console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
         // ALTERNATIVE WOULD BE TO DRAW VERTICAL LINES WITH RIGHT ANGLES BETWEEN BUBBLES
         // setInterval(function() {
         //     line.position();
