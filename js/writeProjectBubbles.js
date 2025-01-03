@@ -81,7 +81,7 @@ function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%);> 
-        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `left:10%; margin-top:50px;`})}  
+        ${projectBubble("dungeon_crew",     {"top_dot": false, "bottom_dot": false,  "style": `right:10%; margin-top:50px; float: right;`})}  
         ${projectBubble("allianz_vr",       {"top_dot": false, "bottom_dot": true,   "style": `left:40%; margin-top:50px;`})}
         ${projectBubble("ooc",              {"top_dot": true,  "bottom_dot": true,   "style": `left:20%; margin-top:50px;`})}
         ${projectBubble("covr",             {"top_dot": true,  "bottom_dot": true,   "style": `left:70%; margin-top:50px;`})}
@@ -109,13 +109,16 @@ function writeBubbles() {
           );
         line.color = 'black';
         line.size = 10;
-        line.path = "grid";
+        line.path = "fluid";
+        line.startSocketGravity = [0, -275];
+        line.endSocketGravity   = [0,  275];
+        // line.path = "grid";
+        // line.startSocketGravity = [0, -75];
+        // line.endSocketGravity   = [0,  75];
         line.endPlug = 'behind';
         line.startPlug = 'behind';
         line.startSocket = 'bottom';
         line.bottomSocket = 'top';
-        line.startSocketGravity =   [0, -75];
-        line.endSocketGravity =     [0,  75];
         //line.dropShadow = true;
         // console.log("BE CAREFUL WITH THIS, IT IS BE VERY RESOURCE INTENSIVE, NOT SURE IS WORTH IT");
         // ALTERNATIVE WOULD BE TO DRAW VERTICAL LINES WITH RIGHT ANGLES BETWEEN BUBBLES
