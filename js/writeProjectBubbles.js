@@ -73,17 +73,16 @@ function writeBubbles() {
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
         margin-top:30px; gap:50px;">
-        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": null,  "style": `margin-left:15%; margin-top:75px;`})}  
-        ${projectBubble("allianz_vr",       {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:10%; margin-top:50px;`})}
-        ${lineBreak()}
-        ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,  "style": `margin-left:22%; margin-top:50px;`})}
-        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,   "style": `margin-left:5%; margin-top:50px;`})}
+        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": null,  "style": `margin-left:5%; margin-top:75px;`})}  
+        ${projectBubble("allianz_vr",       {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:7%; margin-top:50px;`})}
+        ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,  "style": `margin-left:10%; margin-top:50px;`})}
         ${lineBreak()}
         ${projectBubble("pogobots",         {"top_dot": null, "bottom_dot": 45,   "style": `margin-left:10%; margin-top:50px;`})}
-        ${projectBubble("echoes",           {"top_dot": null, "bottom_dot": 75,   "style": `margin-left:25%; margin-top:50px;`})}
+        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,    "style": `margin-left:0%; margin-top:50px;`})}
         ${lineBreak()}
         ${projectBubble("website",          {"top_dot": null, "bottom_dot": null,  "style": `margin-left:5%; margin-top:50px;`})}
-        ${projectBubble("master",           {"top_dot": 40,  "bottom_dot": 65,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("master",           {"top_dot": 80,  "bottom_dot": 35,   "style": `margin-left:10%; margin-top:50px;`})}
+        ${projectBubble("echoes",           {"top_dot": null, "bottom_dot": 75,   "style": `margin-left:5%; margin-top:50px;`})}
         ${lineBreak()}
         ${projectBubble("licence",          {"top_dot": 35,  "bottom_dot": null,  "style": `margin-left:20%; margin-top:50px;`})}
         ${projectBubble("gamejams",         {"top_dot": 50,  "bottom_dot": null,  "style": `margin-left:15%; margin-top:50px;`})}  
