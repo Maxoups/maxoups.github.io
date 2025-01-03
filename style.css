@@ -39,18 +39,20 @@
 	animation: idle_bob 5s infinite ease-in-out;
 }
 
-/* @media screen and (max-width: 700px) {
-	.workBubble {
-	  top: 0px;
-	  margin-left: 0px;
-	  background-color: rgb(255, 0, 0);
-	}
-  } */
-
 .workBubble:hover {
 	z-index: 8;
 	scale:1.175;
 	background-color: rgba(0, 0, 0, 0.85);
+}
+
+@media (max-width: 500px) {
+	.workBubble {
+	  scale:0.875
+	}
+
+	.workBubble:hover {
+		scale:1;
+	}
 }
 
 .dot {
@@ -292,6 +294,13 @@ li {
 	}
 	.intro-child-right-sep {
 		display: none;
+	}
+	.intro-child-text {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.container {
+		max-width: 100%;
 	}
   }
 
