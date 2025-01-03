@@ -1,4 +1,5 @@
 
+
 class BubbleData {
     constructor(title, image, text, link, posX, posY) {
         this.title = title; 
@@ -10,6 +11,7 @@ class BubbleData {
     }
 }
 
+let hover_intervals = {};
 let projects = {
     "ooc": new BubbleData(
         "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
@@ -25,7 +27,7 @@ let projects = {
         "url('images/projects/licence.jpg')", 
         "In 2022, I graduated from Sorbonne Université with a Double Bachelor's degree in Modern Literature and Computer Science. It's a fun combo.", 
         "https://sciences.sorbonne-universite.fr/formation-sciences/offre-de-formation/licences/licence-carte/double-cursus-licences-schumaines/infolettres", 
-        "5%", "0%"),
+        "5%", "150px"),
     "dungeon_crew": new BubbleData("Dungeon Crew Webcomic", 
         "url('images/projects/dungeon_crew.jpg')", 
         "I am the author of the pixel art webcomic Dungeon Crew, a fantasy adventure about a group of bad guys managing a dungeon.", 
@@ -35,7 +37,7 @@ let projects = {
         "url('images/projects/allianz_vr.jpg')", 
         "I have worked as a Gameplay Developer at Virtual Room, for a freeroaming multiplayer VR experience at the 2024 Paris Olympics Games, commissioned by Allianz.", 
         "https://www.allianz.com/en/mediacenter/news/media-releases/240729-allianz-offers-unique-experiences-for-club-france-visitors.html", 
-        "10%", "500%"),
+        "60%", "500%"),
     "pogobots": new BubbleData("Swarm Robotics Research & Development", 
         "url('images/projects/pogobots.jpg')", 
         "As part of my studies, I have done behavioral programming and data analysis on the Pogobot, a robot designed at ISIR Laboratory for swarm robotics experiments.", 
@@ -65,15 +67,15 @@ function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="min-height: 900px;min-width: 100%; ">
-        ${projectBubble(projects["dungeon_crew"], false, false)}  
-        ${projectBubble(projects["ooc"], true, true)}
-        ${projectBubble(projects["master"], true, false)}
-        ${projectBubble(projects["licence"], true, false)}
-        ${projectBubble(projects["allianz_vr"], true, false)}
-        ${projectBubble(projects["pogobots"], true, false)}
-        ${projectBubble(projects["covr"], true, false)}
-        ${projectBubble(projects["gamejams"], false, false)}
-        ${projectBubble(projects["website"], false, false)}
+        ${projectBubble("dungeon_crew", false, false)}  
+        ${projectBubble("ooc", true, true)}
+        ${projectBubble("master", true, true)}
+        ${projectBubble("licence", true, true)}
+        ${projectBubble("allianz_vr", true, false)}
+        ${projectBubble("pogobots", true, false)}
+        ${projectBubble("covr", true, false)}
+        ${projectBubble("gamejams", false, false)}
+        ${projectBubble("website", false, false)}
         </div>
         `;})
     
@@ -81,24 +83,45 @@ function writeBubbles() {
     
 
     function connectBubbles(bubble1, bubble2) {
-
+        let line = new LeaderLine(
+            document.getElementById(bubble1+"_top"),
+            document.getElementById(bubble2+"_bottom")
+          );
+        line.color = 'black';
+        line.size = 5;
+        line.arc = "magnet";
+        line.endPlug = 'behind';
+        // line.outline = true;
+        // line.outlineColor = 'black';
+        // line.outlineSize = 5;
+        let parent1 = document.getElementById(bubble1).parentElement;
+        let parent2 = document.getElementById(bubble2).parentElement;
+        for (let p in [parent1, parent2]) {
+            p.addEventListener('mouseover', () => {
+                line.position();
+            });
+            p.addEventListener('mouseout', () => {
+                line.position();
+            });
+        }
     }
     
-    function projectBubble(bubbleData, display_top_dot, display_bottom_dot) {
+    function projectBubble(bubble_id, display_top_dot, display_bottom_dot) {
+        let bubbleData = projects[bubble_id];
         let anim_delay = ((Math.random() * 20 ) * -1);
         let top_dot_posX = (Math.random() * 60) + 15;
         let bottom_dot_posX = (Math.random() * 60) + 15;
         let top_dot = "";
         if (display_top_dot) {
-            top_dot = `<span class="dot" id="`+ bubbleData.title +`_top" style="position:absolute; top:-20px; left:`+ top_dot_posX +`%"></span>`;
+            top_dot = `<span class="dot" id="`+ bubble_id +`_top" style="position:absolute; top:-20px; left:`+ top_dot_posX +`%"></span>`;
         }
         let bottom_dot = "";
         if (display_bottom_dot) {
-            bottom_dot = `<span class="dot" id="`+ bubbleData.title +`_bottom" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
+            bottom_dot = `<span class="dot" id="`+ bubble_id +`_bottom" style="position:absolute; bottom:-20px; left:`+ bottom_dot_posX +`%"></span>`;
         }
         return `
         <a href="`+ bubbleData.link +`" target="_blank" style="text-decoration:none; max-height: 200px; max-width: 300px;">
-            <div class="workBubble" 
+            <div class="workBubble" id="`+ bubble_id +`" 
                 style="background-image:`+ bubbleData.image +`;
                 top: `+ bubbleData.posY +`; margin-left: `+ bubbleData.posX +`;
                 animation-delay: `+ anim_delay +`s;">
