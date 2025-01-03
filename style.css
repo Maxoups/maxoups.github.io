@@ -631,22 +631,22 @@ p {
 	image-rendering: crisp-edges;
 	position:absolute;
 	scale: 2.5;
-	z-index: -5;
+	z-index: 0;
 }
 
 .img-scrambled {
 	position:absolute;
 	scale: 0.4;
-	z-index: -5;
+	z-index: 0;
   }
 
   .img-olmo {
 	position:absolute;
 	scale: 0.18;
-	z-index: -5;
+	z-index: 0;
 }
   .img-pingu {
 	position:absolute;
 	scale: 0.6;
-	z-index: -5;
+	z-index: 0;
 }
