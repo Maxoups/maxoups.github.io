@@ -304,6 +304,12 @@ li {
 	.container {
 		max-width: 100%;
 	}
+	.waviy {
+		transform: scale(0.75);
+	}
+	.waviy:hover {
+		transform: scale(0.75);
+	}
   }
 
   
@@ -531,6 +537,7 @@ button:hover {
 .waviy {
 	position: relative;
 	margin-left: 0px;
+	scale:1;
 	transition: 0.50s;
   		-webkit-transition: 0.50s;
   		-moz-transition: 0.50s;
