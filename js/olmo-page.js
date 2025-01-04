@@ -1,10 +1,27 @@
 
+findAndWriteCorrectPage();
+
+
 function findAndWriteCorrectPage(){
-    document.querySelector(div).innerHTML = `<div class="olmo-page1">${writePage(1)}</div>`;
-    document.querySelector(div).innerHTML = `<div class="olmo-page2">${writePage(2)}</div>`;
+    console.log("finding and writing correct page");
+    
+    let i=1;
+    
+    for (i = 1; i < 3; i++) {
+        console.log("writing page " + i);
+        let writeNavDiv = document.querySelectorAll(".olmo-page" + i);
+        writeNavDiv.forEach(function(element) {
+            element.innerHTML = `${writePage(i)}`;})
+        console.log("wrote page " + i);
+    }
+
+
+    // document.querySelector(div).innerHTML = `<div class="olmo-page1">${writePage(1)}</div>`;
+    // document.querySelector(div).innerHTML = `<div class="olmo-page2">${writePage(2)}</div>`;
 }
 
 function writePage(nbPage){
+    console.log("writing page " + nbPage);
     let title = "";
     let text = "";
     let link = "";
@@ -23,7 +40,7 @@ function writePage(nbPage){
     return writePage(text, link);
 }
 
-function writePage(text, link){
+function writePage(text, link, title){
     return `<div class="main">
 	<div class="container">
 		<div style="height:50px"></div>
