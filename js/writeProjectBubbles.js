@@ -139,11 +139,15 @@ function writeBubbles() {
         let anim_delay = ((Math.random() * 20 ) * -1);
         let top_dot = "";
         if (display_top_dot != null) {
-            top_dot = `<span class="dot" id="`+ bubble_id +`_top" style="position:absolute; top:-20px; left:`+ display_top_dot +`%"></span>`;
+            top_dot = `<span class="dot" id="`+ bubble_id +`_top" style="position:absolute; top:-20px; left:`+ display_top_dot +`%"></span>`; 
+            // replace 'display_top_dot' with 45 for middle pos -> better for scaling?
+            // I'd like to find a way to keep the dot in the same place during scaling
         }
         let bottom_dot = "";
         if (display_bottom_dot != null) {
             bottom_dot = `<span class="dot" id="`+ bubble_id +`_bottom" style="position:absolute; bottom:-20px; left:`+ display_bottom_dot +`%"></span>`;
+            // replace 'display_top_dot' with 45 for middle pos -> better for scaling?
+            // I'd like to find a way to keep the dot in the same place during scaling
         }
         return `
         <a href="`+ bubbleData.link +`" target="_blank" style="z-index:10; text-decoration:none; max-height: 200%; max-width: 300px;`+ layout["style"] +`">
