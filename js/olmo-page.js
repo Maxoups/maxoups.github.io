@@ -2,17 +2,12 @@
 findAndWriteCorrectPage();
 
 
-function findAndWriteCorrectPage(){
-    console.log("finding and writing correct page");
-    
+function findAndWriteCorrectPage(){ 
     let i=1;
-    
     for (i = 1; i < 3; i++) {
-        console.log("writing page " + i);
         let writeNavDiv = document.querySelectorAll(".olmo-page" + i);
         writeNavDiv.forEach(function(element) {
             element.innerHTML = `${writePage(i)}`;})
-        console.log("wrote page " + i);
     }
 
 
@@ -21,26 +16,25 @@ function findAndWriteCorrectPage(){
 }
 
 function writePage(nbPage){
-    console.log("writing page " + nbPage);
-    let title = "";
-    let text = "";
-    let link = "";
     switch(nbPage){
         case 1:
-            title = "Well hi.";
-            text = "Again. This website has some secrets. Secrets are not meant to be uncovered. You were not supposed to come here. You should go back now.";
-            link = "index.html.html";
-            break;
+            console.log("writing page 1");
+            return pageContents(
+                "Again. This website has some secrets. Secrets are not meant to be uncovered. You were not supposed to come here. You should go back now.",
+                "index.html.html", 
+                "Well hi."
+            );
         case 2:
-            title = "Well hi. Again.";
-            text = "Well you're awfully persistent. I told you to leave.";
-            link = "index.html";
-            break;
+            console.log("writing page 2");
+            return pageContents(
+                "Well you're awfully persistent. I told you to leave.",
+                "index.html", 
+                "Well hi. Again."
+            );
     }
-    return writePage(text, link);
 }
 
-function writePage(text, link, title){
+function pageContents(text, link, title){
     return `<div class="main">
 	<div class="container">
 		<div style="height:50px"></div>
