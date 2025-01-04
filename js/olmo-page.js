@@ -4,7 +4,8 @@ findAndWriteCorrectPage();
 
 function findAndWriteCorrectPage(){ 
     let i=1;
-    for (i = 1; i < 3; i++) {
+    let LAST = 5;
+    for (i = 1; i < LAST; i++) {
         let writeNavDiv = document.querySelectorAll(".olmo-page" + i);
         writeNavDiv.forEach(function(element) {
             element.innerHTML = `${writePage(i)}`;})
@@ -16,6 +17,7 @@ function findAndWriteCorrectPage(){
 }
 
 function writePage(nbPage){
+    console.log("writing page " + nbPage);
     switch(nbPage){
         case 1:
             console.log("writing page 1");
@@ -25,11 +27,16 @@ function writePage(nbPage){
                 "Well hi."
             );
         case 2:
-            console.log("writing page 2");
             return pageContents(
                 "Well you're awfully persistent. I told you to leave.",
                 "index.html", 
                 "Well hi. Again."
+            );
+        case 3:
+            return pageContents(
+                "[encoded stuff]",
+                "index.html", 
+                "Stop."
             );
     }
 }
