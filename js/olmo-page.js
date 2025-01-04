@@ -5,19 +5,22 @@ function findAndWriteCorrectPage(){
 }
 
 function writePage(nbPage){
+    let title = "";
     let text = "";
     let link = "";
     switch(nbPage){
         case 1:
+            title = "Well hi.";
             text = "Again. This website has some secrets. Secrets are not meant to be uncovered. You were not supposed to come here. You should go back now.";
             link = "index.html.html";
             break;
         case 2:
-            text = "You're";
+            title = "Well hi. Again.";
+            text = "Well you're awfully persistent. I told you to leave.";
             link = "index.html";
             break;
     }
-    writePage(text, link);
+    return writePage(text, link);
 }
 
 function writePage(text, link){
@@ -26,7 +29,7 @@ function writePage(text, link){
 		<div style="height:50px"></div>
 
 		<div class="z-text" style="margin-bottom: 20px;">
-			<h3 style="margin-top: 125px;">Well hi.</h3>
+			<h3 style="margin-top: 125px;">`+ title +`</h3>
 			<p>
 				`+ text +`
 			</p>
