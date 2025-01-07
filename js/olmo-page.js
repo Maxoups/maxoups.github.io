@@ -20,7 +20,6 @@ function writePage(nbPage){
     console.log("writing page " + nbPage);
     switch(nbPage){
         case 1:
-            console.log("writing page 1");
             return pageContents(
                 "Again. This website has some secrets. Secrets are not meant to be uncovered. You were not supposed to come here. You should go back now.",
                 "index.html.html", 
@@ -34,9 +33,15 @@ function writePage(nbPage){
             );
         case 3:
             return pageContents(
-                "[encoded stuff]",
+                "You have everything you need, now get out.",
                 "index.html", 
                 "Stop."
+            );
+        case 4:
+            return pageContents(
+                "Enter the key to proceed.",
+                "index.html", 
+                "Restricted area"
             );
     }
 }
