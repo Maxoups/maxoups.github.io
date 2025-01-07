@@ -37,12 +37,6 @@ function writePage(nbPage){
                 "index.html", 
                 "Stop."
             );
-        case 4:
-            return pageContents(
-                "Enter the key to proceed.",
-                "index.html", 
-                "Restricted area"
-            );
     }
 }
 
