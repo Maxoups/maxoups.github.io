@@ -46,7 +46,7 @@ let projects = {
     "website": new BubbleData("The website you're currently on!", 
         "url('images/projects/website.jpg')", 
         "This website took some time to make. That's because it holds a few secrets! Do you know what an ARG game is?<br>I do.", 
-        "olmo-arg.html"),
+        "arg_game/olmo-arg.html"),
     "echoes": new BubbleData("Echoes", 
         "url('images/projects/echoes2.jpg')", 
         "Between 2020 and 2022, I developed Echoes, an indie stealth puzzle game in which you play alongside your past selves to pull off impossible heists. It's pretty fun, you should give it a try!", 
