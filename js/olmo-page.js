@@ -17,7 +17,6 @@ function findAndWriteCorrectPage(){
 }
 
 function writePage(nbPage){
-    console.log("writing page " + nbPage);
     switch(nbPage){
         case 1:
             return pageContents(
