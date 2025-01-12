@@ -47,7 +47,7 @@ let projects = {
         "url('images/projects/website.jpg')", 
         "This website took some time to make. That's because it holds a few secrets! Do you know what an ARG game is?<br>I do. It's fun! :D", 
         "arg_game/olmo-arg.html"),
-    "echoes": new BubbleData("Echoes", 
+    "echoes": new BubbleData("Echoes - Indie Game", 
         "url('images/projects/echoes2.jpg')", 
         "Between 2020 and 2022, I developed Echoes, an indie stealth puzzle game in which you play alongside your past selves to pull off impossible heists. It's pretty fun, you should give it a try!", 
         "https://feuillemorteentertainment.itch.io/echoes-complete-edition"),
