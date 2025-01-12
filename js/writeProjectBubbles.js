@@ -45,7 +45,7 @@ let projects = {
         "https://itch.io/c/3660379/game-jams-collaborative-projects"),
     "website": new BubbleData("The website you're currently on!", 
         "url('images/projects/website.jpg')", 
-        "This website took some time to make. That's because it holds a few secrets! Do you know what an ARG game is?<br>I do.", 
+        "This website took some time to make. That's because it holds a few secrets! Do you know what an ARG game is?<br>I do. It's fun! :D", 
         "arg_game/olmo-arg.html"),
     "echoes": new BubbleData("Echoes", 
         "url('images/projects/echoes2.jpg')", 
