@@ -39,7 +39,7 @@ let projects = {
         "url('images/projects/covr.jpg')", 
         "As part of my Master's degree, I worked on CoVR, an augmented VR platform with haptic feedback, developed at ISIR Laboratory. I tested the different systems and developed games for the platform.", 
         "https://www.isir.upmc.fr/projects/covr-haptic-platform-for-virtual-reality/?lang=en"),
-    "gamejams": new BubbleData("Game Jams Projects", 
+    "gamejams": new BubbleData("Game Jam Projects", 
         "url('images/projects/gamejams.jpg')", 
         "I have, sometimes over my own good, participated in many, many game jams.<br><br>You can check out the results here!", 
         "https://itch.io/c/3660379/game-jams-collaborative-projects"),
