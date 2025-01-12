@@ -111,6 +111,14 @@ const pgData = [
         imageFiles: 1,
         authorNotes: ``,
     },
+    {
+        pgNum: 6,
+        title: "Daring escape",
+        date: writeDate(2025, 1, 12),
+        altText: "",
+        imageFiles: 1,
+        authorNotes: ``,
+    },
 ];
 
 //below is a function you dont rly need to mess with but if you're more experienced with js you can
