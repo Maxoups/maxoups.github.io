@@ -17,6 +17,8 @@ writePageTitle(".writePageTitle", true, " - "); //write title of page. true/fals
 
 writePageClickable(".writePageClickable",true); //show the current page. to toggle whether pages can be clicked to move to the next one, set this to true or false.
 
+writePageDate(".writePageDate", true); //write the date of the page. to toggle whether the date shows up, set this to true or false.
+
 writeAuthorNotes(".writeAuthorNotes");
 
 keyNav(); //enables navigation through the comic with the arrow keys and WSAD. It doesn't need a div with a class name, it automatically works. delete or comment out (add // at the beginning) here to disable.
@@ -87,6 +89,15 @@ function writePage() {
     //
     return page;
   }
+}
+
+function writePageDate(div, toggleDate) {
+  if (!toggleDate) return;
+  console.log("Writing Page Date")
+
+  console.log("div - " + div);
+
+  document.querySelector(div).innerHTML = `<h2>`+ pgData[pg-1].date +`</h2>`;
 }
 
 //debug

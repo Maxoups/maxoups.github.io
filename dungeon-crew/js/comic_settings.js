@@ -152,8 +152,12 @@ function findGetParameter(parameterName) { //function used to write a parameter 
 
 function writeDate(year,month,day) { //write date of comic page
     const date = new Date(year,month-1,day)
-    .toDateString() //format date as Day Month Date Year
+    /*.toDateString() //format date as Day Month Date Year
     .toString() //convert it to a string
     .slice(4) //remove the Day
-    return date
+    return date;
+    */
+
+    let res = date.toLocaleString('en-US', { month: 'long'}) + " " + date.getDate().toString().padStart(2, "0") + ", " + date.getFullYear();
+    return String(res).charAt(0).toUpperCase() + String(res).slice(1);
 }
