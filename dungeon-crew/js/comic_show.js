@@ -98,7 +98,7 @@ function writePageDate(div, toggleDate) {
   console.log("div - " + div);
 
   //`<h2>`+ pgData[pg-1].date +`</h2>` + 
-  document.querySelector(div).innerHTML = `<p style="font-size:160%;">`+ pgData[pg-1].date +`</p>` ;
+  document.querySelector(div).innerHTML = `<p style="font-size:140%;">`+ pgData[pg-1].date +`</p>` ;
 }
 
 //debug
