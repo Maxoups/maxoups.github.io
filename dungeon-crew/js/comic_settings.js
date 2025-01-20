@@ -121,7 +121,7 @@ const pgData = [
     },
     {
         pgNum: 7,
-        title: "A short study of dungeons... 1/2",
+        title: "Dungeon Academics 1/2",
         date: writeDate(2025, 1, 19),
         altText: "",
         imageFiles: 1,
