@@ -205,7 +205,13 @@ function writeNav(imageToggle) {
         //LAST BUTTON
         if (pg < maxpg) {
             //only make active if not on last page
-            return `<a href="?pg=` + maxpg + navScrollTo + `"/>` + imgOrText(imageToggle, 3) + `</a>`;
+            let objPage;
+            if (pg == maxpg-1) {
+              objPage = maxpg;
+            } else {
+              objPage = maxpg-1;
+            }
+            return `<a href="?pg=` + objPage + navScrollTo + `"/>` + imgOrText(imageToggle, 3) + `</a>`;
         } else {
           return `<a/>` + imgOrText(imageToggle, 3) + `</a>`;
             // if (!imageToggle) {
