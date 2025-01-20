@@ -128,10 +128,10 @@ const pgData = [
         authorNotes: ``,
     },
     {
-        pgNum: 8,
+        pgNum: maxpg,
         title: "[WORK IN PROGRESS]",
         date: writeDate(2025, 1, 26),
-        altText: "",
+        altText: "Coming soon!",
         imageFiles: 1,
         authorNotes: ``,
     },
