@@ -129,7 +129,7 @@ const pgData = [
     },
     {
         pgNum: 8,
-        title: "[PREVIEW]",
+        title: "[WORK IN PROGRESS]",
         date: writeDate(2025, 1, 26),
         altText: "",
         imageFiles: 1,
