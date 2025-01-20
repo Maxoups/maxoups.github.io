@@ -31,7 +31,7 @@ const navFolder = "img/comicnav"; //directory where nav images are stored
 const navExt = "png" //file extension of nav images
 const navScrollTo = "#showComic"; //id of the div you want the page to automatically scroll to when you click to the next comic. will turn off if you delete text between quotation marks
 
-if (pg == 0) {pg = maxpg;} //display MOST RECENT COMIC when the webpage is loaded. if you want to instead have the FIRST COMIC displayed first, change maxpg to 1.
+if (pg == 0) {pg = maxpg-1;} //display MOST RECENT COMIC when the webpage is loaded. if you want to instead have the FIRST COMIC displayed first, change maxpg to 1.
 
 //pgData holds all the parameters for each of your pages. copypaste this and fill out accordingly:
 /* 
