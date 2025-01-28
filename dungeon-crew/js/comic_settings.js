@@ -138,7 +138,7 @@ const pgData = [
     {
         pgNum: maxpg,
         title: "[WORK IN PROGRESS]",
-        date: writeDate(2025, 2, 2),
+        date: writeDate(2025, 2, 9),
         altText: "Coming soon!",
         imageFiles: 1,
         authorNotes: ``,
