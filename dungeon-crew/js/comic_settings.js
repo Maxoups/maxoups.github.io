@@ -82,7 +82,7 @@ const pgData = [
     {
         pgNum: 2,
         title: "Business Opportunity",
-        date: writeDate(2024, 12, 31),
+        date: writeDate(2025, 1, 5),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -90,7 +90,7 @@ const pgData = [
     {
         pgNum: 3,
         title: "Wrong target",
-        date: writeDate(2025, 1, 5),
+        date: writeDate(2025, 1, 12),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -98,7 +98,7 @@ const pgData = [
     {
         pgNum: 4,
         title: "Distressed Damsel",
-        date: writeDate(2025, 1, 12),
+        date: writeDate(2025, 1, 19),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -106,7 +106,7 @@ const pgData = [
     {
         pgNum: 5,
         title: "Well-kept secret",
-        date: writeDate(2025, 1, 19),
+        date: writeDate(2025, 1, 26),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -114,7 +114,7 @@ const pgData = [
     {
         pgNum: 6,
         title: "Daring escape",
-        date: writeDate(2025, 1, 26),
+        date: writeDate(2025, 2, 9),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -122,7 +122,7 @@ const pgData = [
     {
         pgNum: 7,
         title: "Dungeon Academics 1/2 [PREVIEW]",
-        date: writeDate(2025, 2, 9),
+        date: writeDate(2025, 2, 16),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -130,7 +130,7 @@ const pgData = [
     {
         pgNum: 8,
         title: "Dungeon Academics 2/2 [PREVIEW]",
-        date: writeDate(2025, 2, 16),
+        date: writeDate(2025, 2, 23),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -138,7 +138,7 @@ const pgData = [
     {
         pgNum: maxpg,
         title: "[WORK IN PROGRESS]",
-        date: writeDate(2025, 2, 23),
+        date: writeDate(2025, 3, 2),
         altText: "Coming soon!",
         imageFiles: 1,
         authorNotes: ``,
