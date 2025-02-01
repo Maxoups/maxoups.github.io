@@ -114,7 +114,7 @@ const pgData = [
     {
         pgNum: 6,
         title: "Daring escape [PREVIEW]",
-        date: writeDate(2025, 2, 9),
+        date: writeDate(2025, 2, 2),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -122,7 +122,7 @@ const pgData = [
     {
         pgNum: 7,
         title: "Dungeon Academics 1/2 [PREVIEW]",
-        date: writeDate(2025, 2, 16),
+        date: writeDate(2025, 2, 9),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -130,7 +130,7 @@ const pgData = [
     {
         pgNum: 8,
         title: "Dungeon Academics 2/2 [PREVIEW]",
-        date: writeDate(2025, 2, 23),
+        date: writeDate(2025, 2, 16),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -138,7 +138,7 @@ const pgData = [
     {
         pgNum: maxpg,
         title: "[WORK IN PROGRESS]",
-        date: writeDate(2025, 3, 2),
+        date: writeDate(2025, 2, 23),
         altText: "Coming soon!",
         imageFiles: 1,
         authorNotes: ``,
