@@ -18,6 +18,6 @@ maxence.maire@yahoo.fr
 This is my personal adress by the way.
 Don't go around showing it to everyone okay?
 It's a secret between you and me.
-Now go talk to someone.
-
+Now go talk to someone. <br />
+ <br />
 Website: https://maxoups.github.io/
