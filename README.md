@@ -16,7 +16,7 @@ Not Maxence's readme.
 If you wanna talk to me you can send me an email.
 maxence.maire@yahoo.fr
 This is my personal adress by the way.
-Don't go around showing it to everyone okay?
+Don't go around showing it to everybody okay?
 It's a secret between you and me.
 Now go talk to someone. <br />
  <br />
