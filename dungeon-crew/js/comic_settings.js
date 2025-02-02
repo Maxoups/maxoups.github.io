@@ -113,7 +113,7 @@ const pgData = [
     },
     {
         pgNum: 6,
-        title: "Daring escape [PREVIEW]",
+        title: "Daring escape",
         date: writeDate(2025, 2, 2),
         altText: "",
         imageFiles: 1,
