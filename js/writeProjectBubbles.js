@@ -11,6 +11,11 @@ class BubbleData {
 
 // let hover_intervals = {};
 let projects = {
+    "PRISM": new BubbleData(
+        "PRISM Platform - CEA List",
+        "url('images/projects/prism.jpg')",
+        "Currently working at CEA List on PRISM, a platform used to develop real-time digital twins for robotic simulation and training. PRISM is developed using Unreal Engine 5 and the XDE physics engine.",
+        "https://list.cea.fr/en/technology-platforms-expand-what-is-possible/"),
     "ooc": new BubbleData(
         "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
         "As part of my Master's degree, I worked on a bioengineering research project at the University of Okayama in Japan, under the guidance of Professor K. Takahashi.", 
@@ -82,9 +87,10 @@ function writeBubbles() {
         margin-top:30px; gap:50px; justify-content: space-evenly;">
 
         ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:110px;`})}  
+        ${projectBubble("PRISM",            {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:110px;`})}  
         ${lineBreak()}
         ${projectBubble("website",          {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:5%; margin-top:70px;`})}
-        ${projectBubble("allianz_vr",       {"top_dot": null, "bottom_dot": 60,     "style": `margin-left:3%; margin-top:20px;`})}
+        ${projectBubble("allianz_vr",       {"top_dot": 45, "bottom_dot": 60,     "style": `margin-left:3%; margin-top:20px;`})}
         ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,    "style": `margin-left:0%; margin-top:65px;`})}
         ${lineBreak()}
         ${projectBubble("pogobots",         {"top_dot": null, "bottom_dot": 45,     "style": `margin-left:9%; margin-top:60px;`})}
@@ -99,6 +105,7 @@ function writeBubbles() {
         </div>
         `;})
     
+    connectBubbles("allianz_vr", "PRISM");
     connectBubbles("website", "dungeon_crew");
     connectBubbles("licence", "master");
     connectBubbles("master", "pogobots");
