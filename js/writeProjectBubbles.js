@@ -14,7 +14,7 @@ let projects = {
     "PRISM": new BubbleData(
         "PRISM Platform - CEA List",
         "url('images/projects/prism.jpg')",
-        "Currently working at CEA List on PRISM, a platform used to develop real-time digital twins for robotic simulation and training. PRISM is developed using Unreal Engine 5 and the XDE physics engine.",
+        "I currently work at CEA List, on PRISM, a platform used to develop real-time digital twins for robotic simulation and training. PRISM is developed using Unreal Engine 5 and the XDE physics engine.",
         "https://list.cea.fr/en/technology-platforms-expand-what-is-possible/"),
     "ooc": new BubbleData(
         "Organ-on-a-chip Research", "url('images/projects/okayama_research.jpg')", 
