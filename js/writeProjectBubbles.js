@@ -71,18 +71,24 @@ let projects = {
 writeBubbles();
 
 //background-color:red;
+
+//  `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
+//        margin-top:30px; gap:50px; justify-content: space-evenly;">
+
 function writeBubbles() {
     let writeNavDiv = document.querySelectorAll(".projectBubbles");
     writeNavDiv.forEach(function(element) {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
         margin-top:30px; gap:50px; justify-content: space-evenly;">
-        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": null,   "style": `margin-left:0%; margin-top:110px;`})}  
+
+        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:110px;`})}  
+        ${lineBreak()}
+        ${projectBubble("website",          {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:5%; margin-top:70px;`})}
         ${projectBubble("allianz_vr",       {"top_dot": null, "bottom_dot": 60,     "style": `margin-left:3%; margin-top:20px;`})}
         ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,    "style": `margin-left:0%; margin-top:65px;`})}
         ${lineBreak()}
         ${projectBubble("pogobots",         {"top_dot": null, "bottom_dot": 45,     "style": `margin-left:9%; margin-top:60px;`})}
-        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,      "style": `margin-left:2%; margin-top: 0px;`})}
-        ${projectBubble("website",          {"top_dot": null, "bottom_dot": null,   "style": `margin-left:5%; margin-top:70px;`})}
+        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,      "style": `margin-right:45%; margin-top: 0px;`})}
         ${lineBreak()}
         ${projectBubble("electronics",      {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:2%; margin-top:70px;`})}
         ${projectBubble("master",           {"top_dot": 60,  "bottom_dot": 35,      "style": `margin-left:4%; margin-top:30px;`})}
@@ -93,6 +99,7 @@ function writeBubbles() {
         </div>
         `;})
     
+    connectBubbles("website", "dungeon_crew");
     connectBubbles("licence", "master");
     connectBubbles("master", "pogobots");
     connectBubbles("master", "covr");
