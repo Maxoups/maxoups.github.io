@@ -86,8 +86,8 @@ function writeBubbles() {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
         margin-top:30px; gap:50px; justify-content: space-evenly;">
 
-        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:110px;`})}  
-        ${projectBubble("PRISM",            {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:110px;`})}  
+        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:30px;`})}  
+        ${projectBubble("PRISM",            {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:30px;`})}  
         ${lineBreak()}
         ${projectBubble("website",          {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:5%; margin-top:70px;`})}
         ${projectBubble("allianz_vr",       {"top_dot": 45, "bottom_dot": 60,     "style": `margin-left:3%; margin-top:20px;`})}
