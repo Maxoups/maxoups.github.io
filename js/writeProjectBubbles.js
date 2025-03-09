@@ -88,7 +88,7 @@ function writeBubbles() {
         ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,    "style": `margin-left:0%; margin-top:65px;`})}
         ${lineBreak()}
         ${projectBubble("pogobots",         {"top_dot": null, "bottom_dot": 45,     "style": `margin-left:9%; margin-top:60px;`})}
-        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,      "style": `margin-right:45%; margin-top: 0px;`})}
+        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,      "style": `margin-right:10%; margin-top: 0px;`})}
         ${lineBreak()}
         ${projectBubble("electronics",      {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:2%; margin-top:70px;`})}
         ${projectBubble("master",           {"top_dot": 60,  "bottom_dot": 35,      "style": `margin-left:4%; margin-top:30px;`})}
@@ -169,6 +169,16 @@ function writeBubbles() {
         </a>`
     }
 }
+
+function updateScaleFactor() {
+    let scaleFactor = Math.max(1.0, window.innerWidth / 1920); // Compute scale factor
+    let scaleFactor_hover = scaleFactor*1.175; // Compute scale factor
+    document.documentElement.style.setProperty("--scale-factor", scaleFactor);
+    document.documentElement.style.setProperty("--scale-factor-hover", scaleFactor_hover);
+}
+
+window.addEventListener("resize", updateScaleFactor);
+updateScaleFactor(); // Run on page load
 
 
 /*
