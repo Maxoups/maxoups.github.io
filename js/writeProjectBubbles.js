@@ -11,6 +11,11 @@ class BubbleData {
 
 // let hover_intervals = {};
 let projects = {
+    "psu": new BubbleData(
+        "Play Sorbonne Organization",
+        "url('images/projects/psu.jpg')",
+        "Play Sorbonne is a non-profit organization centered around games. We host festivals, conferences, game jams, and we publish both board games and video games!",
+        "https://playsorbonne.fr/"),
     "PRISM": new BubbleData(
         "PRISM Platform - CEA List",
         "url('images/projects/prism.jpg')",
@@ -87,14 +92,15 @@ function writeBubbles() {
         margin-top:30px; gap:50px; justify-content: space-evenly;">
 
         ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:30px;`})}  
-        ${projectBubble("PRISM",            {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:30px;`})}  
+        ${projectBubble("PRISM",            {"top_dot": null, "bottom_dot": 35,   "style": `margin-left:0%; margin-top:30px;`})}  
         ${lineBreak()}
+        ${projectBubble("psu",              {"top_dot": null, "bottom_dot": null,   "style": `margin-left:1%; margin-top:10px;`})}
         ${projectBubble("website",          {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:5%; margin-top:70px;`})}
-        ${projectBubble("allianz_vr",       {"top_dot": 45, "bottom_dot": 60,     "style": `margin-left:3%; margin-top:20px;`})}
-        ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,    "style": `margin-left:0%; margin-top:65px;`})}
+        ${projectBubble("allianz_vr",       {"top_dot": 60, "bottom_dot": 35,     "style": `margin-left:3%; margin-top:50px;`})}
         ${lineBreak()}
         ${projectBubble("pogobots",         {"top_dot": null, "bottom_dot": 45,     "style": `margin-left:9%; margin-top:60px;`})}
-        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,      "style": `margin-right:10%; margin-top: 0px;`})}
+        ${projectBubble("covr",             {"top_dot": 40,  "bottom_dot": 25,      "style": `margin-left:8%; margin-top: 0px;`})}
+        ${projectBubble("ooc",              {"top_dot": null,  "bottom_dot": 60,    "style": `margin-right:9%; margin-top:20px;`})}
         ${lineBreak()}
         ${projectBubble("electronics",      {"top_dot": 35, "bottom_dot": null,   "style": `margin-left:2%; margin-top:70px;`})}
         ${projectBubble("master",           {"top_dot": 60,  "bottom_dot": 35,      "style": `margin-left:4%; margin-top:30px;`})}
