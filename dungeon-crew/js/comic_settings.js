@@ -10,7 +10,7 @@ let pg = Number(findGetParameter("pg")); //make "pg" mean the current page numbe
 //VARIABLES FOR TWEAKING
 ////////////////////////
 
-//REALLY IMPORTANT ONES
+//REALLY IMPORTANT ONE
 const maxpg = 22 +1; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
 //YOU MUST UPDATE THIS NUMBER EVERY TIME YOU ADD A NEW PAGE or else it wont display the most recent page
 
