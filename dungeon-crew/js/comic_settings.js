@@ -74,7 +74,7 @@ const pgData = [
     {
         pgNum: 1, //what page number it is
         title: "Princess Problems", //the title of the page (leaving this blank will default it to "Page X")
-        date: writeDate(2024, 12, 31), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
+        date: writeDate(2025, 1, 5), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
         altText: "", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
         imageFiles: 1, //how many image files this page is split into
         authorNotes: ``,
@@ -82,7 +82,7 @@ const pgData = [
     {
         pgNum: 2,
         title: "Business Opportunity",
-        date: writeDate(2025, 1, 5),
+        date: writeDate(2025, 1, 12),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -90,7 +90,7 @@ const pgData = [
     {
         pgNum: 3,
         title: "Wrong target",
-        date: writeDate(2025, 1, 12),
+        date: writeDate(2025, 1, 19),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -98,7 +98,7 @@ const pgData = [
     {
         pgNum: 4,
         title: "Distressed Damsel",
-        date: writeDate(2025, 1, 19),
+        date: writeDate(2025, 1, 26),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -106,7 +106,7 @@ const pgData = [
     {
         pgNum: 5,
         title: "Well-kept secret",
-        date: writeDate(2025, 1, 26),
+        date: writeDate(2025, 2, 2),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -114,7 +114,7 @@ const pgData = [
     {
         pgNum: 6,
         title: "Daring escape",
-        date: writeDate(2025, 2, 2),
+        date: writeDate(2025, 2, 9),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -122,7 +122,7 @@ const pgData = [
     {
         pgNum: 7,
         title: "Dungeon Academics 1/2",
-        date: writeDate(2025, 2, 9),
+        date: writeDate(2025, 2, 16),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -130,7 +130,7 @@ const pgData = [
     {
         pgNum: 8,
         title: "Dungeon Academics 2/2",
-        date: writeDate(2025, 2, 16),
+        date: writeDate(2025, 2, 23),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -138,7 +138,7 @@ const pgData = [
     {
         pgNum: 9,
         title: "Compliments to the chef",
-        date: writeDate(2025, 2, 23),
+        date: writeDate(2025, 3, 2),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -146,7 +146,7 @@ const pgData = [
     {
         pgNum: 10,
         title: "Night shift",
-        date: writeDate(2025, 3, 2),
+        date: writeDate(2025, 3, 9),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -154,7 +154,7 @@ const pgData = [
     {
         pgNum: 11,
         title: "Sneaking out",
-        date: writeDate(2025, 3, 9),
+        date: writeDate(2025, 3, 16),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -162,7 +162,7 @@ const pgData = [
     {
         pgNum: 12,
         title: "Date Night",
-        date: writeDate(2025, 3, 16),
+        date: writeDate(2025, 3, 23),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -170,7 +170,7 @@ const pgData = [
     {
         pgNum: 13,
         title: '"I look for traps!"',
-        date: writeDate(2025, 3, 23),
+        date: writeDate(2025, 3, 30),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -178,7 +178,7 @@ const pgData = [
     {
         pgNum: 14,
         title: "Monster mash",
-        date: writeDate(2025, 3, 30),
+        date: writeDate(2025, 4, 6),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -186,7 +186,7 @@ const pgData = [
     {
         pgNum: 15,
         title: "Dramatic entrance",
-        date: writeDate(2025, 4, 6),
+        date: writeDate(2025, 4, 13),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -194,7 +194,7 @@ const pgData = [
     {
         pgNum: 16,
         title: "Pspspspsp",
-        date: writeDate(2025, 4, 13),
+        date: writeDate(2025, 4, 20),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -202,7 +202,7 @@ const pgData = [
     {
         pgNum: 17,
         title: "King's Quest 1/2",
-        date: writeDate(2025, 4, 20),
+        date: writeDate(2025, 4, 27),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -210,7 +210,7 @@ const pgData = [
     {
         pgNum: 18,
         title: "King's Quest 2/2",
-        date: writeDate(2025, 4, 27),
+        date: writeDate(2025, 5, 4),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -218,7 +218,7 @@ const pgData = [
     {
         pgNum: 19,
         title: "Barbabrian",
-        date: writeDate(2025, 5, 4),
+        date: writeDate(2025, 5, 11),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -226,7 +226,7 @@ const pgData = [
     {
         pgNum: 20,
         title: "Wrap-up",
-        date: writeDate(2025, 5, 11),
+        date: writeDate(2025, 5, 18),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -234,7 +234,7 @@ const pgData = [
     {
         pgNum: 21,
         title: "Climactic showdown",
-        date: writeDate(2025, 5, 18),
+        date: writeDate(2025, 5, 25),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -242,7 +242,7 @@ const pgData = [
     {
         pgNum: 22,
         title: "Bossfight",
-        date: writeDate(2025, 5, 25),
+        date: writeDate(2025, 6, 1),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -250,7 +250,7 @@ const pgData = [
     {
         pgNum: 23,
         title: "Escape sequence",
-        date: writeDate(2025, 6, 1),
+        date: writeDate(2025, 6, 8),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -258,7 +258,7 @@ const pgData = [
     {
         pgNum: 24,
         title: "Your biggest fans",
-        date: writeDate(2025, 6, 8),
+        date: writeDate(2025, 6, 15),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
