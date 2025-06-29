@@ -272,9 +272,17 @@ const pgData = [
         authorNotes: ``,
     },
     {
+        pgNum: 26,
+        title: "Meetings and stanchions",
+        date: writeDate(2025, 6, 29),
+        altText: "",
+        imageFiles: 1,
+        authorNotes: ``,
+    },
+    {
         pgNum: maxpg,
         title: "[WORK IN PROGRESS]",
-        date: writeDate(2025, 6, 29),
+        date: writeDate(2025, 7, 6),
         altText: "Coming soon!",
         imageFiles: 1,
         authorNotes: ``,
