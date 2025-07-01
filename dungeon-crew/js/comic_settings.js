@@ -186,7 +186,7 @@ const pgData = [
     {
         pgNum: 15,
         title: "Dramatic entrance",
-        date: writeDate(2025, 4, 13),
+        date: writeDate(2025, 4, 13), 
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -298,7 +298,7 @@ const pgData = [
     {
         pgNum: 29,
         title: "Dungeon Notebooks 2/2",
-        date: writeDate(2025, 6, 20),
+        date: writeDate(2025, 7, 20),
         altText: "",
         imageFiles: 1,
         authorNotes: ``,
@@ -327,12 +327,14 @@ function findGetParameter(parameterName) { //function used to write a parameter 
 }
 
 // return true if comic date is in past, and false if in future
-function comicIsPublished(comicDateStr) {
-    let comicDate = Date.parse(dateStr)
+function isComicPublished(comicDate) {
     let todayDate = new Date()
+    return (comicDate <= todayDate)
+}
 
-    return (comicDate.getTime() - todayDate.getTime() > 0)
-
+function writeDateStr(date) {
+    let res = date.toLocaleString('en-US', { month: 'long'}) + " " + date.getDate().toString().padStart(2, "0") + ", " + date.getFullYear();
+    return String(res).charAt(0).toUpperCase() + String(res).slice(1);
 }
 
 function writeDate(year,month,day) { //write date of comic page
@@ -343,6 +345,5 @@ function writeDate(year,month,day) { //write date of comic page
     return date;
     */
 
-    let res = date.toLocaleString('en-US', { month: 'long'}) + " " + date.getDate().toString().padStart(2, "0") + ", " + date.getFullYear();
-    return String(res).charAt(0).toUpperCase() + String(res).slice(1);
-}
+    return date
+} 

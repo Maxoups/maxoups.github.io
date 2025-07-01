@@ -60,13 +60,20 @@ function writePage() {
   let partExtension = ""; //part extension to add to the url if the image is split into multiple parts
   let altText = ""; //variable for alt text
   let path = (folder != "" ? folder + "/" : "") + image + pg + partExtension + "." + ext; //path for your comics made out of variables strung together
-  
+ 
+
   // write Work In Progress panel
   if (pgData[pg-1].title == "[WORK IN PROGRESS]") {
     path = (folder != "" ? folder + "/" : "") + image + "WIP" + "." + ext;
   }
-  let page = ``;
+  
+  // write Comic Not Published Yet panel
+  else if (! isComicPublished(pgData[pg-1].date)) {
+    path = (folder != "" ? folder + "/" : "") + image + "WIP" + "." + ext;
+  }
 
+  let page = ``;
+  // write regular panel
   if (pgData.length < pg) { //if the array is blank or not long enough to have an entry for this page
     //debug
     console.log("page code to insert - " + page);
@@ -103,7 +110,7 @@ function writePageDate(div, toggleDate) {
   console.log("div - " + div);
 
   //`<h2>`+ pgData[pg-1].date +`</h2>` + 
-  document.querySelector(div).innerHTML = `<p style="font-size:140%;">`+ pgData[pg-1].date +`</p>` ;
+  document.querySelector(div).innerHTML = `<p style="font-size:140%;">`+ writeDateStr(pgData[pg-1].date) +`</p>` ;
 }
 
 //debug
