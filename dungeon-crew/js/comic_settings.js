@@ -326,6 +326,15 @@ function findGetParameter(parameterName) { //function used to write a parameter 
     return result;
 }
 
+// return true if comic date is in past, and false if in future
+function comicIsPublished(comicDateStr) {
+    let comicDate = Date.parse(dateStr)
+    let todayDate = new Date()
+
+    return (comicDate.getTime() - todayDate.getTime() > 0)
+
+}
+
 function writeDate(year,month,day) { //write date of comic page
     const date = new Date(year,month-1,day)
     /*.toDateString() //format date as Day Month Date Year
