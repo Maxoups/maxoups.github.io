@@ -62,7 +62,7 @@ function writePage() {
   let path = (folder != "" ? folder + "/" : "") + image + pg + partExtension + "." + ext; //path for your comics made out of variables strung together
   
   // write Work In Progress panel
-  if (pg == maxpg) {
+  if (pgData[pg-1].title == "[WORK IN PROGRESS]") {
     path = (folder != "" ? folder + "/" : "") + image + "WIP" + "." + ext;
   }
   let page = ``;
