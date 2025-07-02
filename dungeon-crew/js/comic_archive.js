@@ -56,19 +56,17 @@ function writeArchive(divClass, min, max, reverseOrder, useThumbs,useNums) {
         if (pgData.length >= i) {
             //set values to the values indicated in the pgData object if available
             if (pgData[i - 1].title) {
-                pgTitle = pgData[i - 1].title;
+                pgTitle = comicDraft(i) + pgData[i - 1].title;
             }
             if (pgData[i - 1].date) {
-                pgDate = pgData[i - 1].date;
-            }
-            if (pgData[i - 1].date) {
-                pgDate = pgData[i - 1].date;
+                pgDate = writeDateStr(pgData[i - 1].date);
             }
             if (pgData[i - 1].pgNum) {
                 pgNum = pgData[i - 1].pgNum;
             }
         }
 
+        // comicDraft()
         //make the whole row a clickable link to the corresponding comic
         row.setAttribute("class", `archiveRow`);
 
@@ -100,4 +98,12 @@ function writeArchive(divClass, min, max, reverseOrder, useThumbs,useNums) {
         //left align text if not using thumbnails
         cellTitle.className += " leftAlignTableText";
     }
+}
+
+function comicDraft(i) {
+  if ((!isComicPublished(pgData[i - 1].date) && (pgData[i - 1].title != "[WORK IN PROGRESS]")) ) {
+      return "[DRAFT] "
+  } else {
+    return ""
+  }
 }
