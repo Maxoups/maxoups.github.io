@@ -42,6 +42,7 @@ function writePageTitle(div,toggleNum, char) {
   if (pgData.length >= pg) {
     //display title of current page
     document.querySelector(div).innerHTML = `<h1>${pgData[pg - 1].title}</h1>`;
+    char += comicDraft(pg)
     if (toggleNum) {
         //toggle whether you want to display the page number
         document.querySelector(div).innerHTML = `<h1>${pgData[pg - 1].pgNum + char + pgData[pg - 1].title}</h1>`; //char denotes a separating character between the number and the title
@@ -52,6 +53,14 @@ function writePageTitle(div,toggleNum, char) {
 function writeAuthorNotes(div) { //display author notes
   if (pgData.length >= pg) {
     return document.querySelector(div).innerHTML = `${pgData[pg-1].authorNotes}`
+  }
+}
+
+function comicDraft(i) {
+  if ((!isComicPublished(pgData[i - 1].date) && (pgData[i - 1].title != "[WORK IN PROGRESS]")) ) {
+      return "[DRAFT] "
+  } else {
+    return ""
   }
 }
 
@@ -68,9 +77,9 @@ function writePage() {
   }
   
   // write Comic Not Published Yet panel
-  else if (! isComicPublished(pgData[pg-1].date)) {
-    path = (folder != "" ? folder + "/" : "") + image + "WIP" + "." + ext;
-  }
+  // else if (! isComicPublished(pgData[pg-1].date)) {
+  //   path = (folder != "" ? folder + "/" : "") + image + "WIP" + "." + ext;
+  // }
 
   let page = ``;
   // write regular panel
