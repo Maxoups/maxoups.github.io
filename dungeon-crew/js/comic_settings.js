@@ -31,8 +31,6 @@ const navFolder = "img/comicnav"; //directory where nav images are stored
 const navExt = "png" //file extension of nav images
 const navScrollTo = "#showComic"; //id of the div you want the page to automatically scroll to when you click to the next comic. will turn off if you delete text between quotation marks
 
-if (pg == 0) {pg = maxpg-1;} //display MOST RECENT COMIC when the webpage is loaded. if you want to instead have the FIRST COMIC displayed first, change maxpg to 1.
-
 //pgData holds all the parameters for each of your pages. copypaste this and fill out accordingly:
 /* 
     {
@@ -313,8 +311,16 @@ const pgData = [
     },
 ];
 
-//below is a function you dont rly need to mess with but if you're more experienced with js you can
+if (pg == 0) {pg = getLastPublishedComic();} //display MOST RECENT COMIC when the webpage is loaded. if you want to instead have the FIRST COMIC displayed first, change maxpg to 1.
 
+
+function getLastPublishedComic() {
+    let res = maxpg-1;
+    while (! isComicPublished(pgData[res-1].date)) res -= 1;
+    return res;
+}
+
+//below is a function you dont rly need to mess with but if you're more experienced with js you can
 function findGetParameter(parameterName) { //function used to write a parameter to append to the url, to give each comic page its own unique url
     let result = null,
     tmp = []; 

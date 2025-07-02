@@ -222,10 +222,13 @@ function writeNav(imageToggle) {
         if (pg < maxpg) {
             //only make active if not on last page
             let objPage;
-            if (pg == maxpg-1) {
-              objPage = maxpg;
-            } else {
+            let lastPageIndex = getLastPublishedComic();
+            if (pg < lastPageIndex) {
+              objPage = lastPageIndex;
+            } else if (pg < maxpg-1) {
               objPage = maxpg-1;
+            } else {
+              objPage = maxpg;
             }
             return `<a href="?pg=` + objPage + navScrollTo + `"/>` + imgOrText(imageToggle, 3) + `</a>`;
         } else {
