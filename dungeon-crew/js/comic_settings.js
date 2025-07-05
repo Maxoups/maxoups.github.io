@@ -279,7 +279,7 @@ const pgData = [
     },
     {
         pgNum: 27,
-        title: "[WORK IN PROGRESS]",
+        title: "Dungeon Academics 3/3",
         date: writeDate(2025, 7, 6),
         altText: "",
         imageFiles: 1,
