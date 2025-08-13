@@ -11,6 +11,11 @@ class BubbleData {
 
 // let hover_intervals = {};
 let projects = {
+    "teaching": new BubbleData(
+        "Guest Lecturer in Game Programming",
+        "url('images/projects/teaching.jpg')",
+        "I am a guest lecturer at game development schools, teaching programming and game design. I have worked with Ynov Nanterre and ISART Digital.",
+        "https://www.isart.com/degree-programs/game-design-programming/"),
     "psu": new BubbleData(
         "Play Sorbonne Organization",
         "url('images/projects/psu.jpg')",
@@ -91,7 +96,8 @@ function writeBubbles() {
         element.innerHTML = `<div class="projectBubblesWrapper" style="width: 100vw; position:relative; left: calc(-50vw + 50%); display:flex; flex-flow: row wrap;
         margin-top:30px; gap:50px; justify-content: space-evenly;">
 
-        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:0%; margin-top:30px;`})}  
+        ${projectBubble("teaching",         {"top_dot": null, "bottom_dot": null,   "style": `margin-left:5%; margin-top:50px;`})}  
+        ${projectBubble("dungeon_crew",     {"top_dot": null, "bottom_dot": 60,   "style": `margin-left:-5%; margin-top:40px;`})}  
         ${projectBubble("PRISM",            {"top_dot": null, "bottom_dot": 35,   "style": `margin-left:0%; margin-top:30px;`})}  
         ${lineBreak()}
         ${projectBubble("psu",              {"top_dot": null, "bottom_dot": null,   "style": `margin-left:1%; margin-top:10px;`})}
