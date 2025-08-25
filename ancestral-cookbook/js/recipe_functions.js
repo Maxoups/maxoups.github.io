@@ -47,7 +47,7 @@ function addIngredients(recipeIngredients) {
 
 
 function findRecipeByTitle(pageTitle) {
-    const data = recipesData.find(row => row.Titre === pageTitle);
+    const data = recipesData.find(row => row.ID === pageTitle);
     if (!data) {
         console.log("Recipe not found!")
         return;
@@ -59,6 +59,7 @@ function buildPage(data) {
     // Map CSV fields to variables
     const recipeTitle = data.Titre;
     const recipeCook = data.Cuistot;
+    const recipeID = data.ID;
     const recipeType = data.Type;
     const recipeTags = data.Tags ? data.Tags.split(", ") : [];
     const recipeComments = data.Commentaires;
@@ -74,17 +75,11 @@ function buildPage(data) {
     addIngredients(recipeIngredients)
 }
 
-
-//#####################################################################//
-
-
 function writePage() {
-    const data = findRecipeByTitle("Tiramisu")
+    console.log("Building page for:", pageName)
+    const data = findRecipeByTitle(pageName)
     buildPage(data)
 }
-
-
-let recipesData = null;
 
 function parseRecipesCSV() {
     const CsvFile = "https://maxoups.github.io/ancestral-cookbook/Recettes.csv"
@@ -104,6 +99,18 @@ function parseRecipesCSV() {
         }
     });
 }
+
+//#####################################################################//
+
+
+
+// Read parameters
+const params = new URLSearchParams(window.location.search);
+const pageName = params.get("name");       // "cake"
+//const servings = params.get("servings"); // "4"
+
+// Parse recipes CSV
+let recipesData;
 
 if (recipesData == null) {
     console.log("Loading recipesData...")
