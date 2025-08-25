@@ -7,13 +7,26 @@ function createRecipeSlider(images) {
     .join("\n    ");
 
   // Wrap with the container div
-  let image_divs = `
+  const image_divs = `
 <div class="receipe-slider owl-carousel">
     ${imgTags}
 </div>`;
 
-    console.log("Adding slider with image_divs:", image_divs);
+  // Inject into the DOM
   document.getElementById("slider-container").innerHTML = image_divs;
+
+  console.log("Created slider with images:", images);
+
+  // Initialize Owl Carousel after the elements exist
+  $('.receipe-slider.owl-carousel').owlCarousel({
+    items: 1,           // number of images per view
+    loop: true,         // infinite loop
+    margin: 10,
+    nav: true,          // arrows
+    dots: true,         // pagination dots
+    autoplay: true,
+    autoplayTimeout: 3000
+  });
 }
 
 function addRecipeTitle(text) {
