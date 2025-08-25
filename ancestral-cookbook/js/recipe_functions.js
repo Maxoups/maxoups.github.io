@@ -11,6 +11,8 @@ function createRecipeSlider(images) {
 <div class="receipe-slider owl-carousel">
     ${imgTags}
 </div>`;
+
+    console.log("Adding slider with image_divs:", image_divs);
   document.getElementById("slider-container").innerHTML = image_divs;
 }
 
@@ -20,6 +22,18 @@ function addRecipeTitle(text) {
 
 function addRecipeChef(text) {
     document.getElementById("recipe-chef").innerText = text
+}
+
+function addRecipeTime(text) {
+    document.getElementById("recipe-time").innerText = "Préparation : " + text
+}
+
+function addRecipeType(text) {
+    document.getElementById("recipe-type").innerText = "Catégorie : " + text
+}
+
+function addRecipeTags(tags) {
+    document.getElementById("recipe-tags").innerText = "Tags : " + tags.join(", ");
 }
 
 function addIngredients(recipeIngredients) {
@@ -72,7 +86,10 @@ function buildPage(data) {
     createRecipeSlider(recipeImages);
     addRecipeTitle(recipeTitle);
     addRecipeChef(recipeCook);
-    addIngredients(recipeIngredients)
+    addIngredients(recipeIngredients);
+    addRecipeTime(recipeTime);
+    addRecipeType(recipeType);
+    addRecipeTags(recipeTags);
 }
 
 function writePage() {
