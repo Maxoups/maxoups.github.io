@@ -1,4 +1,5 @@
 
+
 function createRecipeSlider(images) {
   // Build the inner <img> tags
   const imgTags = images
@@ -6,15 +7,23 @@ function createRecipeSlider(images) {
     .join("\n    ");
 
   // Wrap with the container div
-  return `
+  let image_divs = `
 <div class="receipe-slider owl-carousel">
     ${imgTags}
 </div>`;
+  document.getElementById("slider-container").innerHTML = image_divs;
+}
+
+function addRecipeTitle(text) {
+  document.getElementById("recipe-title").innerText = text;
 }
 
 
-
-// Inject recipe elementsg
+//#####################################################################//
+// Recipe variables
+const recipeTitle = "Vegetarian butter salad"
 const imageList = ["img/bg-img/bg5.jpg"];
 
-document.getElementById("slider-container").innerHTML = createRecipeSlider(imageList);
+// Function calls
+createRecipeSlider(imageList);
+addRecipeTitle(recipeTitle);
