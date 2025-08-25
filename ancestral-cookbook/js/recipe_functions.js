@@ -51,10 +51,27 @@ function addIngredients(recipeIngredients) {
       </div>
     `;
   });
-
-  // Insert HTML inside the div
   ingredientsList.innerHTML = ingredientsHTML;
 }
+
+function addRecipeSteps(steps) {
+    const stepsList = document.getElementById("recipe-steps");
+    stepsList.innerHTML = ""; // Clear existing steps
+
+    let stepsHTML = "";
+
+    // Build steps dynamically
+    steps.forEach((step, index) => {
+        stepsHTML += `
+            <div class="single-preparation-step d-flex">
+                <h4>${index + 1}.</h4>
+                <p class="step-text">${step}</p>
+            </div>
+        `;
+    });
+    stepsList.innerHTML = stepsHTML;
+}
+
 
 
 //#####################################################################//
@@ -90,6 +107,7 @@ function buildPage(data) {
     addRecipeTime(recipeTime);
     addRecipeType(recipeType);
     addRecipeTags(recipeTags);
+    addRecipeSteps(recipeText);
 }
 
 function writePage() {

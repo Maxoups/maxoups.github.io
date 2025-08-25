@@ -1190,6 +1190,11 @@ textarea:focus {
         opacity: 1;
         visibility: visible; }
 
+
+.step-text {
+  color: rgb(10, 0, 56)
+}
+
 /* :: 17.0 Breadcumb Area CSS */
 .breadcumb-area {
   position: relative;
