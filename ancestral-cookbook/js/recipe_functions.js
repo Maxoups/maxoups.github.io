@@ -22,6 +22,26 @@ function addRecipeChef(text) {
     document.getElementById("recipe-chef").innerText = text
 }
 
+function addIngredients(recipeIngredients) {
+    const ingredientsList = document.getElementById("recipe-ingredients");
+    ingredientsList.innerHTML = ""; // Clear existing ingredients
+    
+    let ingredientsHTML = "";
+
+    // Build checkboxes dynamically
+    recipeIngredients.forEach((item, index) => {
+    ingredientsHTML += `
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck${index + 1}">
+        <label class="custom-control-label" for="customCheck${index + 1}">${item}</label>
+      </div>
+    `;
+  });
+
+  // Insert HTML inside the div
+  ingredientsList.innerHTML = ingredientsHTML;
+}
+
 
 //#####################################################################//
 
@@ -51,6 +71,7 @@ function buildPage(data) {
     createRecipeSlider(recipeImages);
     addRecipeTitle(recipeTitle);
     addRecipeChef(recipeCook);
+    addIngredients(recipeIngredients)
 }
 
 

@@ -1074,7 +1074,7 @@ textarea:focus {
   height: 20px; }
 .ingredients .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-image: none !important;
-  background-color: #40ba37; }
+  background-color: #098893; }
 
 /* :: 16.0 Footer Area CSS */
 .footer-area {
