@@ -67,6 +67,10 @@ function addIngredients(recipeIngredients) {
   ingredientsList.innerHTML = ingredientsHTML;
 }
 
+function addRecipeComments(text) {
+    document.getElementById("recipe-comments").innerText = text;
+}
+
 function addRecipeSteps(steps) {
     const stepsList = document.getElementById("recipe-steps");
     stepsList.innerHTML = ""; // Clear existing steps
@@ -121,6 +125,7 @@ function buildPage(data) {
     addRecipeType(recipeType);
     addRecipeTags(recipeTags);
     addRecipeSteps(recipeText);
+    addRecipeComments(recipeComments);
 }
 
 function writePage() {
