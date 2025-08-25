@@ -1012,7 +1012,7 @@ textarea:focus {
     .receipe-headline h2 {
       font-size: 24px; } }
 .receipe-headline .receipe-duration {
-  border-left: 3px solid #40ba37;
+  border-left: 3px solid #006b77;
   padding: 15px; }
   .receipe-headline .receipe-duration h6 {
     font-size: 15px;
@@ -1030,7 +1030,7 @@ textarea:focus {
 .single-preparation-step {
   position: relative;
   z-index: 1;
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
   .single-preparation-step h4 {
     color: #474747;
     -webkit-box-flex: 0;
