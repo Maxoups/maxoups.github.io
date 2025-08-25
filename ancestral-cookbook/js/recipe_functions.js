@@ -18,12 +18,19 @@ function addRecipeTitle(text) {
   document.getElementById("recipe-title").innerText = text;
 }
 
+function addRecipeChef(text) {
+    document.getElementById("recipe-chef").innerText = text
+}
+
 
 //#####################################################################//
 // Recipe variables
 const recipeTitle = "Vegetarian butter salad"
-const imageList = ["img/bg-img/bg5.jpg"];
+const recipeCook  = "Stéphane Maire"
+const recipeType = []
+const imageList   = ["img/bg-img/bg5.jpg", "img/tiramisu02.jpg"];
 
 // Function calls
 createRecipeSlider(imageList);
 addRecipeTitle(recipeTitle);
+addRecipeChef(recipeCook)
