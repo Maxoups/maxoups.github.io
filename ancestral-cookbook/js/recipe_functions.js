@@ -119,12 +119,15 @@ function writeRecipeBoxes() {
     recipeBox.innerHTML = recipesHTML;
 }
 
-function writeHeader() {
-    document.getElementById("website-header").innerHTML = `<!-- Preloader -->
+/*
     <div id="preloader">
         <i class="circle-preloader"></i>
         <img src="img/core-img/salad.png" alt="">
     </div>
+*/
+
+function writeHeader() {
+    document.getElementById("website-header").innerHTML = `<!-- Preloader -->
 
     <!-- Search Wrapper -->
     <div class="search-wrapper">
@@ -261,7 +264,7 @@ function writePage() {
             const data = findRecipeByTitle(pageName);
             buildRecipePage(data);
         }
-    } else if (currentPage.includes("index")) {
+    } else {
         // INDEX PAGE
         writeRecipeBoxes();
     }
