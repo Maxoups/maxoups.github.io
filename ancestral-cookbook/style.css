@@ -474,7 +474,7 @@ textarea:focus {
     .header-area .delicious-main-menu .classy-nav-container {
       background-color: transparent; }
     .header-area .delicious-main-menu .classy-navbar {
-      height: 145px;
+      height: 115px;
       padding: 0; }
       @media only screen and (max-width: 767px) {
         .header-area .delicious-main-menu .classy-navbar {
@@ -1199,6 +1199,13 @@ textarea:focus {
 .step-text {
   color: rgb(10, 0, 56);
   font-size: medium;
+}
+
+.img-logo {
+  max-height: 110px;
+  @media only screen and (min-width: 767px) {
+    margin-top: -20px;
+  }
 }
 
 /* :: 17.0 Breadcumb Area CSS */
