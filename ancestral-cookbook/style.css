@@ -1411,7 +1411,7 @@ label.comments {
 
 /* DARK MODE */
 
-@media (prefers-color-scheme:dark ) {    /* prefers-color-scheme: dark */
+@media (prefers-color-scheme:light ) {    /* prefers-color-scheme: dark */
   body {
     background-color: #121212;
     color: #e0e0e0;
@@ -1462,5 +1462,22 @@ label.comments {
 
   .img-logo {
     content: url("img/core-img/logo_dark_mode.png");
+  }
+
+  .classy-navbar, .delicious-main-menu, .classy-menu {
+    background-color: #000 !important;
+    color:#000;
+  }
+
+  .list-link {
+    color:#e9e9e9 !important;
+  }
+
+  .list-item {
+    color:#cacaca !important;
+  }
+
+  .dropdown {
+    background-color: #212121 !important;
   }
 }
