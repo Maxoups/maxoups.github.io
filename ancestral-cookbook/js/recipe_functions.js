@@ -14,7 +14,20 @@ function createRecipeSlider(images) {
 
   // Inject into the DOM
   document.getElementById("slider-container").innerHTML = image_divs;
+
+  console.log("Created slider with images:", imgTags);
+
+  // Now initialize Owl Carousel (must be after DOM insertion)
+  $('.receipe-slider').owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    nav: true,
+    dots: true
+  });
 }
+
 
 function addRecipeTitle(text) {
   document.getElementById("recipe-title").innerText = text;
@@ -245,6 +258,8 @@ function buildRecipePage(data) {
     const recipeImages = data.Images ? data.Images.split(", ") : [];
 
     // Create HTML div for this recipe
+    console.log("AddEventListener:", recipeImages);
+    //document.addEventListener("DOMContentLoaded", function() {createRecipeSlider(recipeImages);});
     createRecipeSlider(recipeImages);
     addRecipeTitle(recipeTitle);
     addRecipeChef(recipeCook);
