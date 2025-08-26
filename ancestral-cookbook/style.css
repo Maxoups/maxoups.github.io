@@ -494,13 +494,13 @@ textarea:focus {
         .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:hover, .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:focus {
           font-size: 14px;
           color: #ffffff;
-          background-color: #40ba37;
+          background-color: #016065;
           border-bottom: 3px solid #1c8314; }
           .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:hover::after, .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:focus::after {
             color: #ffffff; }
       .header-area .delicious-main-menu .classy-navbar .classynav > ul > li.active > a {
         color: #ffffff;
-        background-color: #40ba37;
+        background-color: #006760;
         border-bottom: 3px solid #1c8314; }
         .header-area .delicious-main-menu .classy-navbar .classynav > ul > li.active > a::after {
           color: #ffffff; }
@@ -514,7 +514,7 @@ textarea:focus {
         -webkit-transition-duration: 500ms;
         transition-duration: 500ms; }
       .header-area .delicious-main-menu .classynav .search-btn:hover i, .header-area .delicious-main-menu .classynav .search-btn:focus i {
-        color: #40ba37; }
+        color: #04636c; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .header-area .delicious-main-menu .classynav .search-btn {
           margin-left: 50px; } }
