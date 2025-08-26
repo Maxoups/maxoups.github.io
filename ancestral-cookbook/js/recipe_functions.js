@@ -116,9 +116,10 @@ function buildPage(data) {
 }
 
 function writePage() {
-    console.log("Building page for:", pageName)
-    const data = findRecipeByTitle(pageName)
-    buildPage(data)
+    if (pageName) {
+        const data = findRecipeByTitle(pageName)
+        buildPage(data)
+    }
 }
 
 function parseRecipesCSV() {
