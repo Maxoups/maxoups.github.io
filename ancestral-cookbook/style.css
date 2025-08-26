@@ -309,6 +309,16 @@ textarea:focus {
       right: 30px; } }
 
 /* Button */
+.btn-dish {
+  margin-bottom: 5px;
+  height: 40px !important;
+  vertical-align: middle;
+  text-align: center;
+  min-width: 20px !important;
+  font-size: 15px !important;
+  line-height: 40px !important;
+}
+
 .delicious-btn {
   display: inline-block;
   min-width: 160px;
@@ -323,7 +333,7 @@ textarea:focus {
   font-weight: 600;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
-  text-transform: capitalize;
+ 
   background-color: #00635a; }
   .delicious-btn.active, .delicious-btn:hover, .delicious-btn:focus {
     font-size: 16px;
