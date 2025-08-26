@@ -14,19 +14,6 @@ function createRecipeSlider(images) {
 
   // Inject into the DOM
   document.getElementById("slider-container").innerHTML = image_divs;
-
-  console.log("Created slider with images:", images);
-
-  // Initialize Owl Carousel after the elements exist
-  $('.receipe-slider.owl-carousel').owlCarousel({
-    items: 1,           // number of images per view
-    loop: true,         // infinite loop
-    margin: 10,
-    nav: true,          // arrows
-    dots: true,         // pagination dots
-    autoplay: true,
-    autoplayTimeout: 3000
-  });
 }
 
 function addRecipeTitle(text) {
