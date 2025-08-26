@@ -1194,7 +1194,8 @@ textarea:focus {
 
 
 .step-text {
-  color: rgb(10, 0, 56)
+  color: rgb(10, 0, 56);
+  font-size: medium;
 }
 
 /* :: 17.0 Breadcumb Area CSS */
@@ -1398,7 +1399,7 @@ label.comments {
 
 /* DARK MODE */
 
-@media (prefers-color-scheme:light ) {    /* prefers-color-scheme: dark */
+@media (prefers-color-scheme:dark ) {    /* prefers-color-scheme: dark */
   body {
     background-color: #121212;
     color: #e0e0e0;
@@ -1433,5 +1434,13 @@ label.comments {
 
   .ingredients .custom-control-label  {
     color:#cdcdcd
+  }
+
+  .step-text {
+  color: #cbcbcb;
+  }
+
+  h4.step-number {
+    color:#838383
   }
 }

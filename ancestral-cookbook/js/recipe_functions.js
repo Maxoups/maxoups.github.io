@@ -68,7 +68,7 @@ function addRecipeSteps(steps) {
     steps.forEach((step, index) => {
         stepsHTML += `
             <div class="single-preparation-step d-flex">
-                <h4>${index + 1}.</h4>
+                <h4 class="step-number">${index + 1}.</h4>
                 <p class="step-text">${step}</p>
             </div>
         `;
