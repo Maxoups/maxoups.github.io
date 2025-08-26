@@ -1443,4 +1443,8 @@ label.comments {
   h4.step-number {
     color:#838383
   }
+
+  #preloader {
+    background-color: #000000;
+  }
 }
