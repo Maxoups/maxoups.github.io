@@ -311,6 +311,7 @@ textarea:focus {
 /* Button */
 .btn-dish {
   margin-bottom: 5px;
+  margin-right: 5px;
   height: 40px !important;
   vertical-align: middle;
   text-align: center;

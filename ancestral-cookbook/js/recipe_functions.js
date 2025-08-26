@@ -76,6 +76,49 @@ function addRecipeSteps(steps) {
     stepsList.innerHTML = stepsHTML;
 }
 
+function getRandomRecipes(count) {
+  let recipeArray = [];
+
+  // Convert dictionary to array if needed
+  let recipes = Array.isArray(recipesData)
+    ? recipesData
+    : Object.values(recipesData);
+
+  // Shuffle array (Fisher–Yates)
+  for (let i = recipes.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [recipes[i], recipes[j]] = [recipes[j], recipes[i]];
+  }
+
+  // Take `count` recipes
+  recipes.slice(0, count).forEach(item => {
+    if (item.Titre && item.ID) {
+      recipeArray.push({
+        Titre: item.Titre,
+        ID: item.ID
+      });
+    }
+  });
+
+  return recipeArray;
+}
+
+
+function writeRecipeBoxes() {
+    let recipeNames = getRandomRecipes(12);
+    console.log("recipeNames = " + recipeNames);
+    const recipeBox = document.getElementById("recipes-box");
+    let recipesHTML = "";
+    for (let recipe of recipeNames) {
+        recipesHTML += `
+            <a href="recipe-post.html?name=${encodeURIComponent(recipe.ID)}" 
+               class="btn delicious-btn btn-dish">
+               ${recipe.Titre}
+            </a>`;
+    }
+    recipeBox.innerHTML = recipesHTML;
+}
+
 function writeHeader() {
     document.getElementById("website-header").innerHTML = `<!-- Preloader -->
     <div id="preloader">
@@ -185,7 +228,7 @@ function findRecipeByTitle(pageTitle) {
     return data;
 }
 
-function buildPage(data) {
+function buildRecipePage(data) {
     // Map CSV fields to variables
     const recipeTitle = data.Titre;
     const recipeCook = data.Cuistot;
@@ -212,9 +255,15 @@ function buildPage(data) {
 
 function writePage() {
     writeHeader();
-    if (pageName) {
-        const data = findRecipeByTitle(pageName);
-        buildPage(data);
+    if (currentPage.includes("recipe")) {
+        // RECIPE PAGE
+        if (pageName) {
+            const data = findRecipeByTitle(pageName);
+            buildRecipePage(data);
+        }
+    } else if (currentPage.includes("index")) {
+        // INDEX PAGE
+        writeRecipeBoxes();
     }
 }
 
@@ -228,8 +277,9 @@ function parseRecipesCSV() {
         header: true,     // first row is header
         skipEmptyLines: true,
         complete: function(results) {
-            recipesData = results.data
-            writePage()
+            recipesData = results.data;
+            console.log(recipesData);
+            writePage();
         },
         error: function(err) {
             console.error("Error parsing CSV:", err);
@@ -243,7 +293,8 @@ function parseRecipesCSV() {
 
 // Read parameters
 const params = new URLSearchParams(window.location.search);
-const pageName = params.get("name");       // "cake"
+const pageName = params.get("name");
+const currentPage = window.location.href;
 //const servings = params.get("servings"); // "4"
 
 // Parse recipes CSV
