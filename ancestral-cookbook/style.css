@@ -315,7 +315,7 @@ textarea:focus {
   height: 60px;
   color: #ffffff;
   border: none;
-  border-left: 3px solid #1c8314;
+  border-left: 3px solid #004345;
   border-radius: 0;
   padding: 0 30px;
   font-size: 16px;
@@ -324,30 +324,30 @@ textarea:focus {
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   text-transform: capitalize;
-  background-color: #40ba37; }
+  background-color: #00635a; }
   .delicious-btn.active, .delicious-btn:hover, .delicious-btn:focus {
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    background-color: #1c8314;
-    border-color: #40ba37; }
+    background-color: #007878;
+    border-color: #006561; }
   .delicious-btn.btn-2 {
-    background-color: #1c8314;
-    border-color: #40ba37; }
+    background-color: #007670;
+    border-color: #006a5c; }
     .delicious-btn.btn-2.active, .delicious-btn.btn-2:hover, .delicious-btn.btn-2:focus {
-      background-color: #40ba37;
-      border-color: #1c8314; }
+      background-color: #006464;
+      border-color: #005d5f; }
   .delicious-btn.btn-3 {
     background-color: #474747;
-    border-color: #1c8314; }
+    border-color: #007d72; }
     .delicious-btn.btn-3.active, .delicious-btn.btn-3:hover, .delicious-btn.btn-3:focus {
-      background-color: #40ba37;
-      border-color: #1c8314; }
+      background-color: #00686b;
+      border-color: #00696f; }
   .delicious-btn.btn-4 {
     background-color: transparent;
-    border: 3px solid #40ba37;
+    border: 3px solid #004745;
     line-height: 53px;
-    color: #40ba37; }
+    color: #005a4f; }
     @media only screen and (max-width: 767px) {
       .delicious-btn.btn-4 {
         height: 40px;
@@ -355,7 +355,7 @@ textarea:focus {
     .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
       line-height: 53px;
       color: #ffffff;
-      background-color: #40ba37; }
+      background-color: #005e50; }
       @media only screen and (max-width: 767px) {
         .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
           height: 40px;
