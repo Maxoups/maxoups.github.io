@@ -124,13 +124,27 @@ function writeRecipeBoxes() {
     let recipesHTML = "";
     for (let recipe of recipeNames) {
         recipesHTML += `
-            <a href="recipe-post.html?name=${encodeURIComponent(recipe.ID)}" 
+            <a href="recipe.html?name=${encodeURIComponent(recipe.ID)}" 
                class="btn delicious-btn btn-dish">
                ${recipe.Titre}
             </a>`;
     }
     recipeBox.innerHTML = recipesHTML;
 }
+
+function goToRandomRecipe(event) {
+    event.preventDefault(); // prevent the default <a> navigation
+    let recipesArray = Array.isArray(recipesData)
+        ? recipesData
+        : Object.values(recipesData);
+
+    if (recipesArray.length === 0) return;
+    const randomRecipe = recipesArray[Math.floor(Math.random() * recipesArray.length)];
+    if (randomRecipe.ID) {
+        window.location.href = `recipe.html?name=${encodeURIComponent(randomRecipe.ID)}`;
+    }
+}
+
 
 /*
     <div id="preloader">
@@ -207,8 +221,8 @@ function writeHeader() {
                                     </li>
                                     <li><a class="list-link" href="#">Cuistots</a>
                                         <ul class="dropdown">
-                                            <li><a class="list-item" href="recipe-post.html">Kaki</a></li>
-                                            <li><a class="list-item" href="recipe-post.html">Mélinouche</a></li>
+                                            <li><a class="list-item" href="recipe.html">Kaki</a></li>
+                                            <li><a class="list-item" href="recipe.html">Mélinouche</a></li>
                                         </ul>
                                     </li>
                                     <!-- <li><a href="contact.html">Contact</a></li> -->
