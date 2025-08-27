@@ -240,7 +240,12 @@ function writeHeader() {
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->`
+    <!-- ##### Header Area End ##### -->`;
+
+    // Re-initialize the nav after injection
+    if (typeof $.fn.classyNav !== "undefined") {
+        $('#deliciousNav').classyNav();
+    }
 }
 
 
