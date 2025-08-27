@@ -154,8 +154,7 @@ function goToRandomRecipe(event) {
 */
 
 function writeHeader() {
-    document.getElementById("website-header").innerHTML = `<!-- Preloader -->
-
+    document.getElementById("website-header").innerHTML = `
     <!-- Search Wrapper -->
     <div class="search-wrapper">
         <!-- Close Btn -->
@@ -241,7 +240,7 @@ function writeHeader() {
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->`;
+    <!-- ##### Header Area End ##### -->`
 }
 
 
