@@ -1420,12 +1420,76 @@ label.comments {
   font-style: italic;
 }
 
+.meal-item {
+  background-color: var(--meal-bg);
+  color: var(--meal-text);
+  border-radius: 12px;
+  border-width: 4px;
+  border-color: #000;
+  border-style:dotted;
+  padding: 16px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  max-width: 300px;
+  display: inline-block;
+}
+
+.meal-item:hover {
+  background-color: var(--meal-bg-hover);
+  transform: scale(1.02);
+}
+
+.meal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.meal-icon {
+  font-size: 20px;
+  color: var(--meal-accent);
+}
+
+.meal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.meal-desc {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color:#191919
+}
+
+:root {
+  --meal-bg: #8bffea;       /* light blue */
+  --meal-bg-hover: #70dac5;
+  --meal-text: #1a1a1a;
+  --meal-accent: #00bbab;   /* dark blue */
+}
+
+
+
 /* DARK MODE */
 
 @media (prefers-color-scheme:dark ) {    /* prefers-color-scheme: dark */
   body {
     background-color: #121212;
     color: #e0e0e0;
+  }
+
+  :root {
+    --meal-bg: #073c4a;      /* dark blue */
+    --meal-bg-hover: #054053;
+    --meal-text: #f0f0f0;
+    --meal-accent: #1bcbdf;  /* light blue */
   }
 
   h1,

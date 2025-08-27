@@ -248,6 +248,19 @@ function writeHeader() {
     }
 }
 
+// ex img: img/core-img/hamburger.png
+function createMealItem(recipe, img) {
+  return `
+    <div class="meal-item" onclick="window.open('recipe.html?name=${recipe.ID}', '_blank')">
+        <div class="meal-header">
+            <img src="${img}" alt="" style="margin-right:0px;scale: 0.6;">
+            <h3 class="meal-title">${recipe.Titre}</h3>
+        </div>
+        <p class="meal-desc">${recipe.Description}</p>
+    </div>
+  `;
+}
+
 
 
 //#####################################################################//
