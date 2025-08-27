@@ -204,24 +204,24 @@ function writeHeader() {
                                     <li class="active"><a class="list-link" href="index.html">Accueil</a></li>
                                     <li><a class="list-link" href="#">Pages</a>
                                         <ul class="dropdown">
-                                            <li><a class="list-item" href="index.html">Générer un menu</a></li>
-                                            <li><a class="list-item" href="blog-post.html">Rechercher</a></li>
+                                            <li><a class="list-item" href="menu.html">Générer un menu</a></li>
+                                            <li><a class="list-item" href="search.html">Rechercher</a></li>
                                             <li><a class="list-item" href="about.html">À propos</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="list-link" href="#">Menu</a>
                                         <ul class="dropdown">
-                                            <li><a class="list-item" href="index.html">Entrées</a></li>
-                                            <li><a class="list-item" href="blog-post.html">Plats</a></li>
-                                            <li><a class="list-item" href="about.html">Desserts</a></li>
-                                            <li><a class="list-item" href="about.html">Boissons</a></li>
-                                            <li><a class="list-item" href="about.html">Autres</a></li>
+                                            <li><a class="list-item" href="search.html">Entrées</a></li>
+                                            <li><a class="list-item" href="search.html">Plats</a></li>
+                                            <li><a class="list-item" href="search.html">Desserts</a></li>
+                                            <li><a class="list-item" href="search.html">Boissons</a></li>
+                                            <li><a class="list-item" href="search.html">Autres</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="list-link" href="#">Cuistots</a>
                                         <ul class="dropdown">
-                                            <li><a class="list-item" href="recipe.html">Kaki</a></li>
-                                            <li><a class="list-item" href="recipe.html">Mélinouche</a></li>
+                                            <li><a class="list-item" href="search.html">Kaki</a></li>
+                                            <li><a class="list-item" href="search.html">Mélinouche</a></li>
                                         </ul>
                                     </li>
                                     <!-- <li><a href="contact.html">Contact</a></li> -->
