@@ -211,17 +211,17 @@ function writeHeader() {
                                     </li>
                                     <li><a class="list-link" href="#">Menu</a>
                                         <ul class="dropdown">
-                                            <li><a class="list-item" href="search.html">Entrées</a></li>
-                                            <li><a class="list-item" href="search.html">Plats</a></li>
-                                            <li><a class="list-item" href="search.html">Desserts</a></li>
-                                            <li><a class="list-item" href="search.html">Boissons</a></li>
-                                            <li><a class="list-item" href="search.html">Autres</a></li>
+                                            <li><a class="list-item" href="search.html?dish_type=Entrée">Entrées</a></li>
+                                            <li><a class="list-item" href="search.html?dish_type=Plat">Plats</a></li>
+                                            <li><a class="list-item" href="search.html?dish_type=Dessert">Desserts</a></li>
+                                            <li><a class="list-item" href="search.html?dish_type=Boisson">Boissons</a></li>
+                                            <li><a class="list-item" href="search.html?dish_type=Autre">Autres</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="list-link" href="#">Cuistots</a>
                                         <ul class="dropdown">
-                                            <li><a class="list-item" href="search.html">Kaki</a></li>
-                                            <li><a class="list-item" href="search.html">Mélinouche</a></li>
+                                            <li><a class="list-item" href="search.html?dish_chef=Kaki">Kaki</a></li>
+                                            <li><a class="list-item" href="search.html?dish_chef=Mélinouche">Mélinouche</a></li>
                                         </ul>
                                     </li>
                                     <!-- <li><a href="contact.html">Contact</a></li> -->
