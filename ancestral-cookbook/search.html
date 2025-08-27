@@ -6,12 +6,11 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
     <title>Ancestral Cookbook | Recherche</title>
 
-
+    <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 
@@ -20,26 +19,86 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* === Custom styles for search page === */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .filters input,
+        .filters select,
+        .filters button {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .meal-item {
+            background-color: var(--meal-bg, #e0f0ff);
+            border-radius: 12px;
+            padding: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .meal-item {
+                --meal-bg: #2a3a4a;
+                color: #f0f0f0;
+            }
+        }
+
+        .meal-title {
+            margin: 0 0 6px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .meal-desc {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+    </style>
 </head>
 
 
 <body>
     <div id="website-header"></div>
-        <!-- Recipe Slider -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div id="slider-container"></div>
-                </div>
-            </div>
-        </div>
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg); margin-bottom: 60px;">
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg); margin-bottom: 40px;">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-text text-center">
+                        <h2>Recherche de recettes</h2>
                     </div>
                 </div>
             </div>
@@ -47,93 +106,29 @@
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
-        <div class="col-12">
-            <div class="delicious-cool-facts-area">
-                <div class="row">
+    <div class="container">
+        <!-- Filters -->
+        <div class="filters">
+            <input type="text" id="searchBar" placeholder="Rechercher un nom de recette...">
 
-                    <!-- Menuitem -->
-                    <div class="meal-item" onclick="window.open('recipe.html?name=12345', '_blank')">
-                        <div class="meal-header">
-                            <img src="img/core-img/hamburger.png" alt="" style="margin-right:0px;scale: 0.6;">
-                            <h3 class="meal-title">Tiramisu</h3>
-                        </div>
-                        <p class="meal-desc">
-                            45min
-                        </p>
-                        <p class="meal-desc">
-                            Kiffeur, Gâteau, Anniversaire
-                        </p>
-                    </div>
+            <select id="categoryFilter">
+                <option value="">Toutes les catégories</option>
+            </select>
 
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/salad.png" alt="">
-                            <h3><span class="counter">1287</span></h3>
-                            <h6>Amazing receipies</h6>
-                        </div>
-                    </div>
+            <select id="chefFilter">
+                <option value="">Tous les cuistots</option>
+            </select>
 
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/hamburger.png" alt="">
-                            <h3><span class="counter">25</span></h3>
-                            <h6>Burger receipies</h6>
-                        </div>
-                    </div>
-
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/rib.png" alt="">
-                            <h3><span class="counter">471</span></h3>
-                            <h6>Meat receipies</h6>
-                        </div>
-                    </div>
-
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/pancake.png" alt="">
-                            <h3><span class="counter">326</span></h3>
-                            <h6>Desert receipies</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <input type="text" id="tagInput" placeholder="Ajouter un tag...">
+            <button onclick="addTag()">+ Tag</button>
         </div>
 
-        <div class="receipe-post-area section-padding-80">
-         <!-- Top Catagory Area -->
-        <div style="width: 100%; margin-top: -40px;">
-            <div class="single-top-catagory">
-                <img src="img/bg-img/bg2.jpg" alt="">
-                <!-- Content -->
-                <div class="top-cta-content">
-                    <h3>Chercher une recette</h3>
-                    <h6>Cherche un plat parmi l'ensemble des recettes de la famille.</h6>
-                    <a href="recipe.html" class="btn delicious-btn">Recherche</a>
-                </div>
-            </div>
-        </div>
+        <!-- Active tags -->
+        <div class="tags-container" id="activeTags"></div>
 
-        <!-- Recipe Content Area -->
-        <div class="receipe-content-area">
-            <div class="container" style="margin-bottom: 60px;">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="preparation-steps">
-                            <h4 class="fixed-title">Repas complet</h4>
-                            <p>Crée un menu avec entrée, plat, dessert.</p>
-                            <a href="recipe.html" class="btn delicious-btn">Générer un menu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
+        <!-- Results -->
+        <div class="results" id="results"></div>
+    </div>
 
 
     <!-- jQuery (required by Owl Carousel) -->
@@ -142,8 +137,8 @@
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-
-    <script src="js\PapaParse-5.0.2\papaparse.min.js"></script>
+    <!-- PapaParse -->
+    <script src="js/PapaParse-5.0.2/papaparse.min.js"></script>
     <script src="js/recipe_functions.js"></script>
 
     <!-- jQuery-2.2.4 js -->
@@ -156,6 +151,127 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-</body>
 
+    <script>
+        // 🥘 Exemple: tu remplaces recipesDataPLACEHOLDER par ta variable globale après parsing CSV
+        const recipesDataPLACEHOLDER = [
+            { ID: "1", Titre: "Tiramisu", Type: "Dessert", Cuistot: "Kaki", Tags: ["café", "sucré"] },
+            { ID: "2", Titre: "Lasagnes", Type: "Plat", Cuistot: "Mélinouche", Tags: ["pâtes", "fromage"] },
+            { ID: "3", Titre: "Salade César", Type: "Entrée", Cuistot: "Kaki", Tags: ["salade", "poulet"] }
+        ];
+
+        const searchBar = document.getElementById("searchBar");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const chefFilter = document.getElementById("chefFilter");
+        const resultsDiv = document.getElementById("results");
+        const tagInput = document.getElementById("tagInput");
+        const activeTagsDiv = document.getElementById("activeTags");
+
+        let activeTags = [];
+
+        function initFilters() {
+        categoryFilter.innerHTML = `<option value="">Toutes les catégories</option>`;
+        chefFilter.innerHTML = `<option value="">Tous les cuistots</option>`;
+
+        if (!recipesDataPLACEHOLDER || recipesDataPLACEHOLDER.length === 0) {
+            console.warn("recipesDataPLACEHOLDER is empty when building filters");
+            return;
+        }
+
+        // Normalize keys just in case (toLowerCase)
+        const types = [...new Set(recipesDataPLACEHOLDER.map(r => (r.Type || r.type || "").trim()).filter(Boolean))];
+        const chefs = [...new Set(recipesDataPLACEHOLDER.map(r => (r.Cuistot || r.cuistot || "").trim()).filter(Boolean))];
+
+        types.forEach(type => {
+            const opt = document.createElement("option");
+            opt.value = type;
+            opt.textContent = type;
+            categoryFilter.appendChild(opt);
+        });
+
+        chefs.forEach(chef => {
+            const opt = document.createElement("option");
+            opt.value = chef;
+            opt.textContent = chef;
+            chefFilter.appendChild(opt);
+        });
+
+        console.log("chefFilter = " + chefs);
+        console.log("categoryFilter = " + types);
+        }
+
+
+        function addTag() {
+            const tag = tagInput.value.trim();
+            if (tag && !activeTags.includes(tag)) {
+                activeTags.push(tag);
+                renderTags();
+                filterRecipes();
+            }
+            tagInput.value = "";
+        }
+
+        function removeTag(tag) {
+            activeTags = activeTags.filter(t => t !== tag);
+            renderTags();
+            filterRecipes();
+        }
+
+        function renderTags() {
+            activeTagsDiv.innerHTML = "";
+            activeTags.forEach(tag => {
+                const span = document.createElement("span");
+                span.className = "tag";
+                span.textContent = tag + " ✕";
+                span.onclick = () => removeTag(tag);
+                activeTagsDiv.appendChild(span);
+            });
+        }
+
+        function filterRecipes() {
+            const searchTerm = searchBar.value.toLowerCase();
+            const category = categoryFilter.value;
+            const chef = chefFilter.value;
+
+            const filtered = recipesDataPLACEHOLDER.filter(recipe => {
+                const matchesSearch = recipe.Titre.toLowerCase().includes(searchTerm);
+                const matchesCategory = !category || recipe.Type === category;
+                const matchesChef = !chef || recipe.Cuistot === chef;
+                const matchesTags = activeTags.every(tag => recipe.Tags.map(t => t.toLowerCase()).includes(tag.toLowerCase()));
+
+                return matchesSearch && matchesCategory && matchesChef && matchesTags;
+            });
+
+            renderResults(filtered);
+        }
+
+        function renderResults(list) {
+            resultsDiv.innerHTML = "";
+            if (list.length === 0) {
+                resultsDiv.innerHTML = "<p>Aucune recette trouvée.</p>";
+                return;
+            }
+
+            list.forEach(r => {
+                const div = document.createElement("div");
+                div.className = "meal-item";
+                div.onclick = () => window.open(`recipe.html?name=${r.ID}`, "_blank");
+                div.innerHTML = `
+                    <h3 class="meal-title">${r.Titre}</h3>
+                    <p class="meal-desc">Type: ${r.Type} • Cuistot: ${r.Cuistot}</p>
+                    <p class="meal-desc">Tags: ${r.Tags.join(", ")}</p>
+                `;
+                resultsDiv.appendChild(div);
+            });
+        }
+
+        searchBar.addEventListener("input", filterRecipes);
+        categoryFilter.addEventListener("change", filterRecipes);
+        chefFilter.addEventListener("change", filterRecipes);
+
+        // Init
+        initFilters();
+        filterRecipes();
+    </script>
+</body>
 </html>

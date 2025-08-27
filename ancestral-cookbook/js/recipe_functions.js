@@ -310,6 +310,7 @@ function writePage() {
             const data = findRecipeByTitle(pageName);
             buildRecipePage(data);
         }
+    } else if (currentPage.includes("search")) {
     } else {
         // INDEX PAGE
         writeRecipeBoxes();
