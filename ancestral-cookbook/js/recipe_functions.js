@@ -317,9 +317,12 @@ function writePage() {
     }
 }
 
+const recipeDataLoaded = new CustomEvent("recipeDataLoaded", {});
+
 function parseRecipesCSV() {
     const CsvFile = "https://maxoups.github.io/ancestral-cookbook/Recettes.csv"
     recipesData = []
+    // console.log("Try loading recipesData...");
 
     // Parse CSV and fill page
     Papa.parse(CsvFile, {
@@ -327,9 +330,12 @@ function parseRecipesCSV() {
         header: true,     // first row is header
         skipEmptyLines: true,
         complete: function(results) {
+            // console.log("RecipesData loaded successfully!");
             recipesData = results.data;
             console.log(recipesData);
             writePage();
+            isRecipesDataLoaded = true;
+            document.dispatchEvent(recipeDataLoaded);
         },
         error: function(err) {
             console.error("Error parsing CSV:", err);
@@ -349,6 +355,7 @@ const currentPage = window.location.href;
 
 // Parse recipes CSV
 let recipesData;
+let isRecipesDataLoaded = false;
 
 if (recipesData == null) {
     console.log("Loading recipesData...")

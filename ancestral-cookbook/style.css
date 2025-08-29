@@ -1424,9 +1424,9 @@ label.comments {
   background-color: var(--meal-bg);
   color: var(--meal-text);
   border-radius: 12px;
-  border-width: 4px;
+  border-width: 1px;
   border-color: #000;
-  border-style:dotted;
+  border-style:groove;
   padding: 16px;
   margin: 12px 0;
   cursor: pointer;
@@ -1469,7 +1469,7 @@ label.comments {
 }
 
 :root {
-  --meal-bg: #8bffea;       /* light blue */
+  --meal-bg: #a5f1e3;       /* light blue */
   --meal-bg-hover: #70dac5;
   --meal-text: #1a1a1a;
   --meal-accent: #00bbab;   /* dark blue */
