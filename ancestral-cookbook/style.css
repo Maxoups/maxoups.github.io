@@ -324,9 +324,9 @@ textarea:focus {
   display: inline-block;
   min-width: 160px;
   height: 60px;
-  color: #ffffff;
+  color: #E4D2AC;
+  background-color: #9C926D;
   border: none;
-  border-left: 3px solid #004345;
   border-radius: 0;
   padding: 0 30px;
   font-size: 16px;
@@ -334,39 +334,38 @@ textarea:focus {
   font-weight: 600;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
- 
-  background-color: #00635a; }
+  }
   .delicious-btn.active, .delicious-btn:hover, .delicious-btn:focus {
+    color: #E4D2AC;
+    background-color: #615B42;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
-    background-color: #007878;
-    border-color: #006561; }
+    }
   .delicious-btn.btn-2 {
-    background-color: #007670;
-    border-color: #006a5c; }
+    background-color: #9C926D;
+  }
     .delicious-btn.btn-2.active, .delicious-btn.btn-2:hover, .delicious-btn.btn-2:focus {
-      background-color: #006464;
-      border-color: #005d5f; }
+      background-color: #615B42;
+    }
   .delicious-btn.btn-3 {
-    background-color: #474747;
-    border-color: #007d72; }
+    background-color: #9C926D; 
+  }
     .delicious-btn.btn-3.active, .delicious-btn.btn-3:hover, .delicious-btn.btn-3:focus {
-      background-color: #00686b;
-      border-color: #00696f; }
+      background-color: #615B42; 
+    }
   .delicious-btn.btn-4 {
     background-color: transparent;
-    border: 3px solid #004745;
+    border: none;
     line-height: 53px;
-    color: #005a4f; }
+    color: #9C926D; ; }
     @media only screen and (max-width: 767px) {
       .delicious-btn.btn-4 {
         height: 40px;
         line-height: 33px; } }
     .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
       line-height: 53px;
-      color: #ffffff;
-      background-color: #005e50; }
+      color: #E4D2AC;
+      background-color: #615B42; }
       @media only screen and (max-width: 767px) {
         .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
           height: 40px;
@@ -1480,6 +1479,18 @@ label.comments {
   --meal-accent: #00bbab;   /* dark blue */
 }
 
+.delicious-main-menu,
+.delicious-main-menu a,
+.delicious-main-menu .classynav ul li a,
+.delicious-main-menu .dropdown li a {
+    color: #E4D2AC !important;
+}
+
+
+
+/*##########################################################################*/
+/*##########################################################################*/
+/*##########################################################################*/
 
 
 /* DARK MODE */
