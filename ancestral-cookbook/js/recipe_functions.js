@@ -177,7 +177,7 @@ function writeHeader() {
     <header class="header-area">
 
         <!-- Navbar Area -->
-        <div class="delicious-main-menu" style="max-height: 100px;">
+        <div class="delicious-main-menu" style="max-height: 100px; background-color: #3F2E1F;">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <!-- Menu -->
