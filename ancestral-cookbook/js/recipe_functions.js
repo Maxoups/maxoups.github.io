@@ -24,7 +24,8 @@ function createRecipeSlider(images) {
     autoplay: true,
     autoplayTimeout: 5000,
     nav: true,
-    dots: true
+    dots: true,
+    navText: ['◀', '▶']
   });
 }
 
