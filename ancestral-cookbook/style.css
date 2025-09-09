@@ -1074,12 +1074,12 @@ textarea:focus {
   color: #a4a4a4;
   margin-bottom: 0; }
 .receipe-headline h2 {
-  font-size: 36px;
-  color: #474747;
+  font-size: 80px;
+  color: #3F2E1F;
   margin-bottom: 30px; }
   @media only screen and (max-width: 767px) {
     .receipe-headline h2 {
-      font-size: 24px; } }
+      font-size: 60px; } }
 .receipe-headline .receipe-duration {
   border-left: 3px solid #006b77;
   padding: 15px; }
