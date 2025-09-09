@@ -8,6 +8,7 @@
 */
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 /* :: 2.0 Import All CSS */
 @import url(css/bootstrap.min.css);
 @import url(css/owl.carousel.min.css);
@@ -311,11 +312,11 @@ textarea:focus {
 
 /* ScrollUp */
 #scrollUp {
-  background-color: #40ba37;
+  background-color: #7E5B34;
   border-radius: 0;
   bottom: 60px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
-  color: #ffffff;
+  box-shadow: 0 2px 6px 0 #3F2E1F;
+  color: #E4D2AC;
   font-size: 24px;
   height: 40px;
   line-height: 38px;
@@ -325,7 +326,7 @@ textarea:focus {
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms; }
   #scrollUp:hover {
-    background-color: #141414; }
+    background-color: #3F2E1F; }
   @media only screen and (max-width: 767px) {
     #scrollUp {
       bottom: 30px;
@@ -1069,9 +1070,10 @@ textarea:focus {
     visibility: visible; }
 
 .receipe-headline span {
-  font-size: 21px;
+  font-size: 22px;
   display: block;
   color: #7E5B34;
+  font-style: italic;
   font-family: 'CinzelDecorative', 'Open Sans', sans-serif;
   margin-bottom: 0; }
 .receipe-headline h2 {
@@ -1112,9 +1114,12 @@ textarea:focus {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .ingredients {
-    margin-bottom: 80px; } }
+    margin-bottom: 80px;
+    font-family: 'EB Garamond', serif;
+  } }
 @media only screen and (max-width: 767px) {
   .ingredients {
+    font-family: 'EB Garamond', serif;
     margin-bottom: 80px; } }
 .ingredients h4 {
   color: #3F2E1F;
@@ -1131,11 +1136,13 @@ textarea:focus {
   margin-bottom: 15px;
   min-height: 35px; }
 .ingredients .custom-control-label {
-  margin-bottom: 0;
+  margin-bottom: 0px;
   padding-top: 0px;
-  font-size: 16px;
+  margin-top: -5px;
+  font-size: 21px;
+  font-family: 'EB Garamond', serif;
   font-weight: 600;
-  color: #2f2f2f; }
+  color: #3F2E1F; }
 .ingredients .custom-control-label::after {
   background-image: none !important;
   top: 10px;
@@ -1263,7 +1270,9 @@ textarea:focus {
 
 .step-text {
   color: #1D150E;
-  font-size: medium;
+  font-size: 18px;
+  margin-top: 5px;
+  font-family: 'EB Garamond', serif;
 }
 
 .img-logo {
@@ -1467,11 +1476,14 @@ textarea:focus {
 /*# sourceMappingURL=style.css.map */
 
 label.comments {
-  color: #494949;
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  color: #7E5B34;
   margin-left: 5px; 
   margin-top: 15px; 
   margin-bottom: -5px; 
   font-style: italic;
+  font-weight: 500;
 }
 
 .meal-item {
