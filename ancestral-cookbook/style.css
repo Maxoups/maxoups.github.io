@@ -62,7 +62,7 @@ h2 {
 }
 
 p {
-  color: #9b9b9b;
+  color: #3F2E1F;
   font-size: 14px;
   line-height: 2;
   font-weight: 400; }
@@ -630,7 +630,7 @@ textarea:focus {
           padding: 30px 20px; } }
       .hero-slides .single-hero-slide .hero-slides-content h2 {
         font-size: 30px;
-        color: #ffffff;
+        color: #E4D2AC;
         margin-bottom: 30px;
         font-weight: 600; }
         @media only screen and (max-width: 767px) {
@@ -639,7 +639,7 @@ textarea:focus {
       .hero-slides .single-hero-slide .hero-slides-content p {
         font-size: 16px;
         margin-bottom: 50px;
-        color: #ffffff; }
+        color: #E4D2AC; }
   .hero-slides .owl-prev,
   .hero-slides .owl-next {
     background-color: transparent;
@@ -781,7 +781,7 @@ textarea:focus {
   .cta-area .cta-content h2 {
     font-size: 72px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #E4D2AC;
     font-weight: 400; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .cta-area .cta-content h2 {
@@ -793,7 +793,7 @@ textarea:focus {
       .cta-area .cta-content h2 {
         font-size: 30px; } }
   .cta-area .cta-content p {
-    color: #ffffff;
+    color: #E4D2AC;
     margin-bottom: 100px;
     font-size: 16px; }
     @media only screen and (max-width: 767px) {
@@ -820,7 +820,7 @@ textarea:focus {
   .single-small-receipe-area .receipe-content span {
     font-size: 12px;
     display: block;
-    color: #40ba37; }
+    color: #7E5B34; }
   .single-small-receipe-area .receipe-content a {
     display: block; }
     .single-small-receipe-area .receipe-content a h5 {
@@ -856,7 +856,7 @@ textarea:focus {
     font-style: italic;
     margin-bottom: 30px;
     display: block;
-    color: #40ba37;
+    color: #7E5B34;
     line-height: 1; }
   .quote-area h4 {
     font-size: 24px;
@@ -1069,9 +1069,10 @@ textarea:focus {
     visibility: visible; }
 
 .receipe-headline span {
-  font-size: 14px;
+  font-size: 21px;
   display: block;
-  color: #a4a4a4;
+  color: #7E5B34;
+  font-family: 'CinzelDecorative', 'Open Sans', sans-serif;
   margin-bottom: 0; }
 .receipe-headline h2 {
   font-size: 80px;
@@ -1101,7 +1102,7 @@ textarea:focus {
   z-index: 1;
   margin-bottom: 20px; }
   .single-preparation-step h4 {
-    color: #474747;
+    color: #3F2E1F;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 60px;
     flex: 0 0 60px;
@@ -1116,7 +1117,7 @@ textarea:focus {
   .ingredients {
     margin-bottom: 80px; } }
 .ingredients h4 {
-  color: #474747;
+  color: #3F2E1F;
   margin-bottom: 30px; }
 .ingredients .custom-checkbox .custom-control-label::before {
   border-radius: 50%;
@@ -1124,7 +1125,7 @@ textarea:focus {
 .ingredients .custom-control-label::before {
   width: 15px;
   height: 15px;
-  background-color: hsl(216, 26%, 96%); }
+  background-color: #9C926D; }
 .ingredients .custom-control {
   padding-left: 2.5rem;
   margin-bottom: 15px;
@@ -1143,7 +1144,7 @@ textarea:focus {
   height: 20px; }
 .ingredients .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-image: none !important;
-  background-color: #098893; }
+  background-color: #3F2E1E; }
 
 /* :: 16.0 Footer Area CSS */
 .footer-area {
@@ -1261,7 +1262,7 @@ textarea:focus {
 
 
 .step-text {
-  color: rgb(10, 0, 56);
+  color: #1D150E;
   font-size: medium;
 }
 
@@ -1287,7 +1288,7 @@ textarea:focus {
   .breadcumb-area .breadcumb-text h2 {
     font-size: 30px;
     margin-bottom: 0;
-    color: #ffffff; }
+    color: #E4D2AC; }
     @media only screen and (max-width: 767px) {
       .breadcumb-area .breadcumb-text h2 {
         font-size: 24px; } }
@@ -1346,7 +1347,7 @@ textarea:focus {
 .elements-title h2 {
   font-size: 30px;
   margin-bottom: 70px;
-  color: #4b4b4b; }
+  color: #3F2E1F; }
 
 .single-pie-bar h6 {
   font-size: 18px;
@@ -1658,25 +1659,25 @@ html {
   h4,
   h5,
   h6 {
-    color: #aeaeae;
+    color: #E4D2AC;
     line-height: 1.3;
     font-weight: 600;
   }
 
   h2.recipetitle {
-    color: rgb(255, 255, 255);
+    color: #E4D2AC;
   }
 
   label.comments {
-    color:#c9c9c9
+    color:#E4D2AC
   }
 
   h4.fixed-title {
-    color:#e2e2e2
+    color:#E4D2AC
   }
 
   .ingredients .custom-control-label::before {
-    background-color: #4a4a4a;
+    background-color: #3F2E1F;
   }
 
   .ingredients .custom-control-label  {
@@ -1688,7 +1689,7 @@ html {
   }
 
   h4.step-number {
-    color:#838383
+    color:#3F2E1F
   }
 
   #preloader {
