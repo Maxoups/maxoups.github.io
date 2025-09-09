@@ -991,6 +991,11 @@ textarea:focus {
     height: 40px;
     line-height: 40px;
     color: #ffffff;
+    text-shadow: 
+        -2px -2px 0 #000,
+        -2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
     top: 50%;
     margin-top: -20px;
     left: 4%;
@@ -1003,7 +1008,7 @@ textarea:focus {
     visibility: hidden;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
-    border-bottom: 3px solid #1c8314; }
+    }
     @media only screen and (max-width: 767px) {
       .receipe-slider .owl-prev,
       .receipe-slider .owl-next {
