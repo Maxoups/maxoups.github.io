@@ -504,13 +504,13 @@ textarea:focus {
         .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:hover, .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:focus {
           font-size: 14px;
           color: #ffffff;
-          background-color: #016065;
+          background-color: #615B42;
           border-bottom: 3px solid #1c8314; }
           .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:hover::after, .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:focus::after {
             color: #ffffff; }
       .header-area .delicious-main-menu .classy-navbar .classynav > ul > li.active > a {
         color: #ffffff;
-        background-color: #006760;
+        background-color: #615B42;
         border-bottom: 3px solid #1c8314; }
         .header-area .delicious-main-menu .classy-navbar .classynav > ul > li.active > a::after {
           color: #ffffff; }
@@ -524,7 +524,9 @@ textarea:focus {
         -webkit-transition-duration: 500ms;
         transition-duration: 500ms; }
       .header-area .delicious-main-menu .classynav .search-btn:hover i, .header-area .delicious-main-menu .classynav .search-btn:focus i {
-        color: #04636c; }
+        color: #E4D2AC !important;
+        text-shadow: 0 0 5px #E4D2AC;
+      }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .header-area .delicious-main-menu .classynav .search-btn {
           margin-left: 50px; } }
@@ -542,6 +544,33 @@ textarea:focus {
       /*visibility: hidden;*/
     } 
   }
+
+/* Dropdown background styling */
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown {
+    background-color: #3F2E1F !important;
+}
+
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li {
+    background-color: #3F2E1F !important;
+}
+
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li a {
+    color: #E4D2AC !important;
+    background-color: #3F2E1F !important;
+}
+
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li a:hover,
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li a:focus {
+    background-color: #615B42 !important;
+    color: #E4D2AC !important;
+}
+
+/* Also update your existing dark mode dropdown styling */
+@media (prefers-color-scheme:dark) {
+    .dropdown {
+        background-color: #3F2E1F !important;
+    }
+}
 
 /* :: 6.0 Welcome Area CSS */
 .hero-area {
@@ -1484,6 +1513,101 @@ label.comments {
 .delicious-main-menu .classynav ul li a,
 .delicious-main-menu .dropdown li a {
     color: #E4D2AC !important;
+}
+
+/* Dropdown background styling */
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown {
+    background-color: #3F2E1F !important;
+}
+
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li {
+    background-color: #3F2E1F !important;
+}
+
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li a {
+    color: #E4D2AC !important;
+    background-color: #3F2E1F !important;
+}
+
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li a:hover,
+.header-area .delicious-main-menu .classy-navbar .classynav ul li .dropdown li a:focus {
+    background-color: #615B42 !important;
+    color: #E4D2AC !important;
+}
+
+/* Mobile side menu styling */
+.classy-menu {
+    background-color: #3F2E1F !important;
+}
+
+.classy-menu.menu-on {
+    background-color: #3F2E1F !important;
+}
+
+.classy-menu .classynav ul li .dropdown {
+    background-color: #3F2E1F !important;
+}
+
+.classy-menu .classynav ul li .dropdown li a {
+    background-color: #3F2E1F !important;
+    color: #E4D2AC !important;
+}
+
+.classy-menu .classynav ul li .dropdown li a:hover {
+    background-color: #615B42 !important;
+}
+
+/* Also update your existing dark mode dropdown styling */
+@media (prefers-color-scheme:dark) {
+    .dropdown {
+        background-color: #3F2E1F !important;
+    }
+    .classy-menu {
+        background-color: #3F2E1F !important;
+    }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #E4D2AC;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9C926D;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #615B42;
+}
+
+/* Firefox scrollbar styling */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #9C926D #E4D2AC;
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+        background-color: #121212;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #3F2E1F;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #615B42;
+    }
+    
+    html {
+        scrollbar-color: #3F2E1F #121212;
+    }
 }
 
 
