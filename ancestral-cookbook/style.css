@@ -325,7 +325,7 @@ textarea:focus {
   min-width: 160px;
   height: 60px;
   color: #E4D2AC;
-  background-color: #9C926D;
+  background-color: #615B42;
   border: none;
   border-radius: 0;
   padding: 0 30px;
@@ -337,27 +337,27 @@ textarea:focus {
   }
   .delicious-btn.active, .delicious-btn:hover, .delicious-btn:focus {
     color: #E4D2AC;
-    background-color: #615B42;
+    background-color: #433F2D;
     font-size: 16px;
     font-weight: 600;
     }
   .delicious-btn.btn-2 {
-    background-color: #9C926D;
+    background-color: #615B42;
   }
     .delicious-btn.btn-2.active, .delicious-btn.btn-2:hover, .delicious-btn.btn-2:focus {
-      background-color: #615B42;
+      background-color: #433F2D;
     }
   .delicious-btn.btn-3 {
-    background-color: #9C926D; 
+    background-color: #615B42; 
   }
     .delicious-btn.btn-3.active, .delicious-btn.btn-3:hover, .delicious-btn.btn-3:focus {
-      background-color: #615B42; 
+      background-color: #433F2D; 
     }
   .delicious-btn.btn-4 {
     background-color: transparent;
     border: none;
     line-height: 53px;
-    color: #9C926D; ; }
+    color: #615B42; ; }
     @media only screen and (max-width: 767px) {
       .delicious-btn.btn-4 {
         height: 40px;
@@ -365,7 +365,7 @@ textarea:focus {
     .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
       line-height: 53px;
       color: #E4D2AC;
-      background-color: #615B42; }
+      background-color: #433F2D; }
       @media only screen and (max-width: 767px) {
         .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
           height: 40px;
