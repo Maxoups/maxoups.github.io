@@ -1489,10 +1489,8 @@ label.comments {
 .meal-item {
   background-color: var(--meal-bg);
   color: var(--meal-text);
-  border-radius: 12px;
-  border-width: 1px;
-  border-color: #000;
-  border-style:groove;
+  border-radius: 0px;
+  border-width:0px;
   padding: 16px;
   margin: 12px 0;
   cursor: pointer;
