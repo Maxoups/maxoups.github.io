@@ -1652,17 +1652,17 @@ html {
 
 /* DARK MODE */
 
-@media (prefers-color-scheme:dark ) {    /* prefers-color-scheme: dark */
+@media (prefers-color-scheme:light ) {    /* prefers-color-scheme: dark */
   body {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #3F2E1F;
+    color: #E4D2AC;
   }
 
   :root {
-    --meal-bg: #073c4a;      /* dark blue */
-    --meal-bg-hover: #054053;
-    --meal-text: #f0f0f0;
-    --meal-accent: #1bcbdf;  /* light blue */
+    --meal-bg: #3F2E1F;      /* dark blue */
+    --meal-bg-hover: #3F2E1F;
+    --meal-text: #E4D2AC;
+    --meal-accent: #E4D2AC;  /* light blue */
   }
 
   h1,
@@ -1689,15 +1689,15 @@ html {
   }
 
   .ingredients .custom-control-label::before {
-    background-color: #3F2E1F;
+    background-color: #6A331C;
   }
 
   .ingredients .custom-control-label  {
-    color:#cdcdcd
+    color:#E4D2AC
   }
 
   .step-text {
-  color: #cbcbcb;
+  color: #E4D2AC;
   }
 
   h4.step-number {
@@ -1705,7 +1705,7 @@ html {
   }
 
   #preloader {
-    background-color: #000000;
+    background-color: #3F2E1F;
   }
 
   .img-logo {
@@ -1713,19 +1713,23 @@ html {
   }
 
   .classy-navbar, .delicious-main-menu, .classy-menu {
-    background-color: #000 !important;
-    color:#000;
+    background-color: #3F2E1F !important;
+    color:#3F2E1F;
   }
 
   .list-link {
-    color:#e9e9e9 !important;
+    color:#E4D2AC !important;
   }
 
   .list-item {
-    color:#cacaca !important;
+    color:#E4D2AC !important;
   }
 
   .dropdown {
-    background-color: #212121 !important;
+    background-color: #3F2E1F !important;
   }
+
+  .ingredients .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #9C926D; }
+  
 }
