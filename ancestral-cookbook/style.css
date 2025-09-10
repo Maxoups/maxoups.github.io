@@ -1652,7 +1652,7 @@ html {
 
 @media (prefers-color-scheme:dark ) {    /* prefers-color-scheme: dark */
   body {
-    background-color: #3F2E1F;
+    background-color: #1D150E;
     color: #E4D2AC;
   }
 
@@ -1711,7 +1711,7 @@ html {
   } */
 
   .classy-navbar, .delicious-main-menu, .classy-menu {
-    background-color: #3F2E1F !important;
+    background-color: #1D150E !important;
     color:#3F2E1F;
   }
 
