@@ -1652,7 +1652,7 @@ html {
 
 /* DARK MODE */
 
-@media (prefers-color-scheme:light ) {    /* prefers-color-scheme: dark */
+@media (prefers-color-scheme:dark ) {    /* prefers-color-scheme: dark */
   body {
     background-color: #3F2E1F;
     color: #E4D2AC;
