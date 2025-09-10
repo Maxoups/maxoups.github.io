@@ -1706,9 +1706,9 @@ html {
     background-color: #3F2E1F;
   }
 
-  .img-logo {
+  /* .img-logo {
     content: url("img/core-img/logo_dark_mode.png");
-  }
+  } */
 
   .classy-navbar, .delicious-main-menu, .classy-menu {
     background-color: #3F2E1F !important;
