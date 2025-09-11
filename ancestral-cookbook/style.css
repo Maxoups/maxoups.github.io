@@ -1731,6 +1731,29 @@ h4.step-number {
     font-weight: 600;
   }
 
+  .nice-select .option:hover, 
+  .nice-select .option.focus, 
+  .nice-select .option.selected.focus {
+    background-color: #615B42 !important;
+    color: #E4D2AC !important;
+  }
+
+  .nice-select {
+    background-color: #3F2E1F; 
+    color:#E4D2AC;
+  }
+  .nice-select span {
+    color: #E4D2AC; 
+  }
+  .nice-select .list {
+    background-color: #3F2E1F;
+  }
+
+  input {
+  background-color: #3F2E1F;
+  color:#E4D2AC;
+}
+
   .meal-item {
       --meal-bg: #2a3a4a;
       background-color: #6A331C;
