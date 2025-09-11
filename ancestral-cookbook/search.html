@@ -75,15 +75,17 @@
         }
 
         .meal-title {
-            margin: 0 0 6px;
+            margin-bottom: 15px;
             font-size: 18px;
             font-weight: 800;
+            text-align: center;
         }
 
         .meal-desc {
             font-size: 16px;
             opacity: 0.85;
             font-weight: 400;
+            margin-bottom: -10px;
         }
     </style>
 </head>
@@ -271,7 +273,7 @@
             div.onclick = () => window.open(`recipe.html?name=${r.ID}`, "_blank");
             div.innerHTML = `
                 <h3 class="meal-title">${r.Titre}</h3>
-                <p class="meal-desc">${r.Type} • ${r.Cuistot}</p>
+                <p class="meal-desc">${r.Cuistot}</p>
                 <p class="meal-desc">${tags.join(", ")}</p>
                 <p class="meal-item-button">RECETTE</p>
             `;
