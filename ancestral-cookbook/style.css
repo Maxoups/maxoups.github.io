@@ -184,11 +184,11 @@ img {
   .section-heading.text-left {
     text-align: left !important; }
   .section-heading.white h3 {
-    color: #ffffff; }
+    color: #E4D2AC; }
 
 /* Preloader */
 #preloader {
-  background-color: #ffffff;
+  background-color: #E4D2AC;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -763,14 +763,14 @@ textarea:focus {
     }
     .single-top-catagory .top-cta-content h3 {
       font-size: 30px;
-      color: #ffffff;
+      color: #E4D2AC;
       font-weight: 600;
       margin-bottom: 5px; }
       @media only screen and (max-width: 767px) {
         .single-top-catagory .top-cta-content h3 {
           font-size: 18px; } }
     .single-top-catagory .top-cta-content h6 {
-      color: #ffffff;
+      color: #E4D2AC;
       margin-bottom: 30px;
       display: block;
       font-weight: 400; }
@@ -1419,7 +1419,7 @@ textarea:focus {
 
 /* Accordians */
 .single-accordion.panel {
-  background-color: #ffffff;
+  background-color: #E4D2AC;
   border: 0 solid transparent;
   border-radius: 4px;
   box-shadow: 0 0 0 transparent;
@@ -1432,7 +1432,7 @@ textarea:focus {
   .single-accordion h6 a {
     border-radius: 0;
     background-color: #9C926D;
-    color: #ffffff;
+    color: #E4D2AC;
     border-left: 3px solid #9C926D;
     display: block;
     margin: 0;
