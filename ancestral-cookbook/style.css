@@ -1456,12 +1456,6 @@ textarea:focus {
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 5px; }
-      @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .delicious-tabs-content .nav-tabs .nav-link {
-          padding: 0 10px; } }
-      @media only screen and (max-width: 767px) {
-        .delicious-tabs-content .nav-tabs .nav-link {
-          padding: 0 10px; } }
       .delicious-tabs-content .nav-tabs .nav-link.active {
         background-color: #9C926D;
         color: #ffffff;
@@ -1497,9 +1491,8 @@ label.comments {
   border-width:0px;
   height: 310px;
   padding: 0px;
-  margin: 12px 0;
   cursor: pointer;
-  max-width: 300px;
+  width: 260px;
   display: inline-block;
   transition: transform 500ms, background-color 500ms !important;
   transform: scale(1);
@@ -1669,6 +1662,25 @@ h4.step-number {
     margin-right: -15px;
   }
 
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .delicious-tabs-content .nav-tabs .nav-link {
+    padding: 0 10px; 
+  } 
+}
+
+@media only screen and (max-width: 767px) {
+  .meal-item:hover {
+    background-color: #CAA860;
+    transform: scale(1.075);
+    z-index: 2;
+    transition: transform 500ms, background-color 500ms !important;
+  }
+
+  .delicious-tabs-content .nav-tabs .nav-link {
+    padding: 0 10px; 
+  } 
+}
 
 
 /*##########################################################################*/
