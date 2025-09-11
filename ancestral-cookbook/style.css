@@ -39,7 +39,7 @@
 
 body {
   font-family: 'EB Garamond', serif;
-  font-size: 14px; 
+  font-size: 16px; 
   background-color: #E4D2AC;
 }
 
@@ -64,7 +64,7 @@ h2 {
 
 p {
   color: #3F2E1F;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   font-weight: 400; }
 
@@ -77,7 +77,7 @@ a:focus {
   outline: 0 solid transparent;
   color: #000000;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   color: #474747; }
 
 ul,
@@ -491,7 +491,7 @@ textarea:focus {
             display: none;
             width: 100%; }
             .header-area .top-header-area .breaking-news .ticker ul li a {
-              font-size: 14px;
+              font-size: 16px;
               color: #b6b6b6;
               font-style: italic; }
               .header-area .top-header-area .breaking-news .ticker ul li a:hover, .header-area .top-header-area .breaking-news .ticker ul li a:focus {
@@ -534,7 +534,7 @@ textarea:focus {
         color: #474747;
         font-weight: 600; }
         .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:hover, .header-area .delicious-main-menu .classy-navbar .classynav > ul > li > a:focus {
-          font-size: 14px;
+          font-size: 16px;
           color: #ffffff;
           background-color: #615B42;
           border-bottom: 3px solid #9C926D; }
@@ -735,6 +735,32 @@ textarea:focus {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 10; }
+    .single-top-catagory .top-cta-content h3 {
+      font-size: 2.2rem;
+      font-family: 'Quivert', 'Cinzel', serif;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+    .single-top-catagory .top-cta-content h6 {
+      font-size: 1.15rem;
+      font-family: 'EB Garamond', serif;
+      font-weight: 400;
+      margin-bottom: 1.2em;
+    }
+    @media only screen and (max-width: 576px) {
+      .single-top-catagory .top-cta-content h3 {
+        font-size: 1.4rem;
+    }
+    .single-top-catagory .top-cta-content h6 {
+        font-size: 0.95rem;
+    }
+    .single-top-catagory .fixed-title {
+        font-size: 1.2rem;
+    }
+    .preparation-steps p {
+        font-size: 0.95rem;
+    }
+    }
     .single-top-catagory .top-cta-content h3 {
       font-size: 30px;
       color: #ffffff;
@@ -963,7 +989,7 @@ textarea:focus {
         padding: 18px 10px;
         display: block;
         line-height: 1.1;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400; }
         .single-blog-area .blog-thumbnail .post-date a span {
           font-size: 30px;
@@ -1031,7 +1057,7 @@ textarea:focus {
     width: 100%;
     height: 60px;
     background-color: #f3f5f8;
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 20px;
     border: none; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1077,9 +1103,9 @@ textarea:focus {
     @media only screen and (max-width: 767px) {
       .receipe-slider .owl-prev,
       .receipe-slider .owl-next {
-        font-size: 14px; }
+        font-size: 16px; }
       .receipe-headline span {
-        font-size: 14px;
+        font-size: 16px;
       }
       }
   .receipe-slider .owl-next {
@@ -1338,7 +1364,7 @@ textarea:focus {
   position: relative;
   z-index: 1; }
   .single-contact-information h6 {
-    font-size: 14px;
+    font-size: 16px;
     border-bottom: 2px solid #9C926D;
     display: inline-block;
     color: #9C926D; }
@@ -1412,7 +1438,7 @@ textarea:focus {
     margin: 0;
     padding: 20px 60px 20px 20px;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: capitalize;
     font-weight: 600; }
     .single-accordion h6 a span {
@@ -1461,7 +1487,7 @@ textarea:focus {
       line-height: 50px;
       margin: 0 2px;
       border-radius: 0;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       margin-bottom: 5px; }
       .delicious-tabs-content .nav-tabs .nav-link.active {
@@ -1554,9 +1580,9 @@ label.comments {
 }
 
 .meal-item-button {
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 25px;
-  background-color: #6A331C;
+  background-color: #7E5B34;
   color: #E4D2AC;
   font-family: 'CinzelDecorative', 'Open Sans', sans-serif;
   justify-self: center;
@@ -1785,6 +1811,10 @@ h4.step-number {
     color:#E4D2AC
 }
 
+.meal-item-button {
+  background-color: #3F2E1F;
+}
+
   h2.recipetitle {
     color: #E4D2AC;
   }
@@ -1840,5 +1870,10 @@ h4.step-number {
 
   .ingredients .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #9C926D; }
+
+  .preparation-steps p {
+        color: #E4D2AC;
+    }
   
 }
+
