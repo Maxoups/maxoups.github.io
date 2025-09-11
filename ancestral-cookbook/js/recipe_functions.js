@@ -1,5 +1,3 @@
-
-
 function createRecipeSlider(images) {
   // Build the inner <img> tags
   const imgTags = images
@@ -202,34 +200,17 @@ function writeHeader() {
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a class="list-link" href="index.html">Accueil</a></li>
-                                    <li><a class="list-link" href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a class="list-item" href="menu.html">Générer un menu</a></li>
-                                            <li><a class="list-item" href="search.html">Rechercher</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="list-link" href="#">Menu</a>
-                                        <ul class="dropdown">
-                                            <li><a class="list-item" href="search.html?dish_type=Entrée">Entrées</a></li>
-                                            <li><a class="list-item" href="search.html?dish_type=Plat">Plats</a></li>
-                                            <li><a class="list-item" href="search.html?dish_type=Dessert">Desserts</a></li>
-                                            <li><a class="list-item" href="search.html?dish_type=Boisson">Boissons</a></li>
-                                            <li><a class="list-item" href="search.html?dish_type=Autre">Autres</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="list-link" href="#">Cuistots</a>
-                                        <ul class="dropdown">
-                                            <li><a class="list-item" href="search.html?dish_chef=Kaki">Kaki</a></li>
-                                            <li><a class="list-item" href="search.html?dish_chef=Mélinouche">Mélinouche</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                                    <li id="btn-accueil"><a class="list-link" href="index.html">Accueil</a></li>
+                                    <li id="btn-recherche"><a class="list-link" href="search.html">Rechercher</a></li>
+                                    <li id="btn-menu"><a class="list-link" href="menu.html">Menu</a></li>
+                                    <li id="btn-recipe"><a id="random-recipe-btn" class="list-link" href="#">Recette</a></li>
                                 </ul>
 
                                 <!-- Newsletter Form -->
                                 <div class="search-btn">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <i class="fa fa-search" aria-hidden="true">
+                                        <a class="list-link" href="search.html"></a>
+                                    </i>
                                 </div>
 
                             </div>
@@ -245,6 +226,22 @@ function writeHeader() {
     // Re-initialize the nav after injection
     if (typeof $.fn.classyNav !== "undefined") {
         $('#deliciousNav').classyNav();
+    }
+    // Add click event to search-btn to redirect to search.html
+    const searchBtn = document.querySelector('.search-btn');
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'search.html';
+        });
+    }
+    // Add click event to random recipe button
+    const randomBtn = document.getElementById('random-recipe-btn');
+    if (randomBtn) {
+        randomBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            goToRandomRecipe(e);
+        });
     }
 }
 
@@ -303,16 +300,21 @@ function writePage() {
     writeHeader();
     if (currentPage.includes("recipe")) {
         // RECIPE PAGE
+        document.getElementById("btn-recipe").classList.add("active");
         if (pageName) {
             const data = findRecipeByTitle(pageName);
             buildRecipePage(data);
         }
     } else if (currentPage.includes("search")) {
+        // SEARCH PAGE
+        document.getElementById("btn-recherche").classList.add("active");
     } else if (currentPage.includes("menu")) {
         // MENU PAGE
+        document.getElementById("btn-menu").classList.add("active");
         renderRandomMenu();
     } else {
         // INDEX PAGE
+        document.getElementById("btn-accueil").classList.add("active");
         writeRecipeBoxes();
     }
 }
@@ -364,4 +366,14 @@ if (recipesData == null) {
     console.log("recipesData already loaded!")
     writePage()
 }
+
+/*
+Add to your CSS (style.css) if not already present:
+.list-link {
+    transition: color 0.3s;
+}
+.list-link:hover, .classynav ul li.active > a.list-link {
+    color: #9C926D !important;
+}
+*/
 
