@@ -318,14 +318,14 @@
             const div = document.createElement("div");
             div.className = "meal-item";
             div.onclick = () => window.open(`recipe.html?name=${r.ID}`, "_blank");
-            console.log("r.Images = " + r.Images);
+            console.log("r.Miniature = " + r.Images);
             console.log("typeof r.Images = " + typeof r.Images);
             console.log("r.Images.length = " + r.Images.length )
             console.log("r.Images[0] = " + r.Images )
 
             const imgSrc = r.Images.split(",")[0];
             div.innerHTML = `
-                <img class=meal-img src="${imgSrc}">
+                <img class=meal-img src="${r.Miniature}">
                 <h3 class="meal-title">${r.Titre}</h3>
                 <p class="meal-desc">${r.Cuistot}</p>
                 <p class="meal-desc">${tags.join(", ")}</p>
