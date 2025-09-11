@@ -1601,6 +1601,13 @@ label.comments {
     color: #E4D2AC !important;
 }
 
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+    place-items: center;
+}
+
 /* Mobile side menu styling */
 .classy-menu {
     background-color: #3F2E1F !important;

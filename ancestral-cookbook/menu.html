@@ -47,93 +47,23 @@
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
-        <div class="col-12">
-            <div class="delicious-cool-facts-area">
-                <div class="row">
+    <div class="container" style="margin-bottom: 60px; align-self: center;">
+        <div class="results" style="display: flex; flex-wrap: wrap; justify-content: center; gap:40px;" id="results"></div>
+    </div>
 
-                    <!-- Menuitem -->
-                    <div class="meal-item" onclick="window.open('recipe.html?name=12345', '_blank')">
-                        <div class="meal-header">
-                            <img src="img/core-img/hamburger.png" alt="" style="margin-right:0px;scale: 0.6;">
-                            <h3 class="meal-title">Tiramisu</h3>
-                        </div>
-                        <p class="meal-desc">
-                            45min
-                        </p>
-                        <p class="meal-desc">
-                            Kiffeur, Gâteau, Anniversaire
-                        </p>
-                    </div>
 
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/salad.png" alt="">
-                            <h3><span class="counter">1287</span></h3>
-                            <h6>Amazing receipies</h6>
-                        </div>
-                    </div>
-
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/hamburger.png" alt="">
-                            <h3><span class="counter">25</span></h3>
-                            <h6>Burger receipies</h6>
-                        </div>
-                    </div>
-
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/rib.png" alt="">
-                            <h3><span class="counter">471</span></h3>
-                            <h6>Meat receipies</h6>
-                        </div>
-                    </div>
-
-                    <!-- Single Cool Fact -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-cool-fact">
-                            <img src="img/core-img/pancake.png" alt="">
-                            <h3><span class="counter">326</span></h3>
-                            <h6>Desert receipies</h6>
-                        </div>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg); margin-bottom: 60px;">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-text text-center">
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="receipe-post-area section-padding-80">
-         <!-- Top Catagory Area -->
-        <div style="width: 100%; margin-top: -40px;">
-            <div class="single-top-catagory">
-                <img src="img/bg-img/bg2.jpg" alt="">
-                <!-- Content -->
-                <div class="top-cta-content">
-                    <h3>Chercher une recette</h3>
-                    <h6>Cherche un plat parmi l'ensemble des recettes de la famille.</h6>
-                    <a href="recipe.html" class="btn delicious-btn">Recherche</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Recipe Content Area -->
-        <div class="receipe-content-area">
-            <div class="container" style="margin-bottom: 60px;">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="preparation-steps">
-                            <h4 class="fixed-title">Repas complet</h4>
-                            <p>Crée un menu avec entrée, plat, dessert.</p>
-                            <a href="recipe.html" class="btn delicious-btn">Générer un menu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
 
 
     <!-- jQuery (required by Owl Carousel) -->
@@ -156,6 +86,56 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+
+    <script>
+
+    const resultsDiv = document.getElementById("results");
+
+    function getRandomRecipe(type) {
+        const filtered = recipesData.filter(r => r.Type === type);
+        if (filtered.length === 0) return null;
+        return filtered[Math.floor(Math.random() * filtered.length)];
+    }
+
+    function renderRandomMenu() {
+        resultsDiv.innerHTML = "";
+        const types = ["Entrée", "Plat", "Dessert"];
+        types.forEach(type => {
+            const recipe = getRandomRecipe(type);
+            if (recipe) {
+                let tags = recipe.Tags;
+                if (typeof tags === "string") {
+                    tags = tags.split(/[,;]\s*/);
+                } else if (!Array.isArray(tags)) {
+                    tags = [];
+                }
+                const div = document.createElement("div");
+                div.className = "meal-item";
+                div.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
+                const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
+                div.innerHTML = `
+                    <img class="meal-img" src="${imgSrc}">
+                    <h3 class="meal-title">${recipe.Titre}</h3>
+                    <p class="meal-desc">${recipe.Cuistot}</p>
+                    <p class="meal-desc">${tags.join(", ")}</p>
+                    <p class="meal-item-button">RECETTE</p>
+                `;
+                resultsDiv.appendChild(div);
+            }
+        });
+    }
+
+
+    // Wait for recipesData to be loaded
+    document.addEventListener("recipeDataLoaded", function () {
+        renderRandomMenu();
+    });
+
+    // If data is already loaded
+    if (typeof recipesData !== "undefined" && recipesData.length > 0) {
+        renderRandomMenu();
+    }
+    </script>
 </body>
 
 </html>

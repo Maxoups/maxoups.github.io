@@ -308,6 +308,9 @@ function writePage() {
             buildRecipePage(data);
         }
     } else if (currentPage.includes("search")) {
+    } else if (currentPage.includes("menu")) {
+        // MENU PAGE
+        renderRandomMenu();
     } else {
         // INDEX PAGE
         writeRecipeBoxes();
