@@ -211,6 +211,15 @@
 
             $('#chefFilter').niceSelect('update');
             $('#categoryFilter').niceSelect('update');
+
+            $('#categoryFilter').on('change', filterRecipes);
+            $('#chefFilter').on('change', filterRecipes);
+
+            // For nice-select custom UI:
+            $('.nice-select').on('change', filterRecipes);
+            $('.nice-select').on('click', function() {
+                setTimeout(filterRecipes, 10); // slight delay to allow value to update
+            });
         }
 
         function addTag(my_tag) {
@@ -306,8 +315,6 @@
     }
 
         searchBar.addEventListener("input", filterRecipes);
-        categoryFilter.addEventListener("change", filterRecipes);
-        chefFilter.addEventListener("change", filterRecipes);
 
         // Init
         if (isRecipesDataLoaded) {
