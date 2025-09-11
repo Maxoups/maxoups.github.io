@@ -74,6 +74,14 @@
             }
         }
 
+        .tag-option {
+            background-color: #CAA860;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-bottom: 3px;
+            border-radius: 20px;
+        }
+
         .meal-title {
             margin-bottom: 15px;
             font-size: 18px;
@@ -86,6 +94,11 @@
             opacity: 0.85;
             font-weight: 400;
             margin-bottom: -10px;
+        }
+
+        .dropdown {
+            position: absolute;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -121,8 +134,11 @@
                 <option value="">Tous les cuistots</option>
             </select>
 
-            <input type="text" id="tagInput" placeholder="Ajouter un tag...">
-            <button onclick="addTag()">+ Tag</button>
+            <div class="tag-search-container">
+                <input type="text" id="tag-input" style="min-width: 200px;" placeholder="Filtrer par tags...">
+                <div class="dropdown" id="dropdown"></div>
+            </div>
+            
         </div>
 
         <!-- Active tags -->
@@ -130,6 +146,8 @@
 
         <!-- Results -->
         <div class="results" id="results"></div>
+
+        <div style="min-height: 300px;"></div>
     </div>
 
 
@@ -159,8 +177,14 @@
         const categoryFilter = document.getElementById("categoryFilter");
         const chefFilter = document.getElementById("chefFilter");
         const resultsDiv = document.getElementById("results");
-        const tagInput = document.getElementById("tagInput");
         const activeTagsDiv = document.getElementById("activeTags");
+
+        const allTags = [
+            ""
+        ];
+
+        const tagInput = document.getElementById("tag-input");
+        const dropdown = document.getElementById("dropdown");
 
         let activeTags = [];
 
@@ -195,16 +219,19 @@
         console.log("categoryFilter = " + types);
         }
 
-
-        function addTag() {
-            const tag = tagInput.value.trim();
-            if (tag && !activeTags.includes(tag)) {
-                activeTags.push(tag);
+        function addTag(my_tag) {
+            my_tag = my_tag.trim();
+            if (my_tag && !activeTags.includes(my_tag)) {
+                activeTags.push(my_tag);
                 renderTags();
                 filterRecipes();
             }
+
             tagInput.value = "";
+            dropdown.textContent = "";
+            updateDropdown();
         }
+
 
         function removeTag(tag) {
             activeTags = activeTags.filter(t => t !== tag);
@@ -296,8 +323,42 @@
                 filterRecipes();
             });
         }
-        
-        
-    </script>
+
+  function updateDropdown() {
+    const value = tagInput.value.trim().toLowerCase();
+    dropdown.innerHTML = ""; // Clear previous results
+
+    const filteredTags = allTags.filter(tag => tag.toLowerCase().includes(value));
+
+    if (filteredTags.length === 0) {
+      dropdown.style.display = "none";
+      return;
+    }
+
+    filteredTags.forEach(tag => {
+      const option = document.createElement("div");
+      option.textContent = tag;
+      option.classList.add("tag-option");
+      option.addEventListener("click", () => {
+        addTag(tag)
+      });
+      dropdown.appendChild(option);
+    });
+
+    dropdown.style.display = "block";
+  }
+
+  // Show dropdown on input and focus
+  tagInput.addEventListener("input", updateDropdown);
+  tagInput.addEventListener("focus", updateDropdown);
+
+  // Hide dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!document.querySelector('.tag-search-container').contains(e.target)) {
+      dropdown.innerHTML = "";
+      dropdown.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>
