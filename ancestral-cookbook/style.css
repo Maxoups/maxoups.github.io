@@ -1033,6 +1033,14 @@ textarea:focus {
     .receipe-post-search .col-12 {
       margin-bottom: 15px; } }
 
+.receipe-headline span {
+  font-size: 22px;
+  display: block;
+  color: #7E5B34;
+  font-style: italic;
+  font-family: 'CinzelDecorative', 'Open Sans', sans-serif;
+  margin-bottom: 0; }
+
 .receipe-slider {
   position: relative;
   z-index: 1; }
@@ -1061,21 +1069,17 @@ textarea:focus {
     @media only screen and (max-width: 767px) {
       .receipe-slider .owl-prev,
       .receipe-slider .owl-next {
-        font-size: 14px; } }
+        font-size: 14px; }
+      .receipe-headline span {
+        font-size: 14px;
+      }
+      }
   .receipe-slider .owl-next {
     left: auto;
     right: 4%; }
   .receipe-slider:hover .owl-prev, .receipe-slider:hover .owl-next {
     opacity: 1;
     visibility: visible; }
-
-.receipe-headline span {
-  font-size: 22px;
-  display: block;
-  color: #7E5B34;
-  font-style: italic;
-  font-family: 'CinzelDecorative', 'Open Sans', sans-serif;
-  margin-bottom: 0; }
 .receipe-headline h2 {
   font-size: 80px;
   color: #3F2E1F;
