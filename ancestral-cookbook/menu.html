@@ -44,15 +44,15 @@
 
         @keyframes shake-updown {
             0%   { transform: translateY(0); }
-            20%  { transform: translateY(-10px); }
-            40%  { transform: translateY(10px); }
-            60%  { transform: translateY(-10px); }
-            80%  { transform: translateY(10px); }
+            20%  { transform: translateY(-22.5px); }
+            40%  { transform: translateY(22.5px); }
+            60%  { transform: translateY(-22.5px); }
+            80%  { transform: translateY(22.5px); }
             100% { transform: translateY(0); }
         }
 
         .meal-item.shake {
-            animation: shake-updown 0.6s;
+            animation: shake-updown 0.9s;
         }
 
         @media (prefers-color-scheme:dark ) { 
@@ -146,17 +146,28 @@
     }
 
     function setMealContent(final = false) {
-    let interval;
+    // Clear previous interval and timeout if they exist
+    if (mealDiv._shakeInterval) {
+        clearInterval(mealDiv._shakeInterval);
+        mealDiv._shakeInterval = null;
+    }
+    if (mealDiv._shakeTimeout) {
+        clearTimeout(mealDiv._shakeTimeout);
+        mealDiv._shakeTimeout = null;
+    }
+
     let cycles = 0;
-    const maxCycles = 12;
-    const cycleDelay = 120;
+    const maxCycles = 20;
+    const cycleDelay = 60;
 
     function showRandomRecipe() {
-        // Add shake class while cycling
         if (!final) {
             mealDiv.classList.add("shake");
             // Remove shake class after animation duration (600ms)
-            setTimeout(() => mealDiv.classList.remove("shake"), 6000);
+            mealDiv._shakeTimeout = setTimeout(() => {
+                mealDiv.classList.remove("shake");
+                mealDiv._shakeTimeout = null;
+            }, 600);
         }
         const recipe = getRandomRecipe(type);
         if (!recipe) {
@@ -181,16 +192,16 @@
     }
 
     if (!final) {
-        interval = setInterval(() => {
+        mealDiv._shakeInterval = setInterval(() => {
             showRandomRecipe();
             cycles++;
             if (cycles >= maxCycles) {
-                clearInterval(interval);
-                setMealContent(true); // Show final recipe
+                clearInterval(mealDiv._shakeInterval);
+                mealDiv._shakeInterval = null;
+                setMealContent(true);
             }
         }, cycleDelay);
     } else {
-        // Final recipe, no shake
         mealDiv.classList.remove("shake");
         showRandomRecipe();
     }
@@ -199,7 +210,7 @@
     function renderRandomMenu() {
     resultsDiv.innerHTML = "";
     const types = ["Entrée", "Plat", "Dessert"];
-    types.forEach(type => {
+    types.forEach((type, idx) => {
         const wrapper = document.createElement("div");
         wrapper.style.display = "flex";
         wrapper.style.flexDirection = "column";
@@ -216,17 +227,23 @@
 
         // Animation logic
         function setMealContent(final = false) {
-            let interval;
-            let cycles = 0;
-            const maxCycles = 20;
-            const cycleDelay = 60;
+            // Clear previous interval and timeout if they exist
+            if (mealDiv._shakeTimeout) {
+                clearTimeout(mealDiv._shakeTimeout);
+                mealDiv._shakeTimeout = null;
+            }
+            if (mealDiv._changeTimeout) {
+                clearTimeout(mealDiv._changeTimeout);
+                mealDiv._changeTimeout = null;
+            }
+
+            // Animation duration
+            const animationDuration = 1800; // ms (1.5x longer)
+            const cycleDelay = 66; // ms (1.5x faster)
+            const cycles = Math.floor(animationDuration / cycleDelay);
+            let currentCycle = 0;
 
             function showRandomRecipe() {
-                // Add shake class while cycling
-                if (!final) {
-                    mealDiv.classList.add("shake");
-                    setTimeout(() => mealDiv.classList.remove("shake"), 1600);
-                }
                 const recipe = getRandomRecipe(type);
                 if (!recipe) {
                     mealDiv.innerHTML = "<p>Aucune recette trouvée.</p>";
@@ -240,32 +257,42 @@
                 }
                 const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
                 mealDiv.innerHTML = `
-                    <img class="meal-img" src="${imgSrc}">
-                    <h3 class="meal-title">${recipe.Titre}</h3>
-                    <p class="meal-desc">${recipe.Cuistot}</p>
-                    <p class="meal-desc">${tags.join(", ")}</p>
-                    <p class="meal-item-button">RECETTE</p>
-                `;
+                    <img class=\"meal-img\" src=\"${imgSrc}\">\n                    <h3 class=\"meal-title\">${recipe.Titre}</h3>\n                    <p class=\"meal-desc\">${recipe.Cuistot}</p>\n                    <p class=\"meal-desc\">${tags.join(", ")}</p>\n                    <p class=\"meal-item-button\">RECETTE</p>\n                `;
                 mealDiv.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
             }
 
             if (!final) {
-                interval = setInterval(() => {
+                // Set shake animation duration to match the menu change duration
+                mealDiv.classList.add("shake");
+                mealDiv.style.animationDuration = "0.9s";
+                // Cycle through random recipes
+                function cycle() {
                     showRandomRecipe();
-                    cycles++;
-                    if (cycles >= maxCycles) {
-                        clearInterval(interval);
-                        setMealContent(true);
+                    currentCycle++;
+                    if (currentCycle < cycles) {
+                        mealDiv._changeTimeout = setTimeout(cycle, cycleDelay);
+                    } else {
+                        mealDiv.classList.remove("shake");
+                        mealDiv.style.animationDuration = "";
+                        showRandomRecipe(); // Final recipe
                     }
-                }, cycleDelay);
+                }
+                cycle();
+                // Remove shake after animationDuration
+                mealDiv._shakeTimeout = setTimeout(() => {
+                    mealDiv.classList.remove("shake");
+                    mealDiv.style.animationDuration = "";
+                }, animationDuration);
             } else {
                 mealDiv.classList.remove("shake");
+                mealDiv.style.animationDuration = "";
                 showRandomRecipe();
             }
         }
 
         button.onclick = () => setMealContent(false);
-        setMealContent(false);
+        // Add delay between first, second, third item on page load
+        setTimeout(() => setMealContent(false), idx * 400);
 
         wrapper.appendChild(button);
         wrapper.appendChild(mealDiv);
