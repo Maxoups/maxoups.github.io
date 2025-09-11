@@ -247,6 +247,11 @@ img {
 .font-light {
   font-weight: 300; }
 
+input {
+  background-color: #F1E7D2;
+  color:#3F2E1F;
+}
+
 .bg-overlay {
   position: relative;
   z-index: 2;
@@ -292,18 +297,21 @@ textarea:focus {
 
 .nice-select {
   border: none;
-  background-color: #f3f5f8;
-  border-radius: 0;
+  background-color: #F1E7D2; 
+  color:#3F2E1F;
+  border-radius: 5px;
   width: 100%;
   height: 60px;
   line-height: 60px;
-  color: #2f2f2f; }
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  }
   .nice-select span {
-    color: #2f2f2f; }
+    color: #3F2E1F; }
   .nice-select::after {
     right: 20px; }
   .nice-select .list {
-    background-color: #ffffff;
+    background-color: #F1E7D2;
     border: none;
     border-radius: 0;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
@@ -1506,6 +1514,33 @@ label.comments {
   transition: transform 500ms, background-color 500ms !important;
 }
 
+.meal-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.meal-desc {
+    font-size: 16px;
+    opacity: 0.85;
+    font-weight: 400;
+    margin-bottom: -10px;
+    margin-left: 15px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color:#191919
+}
+
+.meal-img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
 .meal-header {
   display: flex;
   align-items: center;
@@ -1516,22 +1551,6 @@ label.comments {
 .meal-icon {
   font-size: 20px;
   color: var(--meal-accent);
-}
-
-.meal-title {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.meal-desc {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.85;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  color:#191919
 }
 
 .meal-item-button {
@@ -1671,9 +1690,7 @@ h4.step-number {
 
 @media only screen and (max-width: 767px) {
   .meal-item:hover {
-    background-color: #CAA860;
     transform: scale(1.075);
-    z-index: 2;
     transition: transform 500ms, background-color 500ms !important;
   }
 
@@ -1716,8 +1733,17 @@ h4.step-number {
 
   .meal-item {
       --meal-bg: #2a3a4a;
+      background-color: #6A331C;
       color: #f0f0f0;
   }
+
+  .meal-item:hover {
+  background-color: #7E5B34;
+  }
+
+  .meal-desc {
+    color:#E4D2AC
+}
 
   h2.recipetitle {
     color: #E4D2AC;

@@ -75,29 +75,6 @@
             font-size: 17px;
         }
 
-        .meal-title {
-            margin-bottom: 15px;
-            font-size: 18px;
-            font-weight: 800;
-            text-align: center;
-        }
-
-        .meal-desc {
-            font-size: 16px;
-            opacity: 0.85;
-            font-weight: 400;
-            margin-bottom: -10px;
-            margin-left: 15px;
-        }
-
-        .meal-img {
-            width:100%;
-            height:150px;
-            object-fit:cover;
-            border-radius:8px;
-            margin-bottom:10px;
-        }
-
         .dropdown {
             position: absolute;
             z-index: 1000;
@@ -149,7 +126,7 @@
                 <option value="">Tous les cuistots</option>
             </select>
 
-            <div class="tag-search-container" style="margin-bottom: 60px;">
+            <div class="tag-search-container">
                 <input type="text" id="tag-input" style="min-width: 250px;" placeholder="Filtrer par tags...">
                 <div class="dropdown" id="dropdown"></div>
             </div>
@@ -157,7 +134,7 @@
         </div>
 
         <!-- Active tags -->
-        <div class="tags-container" id="activeTags"></div>
+        <div class="tags-container" id="activeTags" style="margin-bottom: 60px;"></div>
 
         <!-- Results -->
         <div class="results" id="results"></div>
@@ -299,7 +276,7 @@
     function renderResults(list) {
         resultsDiv.innerHTML = "";
         if (list.length === 0) {
-            resultsDiv.innerHTML = "<p>Aucune recette trouvée.</p>";
+            resultsDiv.innerHTML = "<p style='font-size: 20px; text-align: center; position:absolute;font-family:EB Garamond;font-weight: 900;'>Aucune recette trouvée.</p>";
             return;
         }
 
