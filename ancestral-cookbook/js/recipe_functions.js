@@ -43,7 +43,7 @@ function addRecipeTime(text) {
 }
 
 function addRecipeType(text) {
-    document.getElementById("recipe-type").innerText = text
+    document.getElementById("recipe-type").innerHTML = text
 }
 
 function addRecipeTags(tags) {
@@ -293,8 +293,7 @@ function buildRecipePage(data) {
     addRecipeTitle(recipeTitle);
     addRecipeChef(recipeCook);
     addIngredients(recipeIngredients);
-    addRecipeTime(recipeTime);
-    addRecipeType(recipeType);
+    addRecipeType(recipeType + "&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;" + recipeTime);
     addRecipeTags(recipeTags);
     addRecipeSteps(recipeText);
     addRecipeComments(recipeComments);
