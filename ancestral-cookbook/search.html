@@ -139,7 +139,7 @@
     <div class="container">
         <!-- Filters -->
         <div class="filters">
-            <input type="text" id="searchBar" style="min-width: 300px;" placeholder="Rechercher un nom de recette...">
+            <input type="text" id="searchBar" style="min-width: 300px; margin-top: 30px;" placeholder="Rechercher un nom de recette...">
 
             <select id="categoryFilter">
                 <option value="">Toutes les catégories</option>
@@ -149,7 +149,7 @@
                 <option value="">Tous les cuistots</option>
             </select>
 
-            <div class="tag-search-container">
+            <div class="tag-search-container" style="margin-bottom: 60px;">
                 <input type="text" id="tag-input" style="min-width: 200px;" placeholder="Filtrer par tags...">
                 <div class="dropdown" id="dropdown"></div>
             </div>
@@ -186,7 +186,7 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-
+    
     <script>
         const searchBar = document.getElementById("searchBar");
         const categoryFilter = document.getElementById("categoryFilter");
