@@ -1683,6 +1683,16 @@ html {
     }
 }
 
+.page-header {
+    font-size: 60px !important;
+}
+
+@media (max-width: 800px) {
+    .page-header {
+        font-size: 35px !important;
+    }  
+}
+
 h4.step-number {
     font-size:34px;
     margin-right: -15px;
