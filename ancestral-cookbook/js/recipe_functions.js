@@ -207,7 +207,6 @@ function writeHeader() {
                                         <ul class="dropdown">
                                             <li><a class="list-item" href="menu.html">Générer un menu</a></li>
                                             <li><a class="list-item" href="search.html">Rechercher</a></li>
-                                            <li><a class="list-item" href="about.html">À propos</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="list-link" href="#">Menu</a>
