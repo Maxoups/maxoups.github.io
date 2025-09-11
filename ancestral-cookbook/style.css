@@ -1495,6 +1495,7 @@ label.comments {
   color: var(--meal-text);
   border-radius: 0px;
   border-width:0px;
+  min-height: 200px;
   padding: 16px;
   margin: 12px 0;
   cursor: pointer;
@@ -1536,6 +1537,20 @@ label.comments {
   word-wrap: break-word;
   overflow-wrap: break-word;
   color:#191919
+}
+
+.meal-item-button {
+  font-size: 14px;
+  border-radius: 25px;
+  background-color: #6A331C;
+  color: #E4D2AC;
+  font-family: 'CinzelDecorative', 'Open Sans', sans-serif;
+  justify-self: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
 }
 
 :root {
