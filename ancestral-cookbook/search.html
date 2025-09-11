@@ -64,21 +64,6 @@
             gap: 15px;
         }
 
-        .meal-item {
-            background-color: #D7BD86;
-            padding: 0px;
-            cursor: pointer;
-            border-radius: 12px;
-            min-height: 250px;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .meal-item {
-                --meal-bg: #2a3a4a;
-                color: #f0f0f0;
-            }
-        }
-
         .tag-option {
             font-family: 'EB Garamond', serif;
             background-color: #CAA860;
@@ -101,11 +86,12 @@
             opacity: 0.85;
             font-weight: 400;
             margin-bottom: -10px;
+            margin-left: 15px;
         }
 
         .meal-img {
             width:100%;
-            max-height:160px;
+            height:150px;
             object-fit:cover;
             border-radius:8px;
             margin-bottom:10px;
@@ -328,10 +314,6 @@
             const div = document.createElement("div");
             div.className = "meal-item";
             div.onclick = () => window.open(`recipe.html?name=${r.ID}`, "_blank");
-            console.log("r.Miniature = " + r.Images);
-            console.log("typeof r.Images = " + typeof r.Images);
-            console.log("r.Images.length = " + r.Images.length )
-            console.log("r.Images[0] = " + r.Images )
 
             const imgSrc = r.Images.split(",")[0];
             div.innerHTML = `
