@@ -1645,6 +1645,11 @@ html {
     }
 }
 
+h4.step-number {
+    font-size:34px;
+    margin-right: -15px;
+  }
+
 
 
 /*##########################################################################*/
@@ -1703,7 +1708,7 @@ html {
   }
 
   h4.step-number {
-    color:#7E5B34
+    color:#7E5B34;
   }
 
   #preloader {
