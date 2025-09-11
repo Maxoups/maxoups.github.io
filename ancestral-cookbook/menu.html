@@ -20,6 +20,41 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .reroll-btn {
+            background-color: #9C926D;
+            color: #E4D2AC;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 300ms, transform 300ms;
+            margin-bottom: 30px;
+            transform: scale(1);
+        }
+        .reroll-btn:hover {
+            background-color: #615B42;
+            transform: scale(1.1);
+        }
+        .reroll-btn:active {
+            background-color: #3e3a2b;
+        }
+
+        @media (prefers-color-scheme:dark ) { 
+            .reroll-btn {
+                background-color: #615B42;
+                color: #E4D2AC;
+            }
+            .reroll-btn:hover {
+                background-color: #9C926D;
+            }
+            .reroll-btn:active {
+                background-color: #bcb39a;
+            }
+        }
+    </style>
 </head>
 
 
@@ -98,32 +133,54 @@
     }
 
     function renderRandomMenu() {
-        resultsDiv.innerHTML = "";
-        const types = ["Entrée", "Plat", "Dessert"];
-        types.forEach(type => {
+    resultsDiv.innerHTML = "";
+    const types = ["Entrée", "Plat", "Dessert"];
+    types.forEach(type => {
+        const wrapper = document.createElement("div");
+        wrapper.style.display = "flex";
+        wrapper.style.flexDirection = "column";
+        wrapper.style.alignItems = "center";
+
+        // Create reroll button
+        const button = document.createElement("button");
+        button.textContent = "↻ Relancer";
+        button.className = "reroll-btn";
+
+        // Create meal item
+        const mealDiv = document.createElement("div");
+        mealDiv.className = "meal-item";
+
+        function setMealContent() {
             const recipe = getRandomRecipe(type);
-            if (recipe) {
-                let tags = recipe.Tags;
-                if (typeof tags === "string") {
-                    tags = tags.split(/[,;]\s*/);
-                } else if (!Array.isArray(tags)) {
-                    tags = [];
-                }
-                const div = document.createElement("div");
-                div.className = "meal-item";
-                div.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
-                const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
-                div.innerHTML = `
-                    <img class="meal-img" src="${imgSrc}">
-                    <h3 class="meal-title">${recipe.Titre}</h3>
-                    <p class="meal-desc">${recipe.Cuistot}</p>
-                    <p class="meal-desc">${tags.join(", ")}</p>
-                    <p class="meal-item-button">RECETTE</p>
-                `;
-                resultsDiv.appendChild(div);
+            if (!recipe) {
+                mealDiv.innerHTML = "<p>Aucune recette trouvée.</p>";
+                return;
             }
-        });
-    }
+            let tags = recipe.Tags;
+            if (typeof tags === "string") {
+                tags = tags.split(/[,;]\s*/);
+            } else if (!Array.isArray(tags)) {
+                tags = [];
+            }
+            const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
+            mealDiv.innerHTML = `
+                <img class="meal-img" src="${imgSrc}">
+                <h3 class="meal-title">${recipe.Titre}</h3>
+                <p class="meal-desc">${recipe.Cuistot}</p>
+                <p class="meal-desc">${tags.join(", ")}</p>
+                <p class="meal-item-button">RECETTE</p>
+            `;
+            mealDiv.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
+        }
+
+        button.onclick = setMealContent;
+        setMealContent();
+
+        wrapper.appendChild(button);
+        wrapper.appendChild(mealDiv);
+        resultsDiv.appendChild(wrapper);
+    });
+}
 
 
     // Wait for recipesData to be loaded
