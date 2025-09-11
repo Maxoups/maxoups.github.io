@@ -288,8 +288,6 @@ function buildRecipePage(data) {
     const recipeText = data.Recette ? data.Recette.split("\n\n") : [];
     const recipeImages = data.Images ? data.Images.split(", ") : [];
 
-    // Create HTML div for this recipe
-    console.log("AddEventListener:", recipeImages);
     //document.addEventListener("DOMContentLoaded", function() {createRecipeSlider(recipeImages);});
     createRecipeSlider(recipeImages);
     addRecipeTitle(recipeTitle);
