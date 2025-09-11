@@ -34,8 +34,9 @@
         .filters button {
             padding: 8px;
             border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 14px;
+            border: 1px solid #E4D2AC;
+            font-size: 18px;
+            font-family: 'EB Garamond', serif;
         }
 
         .tags-container {
@@ -43,14 +44,17 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-bottom: 20px;
+            font-size: 18px;
+            font-family: 'EB Garamond', serif;
         }
 
         .tag {
-            background: #CAA860;
+            font-family: 'EB Garamond', serif;
+            background: #7E5B34;
             color: white;
             padding: 5px 10px;
             border-radius: 12px;
-            font-size: 13px;
+            font-size: 17px;
             cursor: pointer;
         }
 
@@ -64,7 +68,7 @@
             background-color: #D7BD86;
             padding: 16px;
             cursor: pointer;
-            transition: background 0.2s;
+            border-radius: 12px;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -75,11 +79,13 @@
         }
 
         .tag-option {
+            font-family: 'EB Garamond', serif;
             background-color: #CAA860;
             padding-right: 10px;
             padding-left: 10px;
             margin-bottom: 3px;
-            border-radius: 20px;
+            border-radius: 10px;
+            font-size: 17px;
         }
 
         .meal-title {
@@ -99,6 +105,9 @@
         .dropdown {
             position: absolute;
             z-index: 1000;
+            max-height: 200px; /* adjust as needed */
+            overflow-y: auto;
+            background-color: #E4D2AC;
         }
     </style>
 </head>
@@ -124,7 +133,7 @@
     <div class="container">
         <!-- Filters -->
         <div class="filters">
-            <input type="text" id="searchBar" placeholder="Rechercher un nom de recette...">
+            <input type="text" id="searchBar" style="min-width: 300px;" placeholder="Rechercher un nom de recette...">
 
             <select id="categoryFilter">
                 <option value="">Toutes les catégories</option>
