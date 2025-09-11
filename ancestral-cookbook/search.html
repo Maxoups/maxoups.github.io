@@ -46,7 +46,7 @@
         }
 
         .tag {
-            background: #007bff;
+            background: #CAA860;
             color: white;
             padding: 5px 10px;
             border-radius: 12px;
@@ -77,12 +77,13 @@
         .meal-title {
             margin: 0 0 6px;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 800;
         }
 
         .meal-desc {
-            font-size: 14px;
+            font-size: 16px;
             opacity: 0.85;
+            font-weight: 400;
         }
     </style>
 </head>
@@ -270,8 +271,8 @@
             div.onclick = () => window.open(`recipe.html?name=${r.ID}`, "_blank");
             div.innerHTML = `
                 <h3 class="meal-title">${r.Titre}</h3>
-                <p class="meal-desc">Type: ${r.Type} • Cuistot: ${r.Cuistot}</p>
-                <p class="meal-desc">Tags: ${tags.join(", ")}</p>
+                <p class="meal-desc">${r.Type} • ${r.Cuistot}</p>
+                <p class="meal-desc">${tags.join(", ")}</p>
             `;
             resultsDiv.appendChild(div);
         });
