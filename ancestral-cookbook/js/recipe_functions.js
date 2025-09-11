@@ -39,15 +39,15 @@ function addRecipeChef(text) {
 }
 
 function addRecipeTime(text) {
-    document.getElementById("recipe-time").innerText = "Préparation : " + text
+    document.getElementById("recipe-time").innerText = text
 }
 
 function addRecipeType(text) {
-    document.getElementById("recipe-type").innerText = "Catégorie : " + text
+    document.getElementById("recipe-type").innerText = text
 }
 
 function addRecipeTags(tags) {
-    document.getElementById("recipe-tags").innerText = "Tags : " + tags.join(", ");
+    document.getElementById("recipe-tags").innerText = tags.join(", ");
 }
 
 function addIngredients(recipeIngredients) {
