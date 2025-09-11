@@ -42,6 +42,19 @@
             background-color: #3e3a2b;
         }
 
+        @keyframes shake-updown {
+            0%   { transform: translateY(0); }
+            20%  { transform: translateY(-10px); }
+            40%  { transform: translateY(10px); }
+            60%  { transform: translateY(-10px); }
+            80%  { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .meal-item.shake {
+            animation: shake-updown 0.6s;
+        }
+
         @media (prefers-color-scheme:dark ) { 
             .reroll-btn {
                 background-color: #615B42;
@@ -132,6 +145,57 @@
         return filtered[Math.floor(Math.random() * filtered.length)];
     }
 
+    function setMealContent(final = false) {
+    let interval;
+    let cycles = 0;
+    const maxCycles = 12;
+    const cycleDelay = 120;
+
+    function showRandomRecipe() {
+        // Add shake class while cycling
+        if (!final) {
+            mealDiv.classList.add("shake");
+            // Remove shake class after animation duration (600ms)
+            setTimeout(() => mealDiv.classList.remove("shake"), 6000);
+        }
+        const recipe = getRandomRecipe(type);
+        if (!recipe) {
+            mealDiv.innerHTML = "<p>Aucune recette trouvée.</p>";
+            return;
+        }
+        let tags = recipe.Tags;
+        if (typeof tags === "string") {
+            tags = tags.split(/[,;]\s*/);
+        } else if (!Array.isArray(tags)) {
+            tags = [];
+        }
+        const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
+        mealDiv.innerHTML = `
+            <img class="meal-img" src="${imgSrc}">
+            <h3 class="meal-title">${recipe.Titre}</h3>
+            <p class="meal-desc">${recipe.Cuistot}</p>
+            <p class="meal-desc">${tags.join(", ")}</p>
+            <p class="meal-item-button">RECETTE</p>
+        `;
+        mealDiv.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
+    }
+
+    if (!final) {
+        interval = setInterval(() => {
+            showRandomRecipe();
+            cycles++;
+            if (cycles >= maxCycles) {
+                clearInterval(interval);
+                setMealContent(true); // Show final recipe
+            }
+        }, cycleDelay);
+    } else {
+        // Final recipe, no shake
+        mealDiv.classList.remove("shake");
+        showRandomRecipe();
+    }
+}
+
     function renderRandomMenu() {
     resultsDiv.innerHTML = "";
     const types = ["Entrée", "Plat", "Dessert"];
@@ -150,31 +214,58 @@
         const mealDiv = document.createElement("div");
         mealDiv.className = "meal-item";
 
-        function setMealContent() {
-            const recipe = getRandomRecipe(type);
-            if (!recipe) {
-                mealDiv.innerHTML = "<p>Aucune recette trouvée.</p>";
-                return;
+        // Animation logic
+        function setMealContent(final = false) {
+            let interval;
+            let cycles = 0;
+            const maxCycles = 20;
+            const cycleDelay = 60;
+
+            function showRandomRecipe() {
+                // Add shake class while cycling
+                if (!final) {
+                    mealDiv.classList.add("shake");
+                    setTimeout(() => mealDiv.classList.remove("shake"), 1600);
+                }
+                const recipe = getRandomRecipe(type);
+                if (!recipe) {
+                    mealDiv.innerHTML = "<p>Aucune recette trouvée.</p>";
+                    return;
+                }
+                let tags = recipe.Tags;
+                if (typeof tags === "string") {
+                    tags = tags.split(/[,;]\s*/);
+                } else if (!Array.isArray(tags)) {
+                    tags = [];
+                }
+                const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
+                mealDiv.innerHTML = `
+                    <img class="meal-img" src="${imgSrc}">
+                    <h3 class="meal-title">${recipe.Titre}</h3>
+                    <p class="meal-desc">${recipe.Cuistot}</p>
+                    <p class="meal-desc">${tags.join(", ")}</p>
+                    <p class="meal-item-button">RECETTE</p>
+                `;
+                mealDiv.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
             }
-            let tags = recipe.Tags;
-            if (typeof tags === "string") {
-                tags = tags.split(/[,;]\s*/);
-            } else if (!Array.isArray(tags)) {
-                tags = [];
+
+            if (!final) {
+                interval = setInterval(() => {
+                    showRandomRecipe();
+                    cycles++;
+                    if (cycles >= maxCycles) {
+                        clearInterval(interval);
+                        setMealContent(true);
+                    }
+                }, cycleDelay);
+            } else {
+                mealDiv.classList.remove("shake");
+                showRandomRecipe();
             }
-            const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
-            mealDiv.innerHTML = `
-                <img class="meal-img" src="${imgSrc}">
-                <h3 class="meal-title">${recipe.Titre}</h3>
-                <p class="meal-desc">${recipe.Cuistot}</p>
-                <p class="meal-desc">${tags.join(", ")}</p>
-                <p class="meal-item-button">RECETTE</p>
-            `;
-            mealDiv.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
         }
 
-        button.onclick = setMealContent;
-        setMealContent();
+        button.onclick = () => setMealContent(false);
+        setMealContent(false);
 
         wrapper.appendChild(button);
         wrapper.appendChild(mealDiv);
