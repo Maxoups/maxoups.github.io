@@ -1767,6 +1767,22 @@ h4.step-number {
   } 
 }
 
+span.comment-quote {
+  font-size: 60px;
+  display: inline;
+  color:#7E5B34;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: 30px;
+}
+
+h2.recipetitle {
+  position: relative;
+  right: 0;
+  width: 72vw;
+}
+
 
 /*##########################################################################*/
 /*##########################################################################*/
@@ -1825,6 +1841,10 @@ h4.step-number {
       background-color: #6A331C;
       color: #f0f0f0;
   }
+
+  span.comment-quote {
+  color:#E4D2AC
+}
 
   .meal-item:hover {
   background-color: #7E5B34;

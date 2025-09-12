@@ -72,7 +72,8 @@ function addIngredients(recipeIngredients) {
 }
 
 function addRecipeComments(text) {
-    document.getElementById("recipe-comments").innerText = text;
+    document.getElementById("recipe-comments").innerHTML =
+        '<span class="comment-quote" style="margin-right: 16px;">“</span>' + text + '<span class="comment-quote">”</span>';
 }
 
 function addRecipeSteps(steps) {
