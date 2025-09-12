@@ -12,9 +12,9 @@ def replace_png_with_jpg_in_csv(csv_path):
         f.write(new_content)
 
 IMG_DIR = r"img"
-MAX_WIDTH = 2000
+MAX_WIDTH = 2400
 ASPECT_RATIO = 2 / 1
-MINIATURE_DIVIDER = 4 # miniatures are 3 times smaller than original images
+MINIATURE_DIVIDER = 4 # miniatures are 4 times smaller than original images
 
 def process_miniatures(csv_path):
     rows = []
