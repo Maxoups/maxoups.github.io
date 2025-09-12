@@ -12,7 +12,7 @@ def replace_png_with_jpg_in_csv(csv_path):
         f.write(new_content)
 
 IMG_DIR = r"img"
-MAX_WIDTH = 1000
+MAX_WIDTH = 1700
 ASPECT_RATIO = 2 / 1
 
 def process_miniatures(csv_path):
