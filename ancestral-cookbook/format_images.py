@@ -41,18 +41,17 @@ def process_miniatures(csv_path):
             if os.path.exists(orig_path):
                 im = Image.open(orig_path)
                 width, height = im.size
-                # Only process if aspect ratio is not 2:1
-                if abs((width / height) - ASPECT_RATIO) > 0.01:
-                    new_size = (max(1, width // MINIATURE_DIVIDER), max(1, height // MINIATURE_DIVIDER))
-                    im_resized = im.resize(new_size, Image.LANCZOS)
-                    # Save new miniature with '_mini' suffix before extension
-                    base, ext = os.path.splitext(os.path.basename(orig_path))
-                    new_filename = base + '_mini.jpg'
-                    new_path = os.path.join(IMG_DIR, new_filename)
-                    im_resized.save(new_path, 'JPEG', quality=80)
-                    # Update CSV reference
-                    row['Miniature'] = os.path.join(IMG_DIR, new_filename).replace('\\', '/')
-                    updated = True
+                # Always create a copy resized to 1/4 original size
+                new_size = (max(1, width // MINIATURE_DIVIDER), max(1, height // MINIATURE_DIVIDER))
+                im_resized = im.resize(new_size, Image.LANCZOS)
+                # Save new miniature with '_mini' suffix before extension
+                base, ext = os.path.splitext(os.path.basename(orig_path))
+                new_filename = base + '_mini.jpg'
+                new_path = os.path.join(IMG_DIR, new_filename)
+                im_resized.save(new_path, 'JPEG', quality=80)
+                # Update CSV reference
+                row['Miniature'] = os.path.join(IMG_DIR, new_filename).replace('\\', '/')
+                updated = True
             rows.append(row)
     # Write updated CSV if any changes
     if updated:
