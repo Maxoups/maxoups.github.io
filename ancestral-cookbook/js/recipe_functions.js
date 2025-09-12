@@ -54,16 +54,21 @@ function addIngredients(recipeIngredients) {
     
     let ingredientsHTML = "";
 
-    // Build checkboxes dynamically
-    recipeIngredients.forEach((item, index) => {
-    ingredientsHTML += `
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="customCheck${index + 1}">
-        <label class="custom-control-label" for="customCheck${index + 1}">${item}</label>
-      </div>
-    `;
-  });
-  ingredientsList.innerHTML = ingredientsHTML;
+        // Build checkboxes and categories dynamically
+        recipeIngredients.forEach((item, index) => {
+                if (item.trim().startsWith('#')) {
+                        // Ingredient category
+                        ingredientsHTML += `<h2 class="ingredient-category">${item.replace(/^#\s*/, '')}</h2>`;
+                } else {
+                        ingredientsHTML += `
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck${index + 1}">
+                                <label class="custom-control-label" for="customCheck${index + 1}">${item}</label>
+                            </div>
+                        `;
+                }
+        });
+        ingredientsList.innerHTML = ingredientsHTML;
 }
 
 function addRecipeComments(text) {
