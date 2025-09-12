@@ -14,6 +14,7 @@ def replace_png_with_jpg_in_csv(csv_path):
 IMG_DIR = r"img"
 MAX_WIDTH = 1700
 ASPECT_RATIO = 2 / 1
+MINIATURE_DIVIDER = 3 # miniatures are 3 times smaller than original images
 
 def process_miniatures(csv_path):
     rows = []
@@ -34,7 +35,7 @@ def process_miniatures(csv_path):
                     width, height = im.size
                     # Only process if aspect ratio is not 2:1
                     if abs((width / height) - ASPECT_RATIO) > 0.01:
-                        new_size = (max(1, width // 2), max(1, height // 2))
+                        new_size = (max(1, width // MINIATURE_DIVIDER), max(1, height // MINIATURE_DIVIDER))
                         im_resized = im.resize(new_size, Image.LANCZOS)
                         # Save new miniature with '_mini' suffix before extension
                         base, ext = os.path.splitext(os.path.basename(miniature_path))
