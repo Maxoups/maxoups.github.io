@@ -27,6 +27,7 @@ def process_miniatures(csv_path):
             # Always create miniature if it doesn't exist
             orig_path = miniature_path
             if not os.path.exists(orig_path) or not miniature_path:
+                print(f"Creating miniature for {row.get('Title', 'Unknown Title')}")
                 # Try to get original image from Images column
                 images_field = row.get('Images', '').strip()
                 # Use first image in Images field
@@ -39,6 +40,7 @@ def process_miniatures(csv_path):
                 if not os.path.exists(orig_path):
                     orig_path = os.path.join(IMG_DIR, os.path.basename(miniature_path))
             if os.path.exists(orig_path):
+                print(f"Processing miniature from {orig_path}")
                 im = Image.open(orig_path)
                 width, height = im.size
                 # Always create a copy resized to 1/4 original size
@@ -55,6 +57,7 @@ def process_miniatures(csv_path):
             rows.append(row)
     # Write updated CSV if any changes
     if updated:
+        print(f"Updating {csv_path} with new miniatures.")
         with open(csv_path, 'w', encoding='utf-8', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
