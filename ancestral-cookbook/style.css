@@ -895,6 +895,11 @@ textarea:focus {
     margin-bottom: 0;
     color: #9b9b9b; }
 
+
+h3.title-category {
+  font-size: 22px;
+}
+
 /* :: 11.0 Quote Area */
 .quote-area {
   position: relative;

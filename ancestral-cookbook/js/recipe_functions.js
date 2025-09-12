@@ -58,7 +58,7 @@ function addIngredients(recipeIngredients) {
         recipeIngredients.forEach((item, index) => {
                 if (item.trim().startsWith('#')) {
                         // Ingredient category
-                        ingredientsHTML += `<h3 class="ingredient-category">${item.replace(/^#\s*/, '')}</h3>`;
+                        ingredientsHTML += `<h3 class="title-category">${item.replace(/^#\s*/, '')}</h3>`;
                 } else {
                         ingredientsHTML += `
                             <div class="custom-control custom-checkbox">
@@ -86,7 +86,7 @@ function addRecipeSteps(steps) {
     steps.forEach((step) => {
         if (step.trim().startsWith('#')) {
             // Step category
-            stepsHTML += `<h3 class="step-category">${step.replace(/^#\s*/, '')}</h3>`;
+            stepsHTML += `<h3 class="title-category">${step.replace(/^#\s*/, '')}</h3>`;
         } else {
             stepsHTML += `
                 <div class="single-preparation-step d-flex">
