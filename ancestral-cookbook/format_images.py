@@ -2,6 +2,14 @@
 from PIL import Image
 import os
 
+# Function to replace every '.png' with '.jpg' in 'recettes.csv'
+def replace_png_with_jpg_in_csv(csv_path):
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    new_content = content.replace('.png', '.jpg')
+    with open(csv_path, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+
 IMG_DIR = r"img"
 MAX_WIDTH = 1000
 ASPECT_RATIO = 2 / 1
@@ -38,3 +46,4 @@ for filename in os.listdir(IMG_DIR):
         print(f"Processed {filename} -> {new_filename}: {im_cropped.size}")
 
 
+replace_png_with_jpg_in_csv('Recettes.csv')
