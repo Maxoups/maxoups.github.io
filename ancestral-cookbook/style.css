@@ -1544,7 +1544,7 @@ label.comments {
   color: var(--meal-text);
   border-radius: 12px;
   border-width:0px;
-  height: 310px;
+  height: 360px;
   padding: 0px;
   cursor: pointer;
   width: 260px;
@@ -1572,7 +1572,7 @@ label.comments {
     font-size: 16px;
     opacity: 0.85;
     font-weight: 400;
-    margin-bottom: -10px;
+    line-height: 20px;
     margin-left: 15px;
     white-space: normal;
     word-wrap: break-word;
@@ -1606,9 +1606,10 @@ label.comments {
   background-color: #7E5B34;
   color: #E4D2AC;
   font-family: 'CinzelDecorative', 'Open Sans', sans-serif;
-  justify-self: center;
   padding-right: 15px;
   padding-left: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   bottom: 0;
   margin-bottom: 15px;
@@ -1732,6 +1733,9 @@ html {
 
 .page-header {
     font-size: 60px !important;
+    font-variant-ligatures: none;
+    font-feature-settings: "kern" 0;
+
 }
 
 @media (max-width: 800px) {
