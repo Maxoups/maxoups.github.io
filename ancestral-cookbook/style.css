@@ -1795,8 +1795,6 @@ h4.step-number {
   h5,
   h6 {
     color: #E4D2AC;
-    line-height: 1.3;
-    font-weight: 600;
   }
 
   .nice-select .option:hover, 
@@ -1877,7 +1875,6 @@ h4.step-number {
   } */
 
   .classy-navbar, .delicious-main-menu, .classy-menu {
-    background-color: #412021 !important;
     color:#3F2E1F;
   }
 
