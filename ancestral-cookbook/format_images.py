@@ -24,27 +24,35 @@ def process_miniatures(csv_path):
         fieldnames = reader.fieldnames
         for row in reader:
             miniature_path = row.get('Miniature', '').strip()
-            if miniature_path:
-                # Only process if file exists
-                orig_path = miniature_path
+            # Always create miniature if it doesn't exist
+            orig_path = miniature_path
+            if not os.path.exists(orig_path) or not miniature_path:
+                # Try to get original image from Images column
+                images_field = row.get('Images', '').strip()
+                # Use first image in Images field
+                if images_field:
+                    first_img = images_field.split(',')[0].strip()
+                    orig_path = first_img
+                    if not os.path.exists(orig_path):
+                        orig_path = os.path.join(IMG_DIR, os.path.basename(first_img))
+            else:
                 if not os.path.exists(orig_path):
-                    # Try relative to IMG_DIR
                     orig_path = os.path.join(IMG_DIR, os.path.basename(miniature_path))
-                if os.path.exists(orig_path):
-                    im = Image.open(orig_path)
-                    width, height = im.size
-                    # Only process if aspect ratio is not 2:1
-                    if abs((width / height) - ASPECT_RATIO) > 0.01:
-                        new_size = (max(1, width // MINIATURE_DIVIDER), max(1, height // MINIATURE_DIVIDER))
-                        im_resized = im.resize(new_size, Image.LANCZOS)
-                        # Save new miniature with '_mini' suffix before extension
-                        base, ext = os.path.splitext(os.path.basename(miniature_path))
-                        new_filename = base + '_mini.jpg'
-                        new_path = os.path.join(IMG_DIR, new_filename)
-                        im_resized.save(new_path, 'JPEG', quality=80)
-                        # Update CSV reference
-                        row['Miniature'] = os.path.join(IMG_DIR, new_filename).replace('\\', '/')
-                        updated = True
+            if os.path.exists(orig_path):
+                im = Image.open(orig_path)
+                width, height = im.size
+                # Only process if aspect ratio is not 2:1
+                if abs((width / height) - ASPECT_RATIO) > 0.01:
+                    new_size = (max(1, width // MINIATURE_DIVIDER), max(1, height // MINIATURE_DIVIDER))
+                    im_resized = im.resize(new_size, Image.LANCZOS)
+                    # Save new miniature with '_mini' suffix before extension
+                    base, ext = os.path.splitext(os.path.basename(orig_path))
+                    new_filename = base + '_mini.jpg'
+                    new_path = os.path.join(IMG_DIR, new_filename)
+                    im_resized.save(new_path, 'JPEG', quality=80)
+                    # Update CSV reference
+                    row['Miniature'] = os.path.join(IMG_DIR, new_filename).replace('\\', '/')
+                    updated = True
             rows.append(row)
     # Write updated CSV if any changes
     if updated:
