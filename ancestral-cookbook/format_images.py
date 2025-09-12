@@ -1,4 +1,5 @@
-# Importing Image class from PIL module
+# Function to create lighter miniatures and update Recettes.csv
+import csv
 from PIL import Image
 import os
 
@@ -13,6 +14,42 @@ def replace_png_with_jpg_in_csv(csv_path):
 IMG_DIR = r"img"
 MAX_WIDTH = 1000
 ASPECT_RATIO = 2 / 1
+
+def process_miniatures(csv_path):
+    rows = []
+    updated = False
+    with open(csv_path, 'r', encoding='utf-8', newline='') as f:
+        reader = csv.DictReader(f)
+        fieldnames = reader.fieldnames
+        for row in reader:
+            miniature_path = row.get('Miniature', '').strip()
+            if miniature_path:
+                # Only process if file exists
+                orig_path = miniature_path
+                if not os.path.exists(orig_path):
+                    # Try relative to IMG_DIR
+                    orig_path = os.path.join(IMG_DIR, os.path.basename(miniature_path))
+                if os.path.exists(orig_path):
+                    im = Image.open(orig_path)
+                    width, height = im.size
+                    new_size = (max(1, width // 2), max(1, height // 2))
+                    im_resized = im.resize(new_size, Image.LANCZOS)
+                    # Save new miniature with '_mini' suffix before extension
+                    base, ext = os.path.splitext(os.path.basename(miniature_path))
+                    new_filename = base + '_mini.jpg'
+                    new_path = os.path.join(IMG_DIR, new_filename)
+                    im_resized.save(new_path, 'JPEG', quality=80)
+                    # Update CSV reference
+                    row['Miniature'] = os.path.join(IMG_DIR, new_filename).replace('\\', '/')
+                    updated = True
+            rows.append(row)
+    # Write updated CSV if any changes
+    if updated:
+        with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+
 
 for filename in os.listdir(IMG_DIR):
     if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif', '.webp')):
@@ -47,3 +84,4 @@ for filename in os.listdir(IMG_DIR):
 
 
 replace_png_with_jpg_in_csv('Recettes.csv')
+process_miniatures('Recettes.csv')
