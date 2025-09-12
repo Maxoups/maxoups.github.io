@@ -58,7 +58,7 @@ function addIngredients(recipeIngredients) {
         recipeIngredients.forEach((item, index) => {
                 if (item.trim().startsWith('#')) {
                         // Ingredient category
-                        ingredientsHTML += `<h2 class="ingredient-category">${item.replace(/^#\s*/, '')}</h2>`;
+                        ingredientsHTML += `<h3 class="ingredient-category">${item.replace(/^#\s*/, '')}</h3>`;
                 } else {
                         ingredientsHTML += `
                             <div class="custom-control custom-checkbox">
@@ -81,14 +81,21 @@ function addRecipeSteps(steps) {
 
     let stepsHTML = "";
 
-    // Build steps dynamically
-    steps.forEach((step, index) => {
-        stepsHTML += `
-            <div class="single-preparation-step d-flex">
-                <h4 class="step-number">${index + 1}.</h4>
-                <p class="step-text">${step}</p>
-            </div>
-        `;
+    // Build steps and categories dynamically
+    let stepNumber = 1;
+    steps.forEach((step) => {
+        if (step.trim().startsWith('#')) {
+            // Step category
+            stepsHTML += `<h3 class="step-category">${step.replace(/^#\s*/, '')}</h3>`;
+        } else {
+            stepsHTML += `
+                <div class="single-preparation-step d-flex">
+                    <h4 class="step-number">${stepNumber}.</h4>
+                    <p class="step-text">${step}</p>
+                </div>
+            `;
+            stepNumber++;
+        }
     });
     stepsList.innerHTML = stepsHTML;
 }
