@@ -154,16 +154,28 @@
         const resultsDiv = document.getElementById("results");
         const activeTagsDiv = document.getElementById("activeTags");
 
-        const allTags = [
-            "végétarien", "vegan", "sain", "kiffeur", "anniversaire", "gâteau", "sans gluten",
-            "brunch", "apéro", "breton", "italien", "pâtes", "viande", "poisson", "fast food",
-            "rapide", "long", "soupe", "salade", "snack", "léger", "réconfortant", "froid"
-        ];
-
+        let allTags = [];
         const tagInput = document.getElementById("tag-input");
         const dropdown = document.getElementById("dropdown");
 
         let activeTags = [];
+
+        function extractAllTags() {
+            if (!recipesData || recipesData.length === 0) return [];
+            const tagsSet = new Set();
+            recipesData.forEach(recipe => {
+                let tags = recipe.Tags;
+                if (typeof tags === "string") {
+                    tags = tags.split(/[,;]\s*/);
+                } else if (!Array.isArray(tags)) {
+                    tags = [];
+                }
+                tags.forEach(tag => {
+                    if (tag && tag.trim()) tagsSet.add(tag.trim().toLowerCase());
+                });
+            });
+            return Array.from(tagsSet);
+        }
 
         function initFilters() {
             categoryFilter.innerHTML = `<option value="">Toutes les catégories</option>`;
@@ -177,6 +189,7 @@
             // Normalize keys just in case (toLowerCase)
             const types = [...new Set(recipesData.map(r => (r.Type || r.type || "").trim()).filter(Boolean))];
             const chefs = [...new Set(recipesData.map(r => (r.Cuistot || r.cuistot || "").trim()).filter(Boolean))];
+            allTags = extractAllTags();
 
             types.forEach(type => {
                 const opt = document.createElement("option");
