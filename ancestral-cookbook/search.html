@@ -304,9 +304,8 @@
             div.className = "meal-item";
             div.onclick = () => window.open(`recipe.html?name=${r.ID}`, "_blank");
 
-            const imgSrc = r.Images.split(",")[0];
             div.innerHTML = `
-                <img class=meal-img src="${r.Miniature}">
+                <img class="meal-img" onerror="javascript:this.src='img/core-img/logo.png'" src="${r.Miniature}">
                 <h3 class="meal-title">${r.Titre}</h3>
                 <p class="meal-desc">${r.Cuistot}</p>
                 <p class="meal-desc">${tags.join(", ")}</p>
