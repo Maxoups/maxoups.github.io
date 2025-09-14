@@ -181,9 +181,8 @@
         } else if (!Array.isArray(tags)) {
             tags = [];
         }
-        const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
         mealDiv.innerHTML = `
-            <img class="meal-img" src="${imgSrc}">
+            <img class="meal-img" onerror="javascript:this.src='img/core-img/logo.png'" src="${recipe.Miniature}">
             <h3 class="meal-title">${recipe.Titre}</h3>
             <p class="meal-desc">${recipe.Cuistot}</p>
             <p class="meal-desc">${tags.join(", ")}</p>
@@ -256,9 +255,8 @@
                 } else if (!Array.isArray(tags)) {
                     tags = [];
                 }
-                const imgSrc = recipe.Images ? recipe.Images.split(",")[0] : recipe.Miniature;
                 mealDiv.innerHTML = `
-                    <img class=\"meal-img\" src=\"${imgSrc}\">\n                    <h3 class=\"meal-title\">${recipe.Titre}</h3>\n                    <p class=\"meal-desc\">${recipe.Cuistot}</p>\n                    <p class=\"meal-desc\">${tags.join(", ")}</p>\n                    <p class=\"meal-item-button\">RECETTE</p>\n                `;
+                    <img class="meal-img" onerror="javascript:this.src='img/core-img/logo.png'" src="${recipe.Miniature}">\n                    <h3 class=\"meal-title\">${recipe.Titre}</h3>\n                    <p class=\"meal-desc\">${recipe.Cuistot}</p>\n                    <p class=\"meal-desc\">${tags.join(", ")}</p>\n                    <p class=\"meal-item-button\">RECETTE</p>\n                `;
                 mealDiv.onclick = () => window.open(`recipe.html?name=${recipe.ID}`, "_blank");
             }
 
