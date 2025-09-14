@@ -1,5 +1,5 @@
 ID,Titre,Cuistot,Type,Tags,Commentaires,Temps,Ingrédients,Recette,Images,Miniature
-tiramisu,Tiramisu,Kaki,Dessert,"Végétarien, Kiffeur, Gâteau",Très bon tiramisu. Le dessert préféré d'Elio !,45 minutes,"5 oeufs
+tiramisu,Tiramisu,Ilia,Dessert,"Végétarien, Kiffeur, Gâteau, Italien, Froid, Chocolat, Café",Très bon tiramisu. Le dessert préféré d'Elio !,45 minutes,"5 oeufs
 135g de cassonade
 Vanille
 500g de mascarpone
@@ -7,15 +7,16 @@ Vanille
 200g de chocolat
 Caco en poudre
 50cl de café","Battre les 5 jaunes avec les 135g de cassonade. Ajouter la vanille.
-Monter les 5 blancs en neige.
-Incorporer.
+
+Monter les 5 blancs en neige. Ensuite, incorporer doucement la préparation aux blancs.
 
 Faire le café et attendre qu'il refroidisse.
 
 Monter le gâteau: alterner couche de crème (0,5cm) et couche de biscuits trempés dans le café (laisser les biscuits environ 5 secondes). Raper du chocolat à chaque couche de crème. Commencer et finir par une couche de crème.
 
-Laisser reposer une nuit au frigo.","img/tiramisu02.jpg, img/tiramisu01.jpg",img/tiramisu02.jpg
-tarte-abricots-pommes,Tarte Pommes-Abricots,Maxence,Dessert,"Végétarien, Tarte, Sans gluten, Léger, Goûter, Facile",Très bonne et assez facile à faire. Tarte très sympa en été ou quand il fait beau !,1 heure,"# Compote de pommes
+Laisser reposer une nuit au frigo.","img/tiramisu-1.jpg, img/tiramisu-2.jpg",img/tiramisu-1.jpg
+tarte-abricots-pommes,Tarte Pommes-Abricots,Maxence,Dessert,"Végétarien, Tarte, Sans gluten, Léger, Goûter, Facile, Fruits","Très bonne et assez facile à faire. Tarte très sympa en été ou quand il fait beau !
+Peut aussi être réalisée en tartelettes individuelles en faisant des petits ronds et en les repliant en triangle sur un oreillon.",1 heure,"# Compote de pommes
 1 pâte feuilletée
 6 pommes
 250g d'abricots en boîte (optionnel)
@@ -36,11 +37,11 @@ Quand la compote n'est plus trop liquide, mixer la compote au mixeur plongeant (
 
 Préchauffer le four à 180°C. Étaler la pâte et ajouter la base de compote.
 
-Ajouter les 450g d'oreillons d'abricots.
+Ajouter les 450g d'oreillons d'abricots. On peut ajouter du jaune d'oeuf au pinceau sur la pâte pour qu'elle dore bien au four.
 
 Mettre au four pendant 40 minutes (retirer quand les oreillons commencent à noircir).
-","img/tarte-abricots-1.jpg, img/tarte-abricots-2.jpg, img/tarte-abricots-3.jpg",img/tarte-abricots-1_mini.jpg
-tarte-lemon-curd,Tarte au Citron,Maxence,Dessert,"Tarte, Sans gluten, Froid, Végétarien",Tarte citronnée très citronnée vraiment très citronnée. Elle est citronnée.,1h15,"# Pâte sablée citronnée
+","img/tarte-abricots-1.jpg, img/tarte-abricots-2.jpg, img/tarte-abricots-3.jpg",img/tarte-abricots-1.jpg
+tarte-lemon-curd,Tarte au Citron,Maxence,Dessert,"Tarte, Sans gluten, Froid, Végétarien, Fruits",Tarte citronnée très citronnée vraiment très citronnée. Elle est citronnée.,1h15,"# Pâte sablée citronnée
 165g de farine
 70g de sucre
 150g de beurre demi-sel
@@ -50,25 +51,28 @@ tarte-lemon-curd,Tarte au Citron,Maxence,Dessert,"Tarte, Sans gluten, Froid, Vé
 165g de jaunes (~9-10 jaunes)
 260g de sucre
 400g de jus de citron
-4 zestes de citron","Mettre le beurre demi-sel, le sucre et la farine dans un bol avec le zeste de citron, et mélanger du bout des doigts pour faire une pâte sablée homogène.
+4 zestes de citron","# Pâte sablée citronnée
+
+Mettre le beurre demi-sel, le sucre et la farine dans un bol avec le zeste de citron, et mélanger du bout des doigts pour faire une pâte sablée homogène.
 
 Cuire environ 30 minutes à 180°C dans un moule de 22cm de diamètre. On peut enlever quand la pâte commencer à dorer. Même si elle ne paraît pas cuite, elle va durcir en refroidissant.
 
+# Crème au citron
 
-Préparer la crème : mélanger au fouet les oeufs et les jaunes dans une casserole avec le sucre jusqu'à avoir un tout homogène.
+Mélanger au fouet les oeufs et les jaunes dans une casserole avec le sucre jusqu'à avoir un tout homogène.
 
 Ajouter le zeste des 4 citrons et mélanger.
 
 Presser et ajouter ensuite le jus de citron. Faire préchauffer le four à 175°C.
 
-Faire chauffer la crème à feux doux pour amener la température à 77°C, où jusqu'à ce que la crème ait une consistance de crème fraîche. Mélanger en permanence pendant la cuisson.
+Faire chauffer la crème à feux doux pour amener la température à 77°C, où jusqu'à ce que la crème ait presque une consistance de crème pâtissière. Mélanger en permanence pendant la cuisson.
 
 Verser sur la pâte à travers un tamis pour filtrer le zeste et obtenir une crème très lisse.
 
 Couvrir d'une feuille d'aluminium et faire cuire 12 minutes à 175°C.
 
-Mettre au frais 3h. On peut ensuite recouvrir de sucre glace pour décorer (plutôt juste avant de servir, autrement le sucre peut s'incorporer à la crème).","img/tarte-citron-01.jpg, img/tarte-citron-02.jpg, img/tarte-citron-03.jpg",img/tarte-citron-01_mini.jpg
-tarte-fraises-citron-basilic,Tarte Fraises Citron Basilic,Maxence,Dessert,"Végétarien, Kiffeur, Anniversaire, Tarte, Breton, Compliqué",Groooooosse tarte très bonne. Faut mettre plein de basilic sinon on le sent pas. Quand je l'ai faite Méliné l'a même pas goûtée ma vie de oim j'ai toujours le seum pourquoi ma ptite soeur elle m'aime pas ?,1h45,"Fraises
+Mettre au frais 3h. On peut ensuite recouvrir de sucre glace pour décorer (plutôt juste avant de servir, autrement le sucre peut s'incorporer à la crème).","img/tarte-citron-01.jpg, img/tarte-citron-02.jpg, img/tarte-citron-03.jpg",img/tarte-citron-01.jpg
+tarte-fraises-citron-basilic,Tarte Fraises Citron Basilic,Maxence,Dessert,"Végétarien, Kiffeur, Anniversaire, Tarte, Breton, Compliqué, Fruits",Groooooosse tarte très bonne. Faut mettre plein de basilic sinon on le sent pas. Quand je l'ai faite Méliné l'a même pas goûtée ma vie de oim j'ai toujours le seum pourquoi ma ptite soeur elle m'aime pas ?,1h45,"Fraises
 Palis breton
 Crème basilic
 Crème citron
@@ -76,4 +80,74 @@ Jsp","Lorem ipsum
 
 Jme souviens plus de la recette
 
-je fais ça un de ces jours","img/tarte-fraises-citron-basilic-1.jpg, img/tarte-fraises-citron-basilic-2.jpg, img/tarte-fraises-citron-basilic-3.jpg",img/tarte-fraises-citron-basilic-1_mini.jpg
+je fais ça un de ces jours","img/tarte-fraises-citron-basilic-1.jpg, img/tarte-fraises-citron-basilic-2.jpg, img/tarte-fraises-citron-basilic-3.jpg",img/tarte-fraises-citron-basilic-1.jpg
+scofa-fruits-rouges,Scofa aux fruits rouges,Maxence,Dessert,"Kiffeur, Anniversaire, Gâteau, Froid, Compliqué, Fruits",Plus ou moins le gâteau de picard. Mais pas tout à fait. Les rageux diront que c'est pas du tout le même. Moi jdis c'est mieux. Au moins on est originaux ici.,3h15,"# Gâteau aux amandes
+210g de blancs d'oeufs
+150g de sucre
+120g d'amandes en poudre
+70g de farine
+75g de sucre glace
+75g de lait
+# Crème au beurre
+300g de fruits rouges
+8 jaunes d'oeufs
+250g de sucre
+300g de beurre pommade
+# Coulis de fruits rouges
+600g de fruits rouges
+3 c.a.s de cassonade
+3 c.a.s de jus de citron
+5 feuilles de gélatine","# Préparer le coulis de fruits rouges
+
+Mettre les 600g de fruits dans une casserole. Ajouter le sucre et le jus de citron, puis mélanger.
+
+Faire chauffer à feu doux jusqu'à ce que les fruits rendent leur eau.
+
+Une fois que les fruits sont prêts, sortir du feu et mixer.
+
+Passer au tamis pour retirer les pépins.
+
+Remettre dans la casserole, puis faire réduire à feu moyen.
+
+Tremper les 5 feuilles gélatine pour les ramollir, puis les égoutter. Retirer le coulis du feu puis y ajouter les feuilles de gélatine et mélanger. 
+
+# Préparer la crème au beurre
+
+Séparer les blancs des jaunes. Réserver les blancs pour le gâteau et mettre les jaunes dans un saladier. Battre les jaunes une minute.
+
+Mettre les 250g de sucre dans une casserole, recouvrir d'eau et faire cuire à feu moyen jusqu'à 121°C (ou : quand on plonge une fourchette dedans et qu'on la ressort, il faut qu'il y ait des filaments).
+
+Dès que le sucre est cuit, le verser doucement dans les jaunes en faisant couler sur la paroi du bol, tout en battant. Battre jusqu'à refroidissement de la préparation.
+
+Incorporer petit à petit les 300g de beurre pommade préalablement coupés en petits morceaux.
+
+Une fois que la préparation est homogène, incorporer les fruits et réserver. 
+
+# Préparer le gâteau
+
+Préchauffez le four à 140°C. Mettre les 70g de farine, les 120g de poudre d'amandes, les 75g de sucre glace et les 75g de lait dans un saladier, et mélanger à la cuillère.
+
+Dans un autre saladier, monter les 210g de blancs d'oeufs en neige, puis ajouter le sucre pour les raffermir. Battre encore 1 minutes.
+
+Incorporer une partie des blancs dans le mélange précédent à la maryse. Une fois que le mélange est homogène, incorporer le reste.
+
+Mettre la pâte dans une poche à douille, puis étaler sur une plaque de cuisson (30 × 40cm) recouverte de papier sulfurisé.
+
+Mettre au four pendant 40 minutes.
+
+Une fois la pâte cuite, sortir du four et laisser refroidir complètement sur une grille à pâtisserie.
+
+# Montage
+
+Une fois que la pâte a refroidi, couper en deux, puis étaler la moitié du coulis de fruits rouge sur une des moitiés.
+
+Étaler la crème au beurre par dessus la couche de coulis.
+
+Étaler le reste du coulis par dessus la crème au beurre.
+
+Poser la deuxième couche de gâteau par dessus le coulis, puis mettre au frais.
+
+Juste avant de servir, saupoudrer de sucre glace.
+","img/sfofa-1.jpg, img/sfofa-2.jpg, img/sfofa-3.jpg",img/sfofa-2.jpg
+gigot-7-heures-ottolenghi,Gigot de 7 heures d'Ottolenghi,Kaki,Plat,"Anniversaire, Viande, Légumes, Chaud",A FAIRE,7h,A FAIRE,A FAIRE,"img/gigot-7-heures-1.jpg, img/gigot-7-heures-2.jpg, img/gigot-7-heures-3.jpg",img/gigot-7-heures-3.jpg
+roules-saumon,Roulés au saumon,Carla,Entrée,"Apéro, Poisson, Léger, Froid, Facile, Fromage",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
