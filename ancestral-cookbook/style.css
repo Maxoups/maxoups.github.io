@@ -898,6 +898,9 @@ textarea:focus {
 
 h3.title-category {
   font-size: 22px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font-weight: 900;
 }
 
 /* :: 11.0 Quote Area */
@@ -1161,7 +1164,7 @@ h3.title-category {
 .single-preparation-step {
   position: relative;
   z-index: 1;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
   .single-preparation-step h4 {
     color: #3F2E1F;
     -webkit-box-flex: 0;
@@ -1330,7 +1333,7 @@ h3.title-category {
 .step-text {
   color: #1D150E;
   font-size: 18px;
-  margin-top: 5px;
+  margin-top: 0px;
   font-family: 'EB Garamond', serif;
 }
 
@@ -1745,8 +1748,8 @@ html {
 }
 
 h4.step-number {
-    font-size:34px;
-    margin-right: -15px;
+    font-size:28px;
+    margin-right: -10px;
   }
 
 
