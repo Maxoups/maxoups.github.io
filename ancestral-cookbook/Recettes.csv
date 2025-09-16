@@ -1,5 +1,5 @@
 ID,Titre,Cuistot,Type,Tags,Commentaires,Temps,Ingrédients,Recette,Images,Miniature
-tiramisu,Tiramisu,Ilia,Dessert,"Végétarien, Kiffeur, Gâteau, Italien, Froid, Chocolat, Café",Très bon tiramisu. Le dessert préféré d'Elio !,45 minutes,"5 oeufs
+tiramisu,Tiramisu,Ilia,Dessert,"Végétarien, Kiffeur, Gâteau, Froid, Chocolat, Café, Italie",Très bon tiramisu. Le dessert préféré d'Elio !,45 minutes,"5 oeufs
 135g de cassonade
 Vanille
 500g de mascarpone
@@ -15,7 +15,7 @@ Faire le café et attendre qu'il refroidisse.
 Monter le gâteau: alterner couche de crème (0,5cm) et couche de biscuits trempés dans le café (laisser les biscuits environ 5 secondes). Raper du chocolat à chaque couche de crème. Commencer et finir par une couche de crème.
 
 Laisser reposer une nuit au frigo.","img/tiramisu-1.jpg, img/tiramisu-2.jpg",img/tiramisu-1.jpg
-tarte-abricots-pommes,Tarte Pommes-Abricots,Maxence,Dessert,"Végétarien, Tarte, Sans gluten, Léger, Goûter, Facile, Fruits","Très bonne et assez facile à faire. Tarte très sympa en été ou quand il fait beau !
+tarte-abricots-pommes,Tarte Pommes-Abricots,Maxence,Dessert,"Végétarien, Tarte, Sans gluten, Léger, Goûter, Facile, Fruits, Été","Très bonne et assez facile à faire. Tarte très sympa en été ou quand il fait beau !
 Peut aussi être réalisée en tartelettes individuelles en faisant des petits ronds et en les repliant en triangle sur un oreillon.",1 heure,"# Compote de pommes
 1 pâte feuilletée
 6 pommes
@@ -72,7 +72,7 @@ Verser sur la pâte à travers un tamis pour filtrer le zeste et obtenir une cr�
 Couvrir d'une feuille d'aluminium et faire cuire 12 minutes à 175°C.
 
 Mettre au frais 3h. On peut ensuite recouvrir de sucre glace pour décorer (plutôt juste avant de servir, autrement le sucre peut s'incorporer à la crème).","img/tarte-citron-01.jpg, img/tarte-citron-02.jpg, img/tarte-citron-03.jpg",img/tarte-citron-01.jpg
-tarte-fraises-citron-basilic,Tarte Fraises Citron Basilic,Maxence,Dessert,"Végétarien, Kiffeur, Anniversaire, Tarte, Bretagne, Compliqué, Fruits",Groooooosse tarte très bonne. Faut mettre plein de basilic sinon on le sent pas. Quand je l'ai faite Méliné l'a même pas goûtée ma vie de oim j'ai toujours le seum pourquoi ma ptite soeur elle m'aime pas ?,1h45,"Fraises
+tarte-fraises-citron-basilic,Tarte Fraises Citron Basilic,Maxence,Dessert,"Végétarien, Kiffeur, Anniversaire, Tarte, Bretagne, Compliqué, Fruits, Été",Groooooosse tarte très bonne. Faut mettre plein de basilic sinon on le sent pas. Quand je l'ai faite Méliné l'a même pas goûtée ma vie de oim j'ai toujours le seum pourquoi ma ptite soeur elle m'aime pas ?,1h45,"Fraises
 Palis breton
 Crème basilic
 Crème citron
@@ -81,7 +81,7 @@ Jsp","Lorem ipsum
 Jme souviens plus de la recette
 
 je fais ça un de ces jours","img/tarte-fraises-citron-basilic-1.jpg, img/tarte-fraises-citron-basilic-2.jpg, img/tarte-fraises-citron-basilic-3.jpg",img/tarte-fraises-citron-basilic-1.jpg
-scofa-fruits-rouges,Scofa aux fruits rouges,Maxence,Dessert,"Kiffeur, Anniversaire, Gâteau, Froid, Compliqué, Fruits",Plus ou moins le gâteau de picard. Mais pas tout à fait. Les rageux diront que c'est pas du tout le même et qu'il est vachement plus lourd. Moi jdis c'est mieux comme ça. Au moins on est originaux ici.,3h15,"# Gâteau aux amandes
+scofa-fruits-rouges,Scofa aux fruits rouges,Maxence,Dessert,"Kiffeur, Anniversaire, Gâteau, Froid, Compliqué, Fruits, France",Plus ou moins le gâteau de picard. Mais pas tout à fait. Les rageux diront que c'est pas du tout le même et qu'il est vachement plus lourd. Moi jdis c'est mieux comme ça. Au moins on est originaux ici.,3h15,"# Gâteau aux amandes
 210g de blancs d'oeufs
 150g de sucre
 120g d'amandes en poudre
@@ -138,7 +138,7 @@ Une fois que la pâte a refroidi, couper en deux, puis étaler la le coulis de f
 Étaler la crème au beurre par dessus la couche de coulis. 
 
 Poser la deuxième couche de gâteau par dessus la crème, puis mettre au frais. Juste avant de servir, saupoudrer de sucre glace.","img/sfofa-1.jpg, img/sfofa-2.jpg, img/sfofa-3.jpg",img/sfofa-2.jpg
-gigot-7-heures-ottolenghi,Gigot de 7 heures d'Ottolenghi,Kaki,Plat,"Anniversaire, Viande, Légumes, Chaud, Moyen-Orient",A FAIRE,7h45,A FAIRE,A FAIRE,"img/gigot-7-heures-1.jpg, img/gigot-7-heures-2.jpg, img/gigot-7-heures-3.jpg",img/gigot-7-heures-3.jpg
+gigot-7-heures-ottolenghi,Gigot de 7 heures d'Ottolenghi,Kaki,Plat,"Anniversaire, Viande, Légumes, Chaud, Moyen-Orient",A FAIRE,1 heure,A FAIRE,A FAIRE,"img/gigot-7-heures-1.jpg, img/gigot-7-heures-2.jpg, img/gigot-7-heures-3.jpg",img/gigot-7-heures-3.jpg
 roules-saumon,Roulés au saumon,Carla,Entrée,"Apéro, Poisson, Léger, Froid, Facile, Fromage",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
 samossa-saumon,Samossas au saumon,Carla,Entrée,"Apéro, Poisson, Léger, Moyen-Orient",A FAIRE,1 heure,A FAIRE,A FAIRE,"img/samossa-1.jpg, img/samossa-2.jpg, img/samossa-3.jpg",img/samossa-1.jpg
 boulettes-viande-moutarde,Boulettes de viande & sauce à la moutarde,Méliné,Plat,"Viande, Chaud, Légumes",A FAIRE,1 heure,A FAIRE,A FAIRE,"img/boulettes-viande-1.jpg, img/boulettes-viande-2.jpg, img/boulettes-viande-3.jpg",img/boulettes-viande-2.jpg
@@ -157,3 +157,96 @@ Ajouter les oeufs battus. Incorporer ensuite la farine et la levure mélangées.
 Verser la préparation dans un moule beurré ou tapissé de papier cuisson, d'environ 24cm de diamètre.
 
 Faire cuire 30 à 40 minutes à 180°C, puis déguster tiède ou froid.","img/gateau-pommes-1.jpg, img/gateau-pommes-2.jpg, img/gateau-pommes-3.jpg",img/gateau-pommes-2.jpg
+tarte-oignons,Tarte tatin aux oignons,Kaki,Plat,"Végétarien, Tarte, Légumes, Chaud, Fromage",A FAIRE,30 minutes,"6 oignons
+Chèvre
+1 pâte feuilletée
+Beurre/Huile d'olive
+2 c.a.s de sucre
+4 c.a.s de vinaigre balsamique
+Thym","Préparer une poêle de la taille de la tarte en retirant le manche (il faut que la poêle puisse passer au four).
+
+Couper les 6 oignons en quarts. Dans la poêle, les faire revenir dans de l'huile ou du beurre.
+
+Ajouter le mélange de sucre, vinaigre balsamique, thym, sel et poivre. Faire mijoter quelques minutes.
+
+Une fois que les oignons ont bien confit, ajouter le chèvre, puis recouvrir avec la pâte feuilletée.
+
+Faire cuire au four 25 minutes à 180°C. Déguster chaud ou tiède.",,
+antipasti,Antispasti,Kaki,Entrée,"Végétarien, Italie, Facile, Légumes",A FAIRE,40 minutes,"# Poivrons confits
+3 poivrons
+2 gousses d'ail
+2 c.a.s. d'huile d'olive
+1 c.a.s. de vinaigre balsamique
+2 c.a.s. de câpres
+# Mozzarella in carrozza
+250g de mozzarella di buffala
+4 tranches de pain de mie
+2 oeufs
+Farine
+Chapelure
+Sel/Poivre
+Huile de friture","# Poivrons confits
+
+Faire cuire les 3 poivrons 30 à 40 minutes à 180°C.
+
+Refroidir et décoller, puis couper en lanières.
+
+Concasser les 2 gousses d'ail, puis mélanger à l'huile d'olive et au vinaigre balsamique, et aux câpres.
+
+# Mozzarella in carrozza
+
+Couper les 250g de mozzarella en tranche fines. Faire sécher sur du papier absorbant.
+
+Répartir sur les 4 tranches de pain de mie. Saler, couper en deux, puis refermer en pressant les bords.
+
+Tremper dans la farine. Ensuite, passer deux fois les oeufs battus salés et poivrés et la chapelure.
+
+Passer au réfrigirateur 30 minutes, puis faire frire 2-3 minutes dans de l'huile à 170°C.",,
+creme-brulee,Crème brûlée,Kaki,Dessert,"Végétarien, Italie, Léger, Facile",A FAIRE,30 minutes,"# Pour 10 crèmes brûlées
+10 jaunes d'oeufs
+120g de sucre
+1L de crème fleurette
+2 gousses de vanille
+Cassonade","Battre les 10 jaunes d'oeufs avec 60g de sucre.
+
+Porter à ébullition 1L de crème fleurette avec 60g de sucre et les 2 gousses de vanille. Retirer dès ébullition.
+
+Laisser refroidir 5 minutes, puis incorporer très doucement au mélange oeufs-sucre.
+
+Disposer dans des coupelles (8mm d'épaisseur), et cuire au bain marie 40 minutes à 110°C.
+
+Conserver au frigo. Avant de servir, recouvrir de cassonade et brûler au chalumeau.",,
+pasta-zozzona,Pasta alla zozzona,Kaki,Plat,"Italie, Pâtes, Chaud, Légumes, Viande",A FAIRE,30 minutes,"120g de ganciale
+50g de vin blanc
+400g de tomates en boite
+Peperoncino
+120g de pecorino
+4 oeufs
+300g de Spaghetti","Faire revenir les 120g de ganciale.
+
+Déglacer avec 50g de vin blanc. Ajouter ensuite les 400g de tomate et les peperoncini.
+
+Cuire les pâtes, puis les ajouter à la sauce (conserver 1 louche d'eau de cuisson des pâtes).
+
+Préparer puis ajouter le mélange carbonara: 3 jaunes d'oeufs et 1 oeuf entier, 120g de pecorino, du poivre, 1 louche d'eau de cuisson.
+
+Bien mélanger et servir.",,
+veloute-butternut,Velouté de Butternut,Méliné,Entrée,"Sain, Automne, Soupe, Réconfortant, Chaud, Léger, Légumes, Hiver",A FAIRE,30 minutes,"1 butternut
+1 oignon
+1 cube de bouillon de volaille
+2 c.a.s. d'huile d'olive
+1 c.a.s de crème fraîche
+Noix de muscade
+Cumin
+Sel/Poivre","Tailler le butternut en lamelles. Ciseler l'oignon. Dorer l'oignon puis ajouter le butternut. Faire cuire pendant 10 minutes.
+
+Plonger dans l'eau puis ajouter le bouillon, sel, la noix de muscade, le cumin. Faire mijoter 50 minutes.
+
+Une fois que les légumes sont cuits, mixer et ajouter la crème fraîche.",,
+paella,Paëlla,Maxence,Plat,"Riz, Kiffeur, Poisson, Chaud, Été",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
+pancakes,Pancakes,Nadja,Dessert,"Végétarien, Brunch, Snack, Anglo-saxon, Chaud, Facile",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
+tomates-mozzarella,Tomates Mozzarella,Kaki,Plat,"Végétarien, Italie, Sain, Légumes, Léger, Salade, Fromage, Été, Facile, Froid",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
+croque-monsieur,Croque-monsieur,Méliné,Plat,"Sandwich, France, Viande, Chaud, Fromage, Été",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
+gateau-yaourt-pommes,Gâteau au yaourt aux pommes,Méliné,Dessert,"Végétarien, Gâteau, Goûter, Réconfortant, Automne, Fruits",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
+cookies,Cookies,Maxence,Dessert,"Anglo-saxon, Goûter, Réconfortant, Facile, Chocolat, Hiver",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
+layer-cake-fruits-rouges,Layer cake aux fruits rouges,Maxence,Dessert,"Anglo-saxon, Anniversaire, Kiffeur, Gâteau, Froid, Fruits, Printemps, Compliqué",A FAIRE,30 minutes,A FAIRE,A FAIRE,,
