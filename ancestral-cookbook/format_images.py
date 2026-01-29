@@ -11,6 +11,49 @@ def replace_png_with_jpg_in_csv(csv_path):
     with open(csv_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
 
+def fill_missing_ids_from_names(csv_path):
+    rows = []
+    used_ids = set()
+
+    # Read CSV
+    with open(csv_path, 'r', encoding='utf-8', newline='') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            rows.append(row)
+            if row and row[0].strip():
+                used_ids.add(row[0].strip())
+
+    # Process rows
+    for row in rows:
+        if not row:
+            continue
+
+        # Ensure at least 2 columns
+        if len(row) < 2:
+            continue
+
+        id_cell = row[0].strip()
+        name_cell = row[1].strip()
+
+        if not id_cell and name_cell:
+            base_id = name_cell.lower().replace(" ", "-")
+            new_id = base_id
+            counter = 2
+
+            # Avoid duplicates
+            while new_id in used_ids:
+                new_id = f"{base_id}-{counter}"
+                counter += 1
+
+            row[0] = new_id
+            used_ids.add(new_id)
+
+    # Write back CSV
+    with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerows(rows)
+
+
 IMG_DIR = r"img"
 MAX_WIDTH = 2000
 ASPECT_RATIO = 2 / 1
@@ -99,4 +142,5 @@ for filename in os.listdir(IMG_DIR):
 
 
 replace_png_with_jpg_in_csv('Recettes.csv')
+fill_missing_ids_from_names('Recettes.csv')
 process_miniatures('Recettes.csv')
